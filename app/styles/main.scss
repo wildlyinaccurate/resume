@@ -1,0 +1,47 @@
+$fontAwesomePath: "fonts";
+
+@import "themes/united";
+@import "bootstrap-sass/lib/bootstrap";
+
+@import "repositories";
+
+* {
+  @include box-sizing(border-box);
+}
+
+a {
+  @include transition-duration(0.45s)
+}
+
+body {
+}
+
+.section {
+  padding: 24px 0;
+  border-bottom: 1px solid $grayLighter;
+}
+
+.intro-wrap {
+  background: url(images/marrakech.jpg) no-repeat;
+  background-size: cover;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
+.intro {
+  @include opacity(85);
+}
+
+@media (min-width: 979px) {
+  // Add margin below navigation on wide screens
+  .intro-wrap {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-wrap {
+    margin: -20px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+
+        <title>Joseph Wynn &ndash; Web Developer</title>
+
+        <meta name="description" content="The online résumé of Joseph Wynn.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu|The+Girl+Next+Door">
+        <link rel="stylesheet" href="styles/main.css"/>
+    </head>
+    <body ng-app="resumeApp">
+        <!--[if lt IE 9]>
+            <!-- build:js scripts/old-browsers.js -->
+            <script src="scripts/vendor/html5shiv.min.js"></script>
+            <script src="scripts/vendor/es5-shim.min.js"></script>
+            <script src="scripts/vendor/json3.min.js"></script>
+            <!-- endbuild -->
+        <![endif]-->
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Joseph Wynn <i class="icon-circle-blank icon-large"></i> Web Developer</a>
+
+                    <ul class="nav pull-right">
+                        <li><a href="https://github.com/wildlyinaccurate"><i class="icon-github-alt icon-large"></i> GitHub</a></li>
+                        <li><a href="https://twitter.com/Joseph_Wynn"><i class="icon-twitter icon-large"></i> Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="intro-wrap">
+            <div class="container">
+                <div class="row hero-unit intro">
+                    <p class="lead">
+                        Hi there! I'm a developer currently based in London, UK.
+                        Right now I am working as a PHP developer, but in my spare time I like to write Python, Ruby and CoffeeScript.
+                    </p>
+                    <p class="lead">
+                        Outside of programming I enjoy cooking, running, rock climbing and playing guitar. I'm also a self-confessed beer enthusiast and wine snob. I sometimes blog at <a href="http://wildlyinaccurate.com/">Wildly Inaccurate</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section row">
+                <div class="span5" ng-controller="skillsController">
+                    <h2>Key Skills</h2>
+                    <div ng-include="'views/skills.html'"></div>
+                </div>
+
+                <div class="span7" ng-controller="employmentHistoryController">
+                    <h2>Employment History</h2>
+                    <div ng-include="'views/employers.html'"></div>
+                </div>
+            </div>
+
+            <div class="section row">
+                <div class="span5">
+                    <h2>Education</h2>
+
+                    <h4>Bachelor in Information &amp; Communication Technology</h4>
+                    <p>Christchurch Polytechnic Institute of Technology 2009 &ndash; 2010</p>
+
+                    <h4>Diploma in Information &amp; Communication Technology</h4>
+                    <p>Christchurch Polytechnic Institute of Technology 2007 &ndash; 2009</p>
+                </div>
+
+                <div class="span7" ng-controller="githubRepositoriesController">
+                    <label class="show-forks"><input type="checkbox" ng-model="showForks"> Show forks?</label>
+
+                    <h2>GitHub Repositories</h2>
+
+                    <div ng-include="'views/repositories.html'" ng-class=""></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/scripts.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/models/skill.js"></script>
+        <script src="scripts/models/employer.js"></script>
+        <script src="scripts/models/role.js"></script>
+        <script src="scripts/models/github/user.js"></script>
+        <script src="scripts/models/github/repository.js"></script>
+
+        <script src="scripts/services/skills.js"></script>
+        <script src="scripts/services/employment_history.js"></script>
+
+        <script src="scripts/controllers/skills.js"></script>
+        <script src="scripts/controllers/employment_history.js"></script>
+        <script src="scripts/controllers/github_repositories.js"></script>
+        <!-- endbuild -->
+
+        <script>
+            var _gaq=[['_setAccount','UA-20744182-4'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

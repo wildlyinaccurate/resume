@@ -1,0 +1,22 @@
+<div class="progress progress-striped active" ng-hide="repositories">
+    <div class="bar" style="width: 100%;">Loading repositories...</div>
+</div>
+
+<div class="well repository" ng-hide="repository.fork && ! showForks" ng-repeat="repository in repositories">
+    <div class="featured" ng-show="repository.name == 'resume'">
+        <i class="icon-share-alt icon-3x"></i><br />
+        <b class="featured-text">This website!</b>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <h4><a href="{{repository.html_url}}">{{repository.name}}</a></h4>
+            <p>{{repository.description}}<p>
+        </div>
+        <div class="span1">
+            <h4><i class="icon-star"></i> &nbsp; {{repository.watchers}}</h4>
+        </div>
+        <div class="span1">
+            <h4><i class="icon-random"></i> &nbsp; {{repository.forks}}</h4>
+        </div>
+    </div>
+</div>

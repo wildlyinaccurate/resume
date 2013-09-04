@@ -1,0 +1,26 @@
+.repository {
+  position: relative;
+}
+
+.featured {
+  color: $purple;
+  font-family: 'The Girl Next Door', cursive;
+  font-size: 24px;
+  position: absolute;
+  left: -171px;
+  top: 6px;
+  text-align: right;
+}
+
+.featured-text {
+  padding-right: 30px;
+}
+
+.show-forks {
+  float: right;
+  padding-top: 30px;
+}
+
+.show-forks input[type="checkbox"] {
+  margin: 0 2px 2px;
+}
