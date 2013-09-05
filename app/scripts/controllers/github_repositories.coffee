@@ -2,6 +2,7 @@
 
 angular.module('resumeApp')
   .controller 'githubRepositoriesController', ['$scope', ($scope) ->
+
     user = new Github.User 'wildlyinaccurate'
 
     user.repositories (repositories) ->

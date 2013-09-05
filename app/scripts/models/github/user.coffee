@@ -2,12 +2,14 @@
 
 window.Github = window.Github || {}
 
+$http = angular.injector(['ng']).get('$http')
+
 class window.Github.User
   constructor: (@username) ->
     @repos = []
 
   repositories: (callback) ->
-    $.getJSON "https://api.github.com/users/#{@username}/repos?per_page=100&callback=?", (response) =>
+    $http.jsonp("https://api.github.com/users/#{@username}/repos?per_page=100").success (response) =>
       return callback @repos if @repos.length > 0
 
       @repos = []
