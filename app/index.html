@@ -22,27 +22,27 @@
             <!-- endbuild -->
         <![endif]-->
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="#">Joseph Wynn <i class="icon-circle-blank icon-large"></i> Web Developer</a>
-
-                    <ul class="nav pull-right">
-                        <li><a href="https://github.com/wildlyinaccurate"><i class="icon-github-alt icon-large"></i> GitHub</a></li>
-                        <li><a href="https://twitter.com/Joseph_Wynn"><i class="icon-twitter icon-large"></i> Twitter</a></li>
-                    </ul>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Joseph Wynn <i class="icon-circle-blank icon-large"></i> Web Developer</a>
                 </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://github.com/wildlyinaccurate"><i class="icon-github-alt icon-large"></i> GitHub</a></li>
+                    <li><a href="https://twitter.com/Joseph_Wynn"><i class="icon-twitter icon-large"></i> Twitter</a></li>
+                </ul>
             </div>
         </nav>
 
         <div class="intro-wrap">
             <div class="container">
-                <div class="row hero-unit intro">
-                    <p class="lead">
+                <div class="row jumbotron intro">
+                    <p>
                         Hi there! I'm a developer currently based in London, UK.
                         Right now I am working as a PHP developer, but in my spare time I like to write Python, Ruby and CoffeeScript.
                     </p>
-                    <p class="lead">
+                    <p>
                         Outside of programming I enjoy cooking, running, rock climbing and playing guitar. I'm also a self-confessed beer enthusiast and wine snob. I sometimes blog at <a href="http://wildlyinaccurate.com/">Wildly Inaccurate</a>.
                     </p>
                 </div>
@@ -51,19 +51,19 @@
 
         <div class="container">
             <div class="section row">
-                <div class="span5" ng-controller="skillsController">
+                <div class="col-md-5" ng-controller="skillsController">
                     <h2>Key Skills</h2>
                     <div ng-include="'views/skills.html'"></div>
                 </div>
 
-                <div class="span7" ng-controller="employmentHistoryController">
+                <div class="col-md-7" ng-controller="employmentHistoryController">
                     <h2>Employment History</h2>
                     <div ng-include="'views/employers.html'"></div>
                 </div>
             </div>
 
             <div class="section row">
-                <div class="span5">
+                <div class="col-md-5">
                     <h2>Education</h2>
 
                     <h4>Bachelor in Information &amp; Communication Technology</h4>
@@ -73,7 +73,7 @@
                     <p>Christchurch Polytechnic Institute of Technology 2007 &ndash; 2009</p>
                 </div>
 
-                <div class="span7" ng-controller="githubRepositoriesController">
+                <div class="col-md-7" ng-controller="githubRepositoriesController">
                     <label class="show-forks"><input type="checkbox" ng-model="showForks"> Show forks?</label>
 
                     <h2>GitHub Repositories</h2>

@@ -1,7 +1,7 @@
 $FontAwesomePath: "/bower_components/font-awesome/font";
 
-@import "bootstrap-sass/lib/bootstrap";
 @import "themes/united";
+@import "bootstrap-sass/lib/bootstrap";
 @import "font-awesome/scss/font-awesome";
 
 @import "repositories";
@@ -30,7 +30,7 @@ body {
 }
 
 .intro {
-  @include opacity(85);
+  background-color: rgba($gray-lighter, 0.85);
 }
 
 @media (min-width: 979px) {

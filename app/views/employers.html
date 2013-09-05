@@ -1,10 +1,10 @@
 <div class="row" ng-repeat="role in employmentHistory">
-    <div class="span2">
+    <div class="col-md-4">
         {{role.startDate | date:'MMMM y'}} &ndash;
         <span ng-hide="role.endDate">Present</span>
         {{role.endDate | date:'MMMM y'}}
     </div>
-    <div class="span5">
+    <div class="col-md-8">
         <p>
             <b>{{role.title}}</b>
             <span ng-show="role.employer">at <a href="{{role.employer.url}}">{{role.employer.name}}</a></span>
