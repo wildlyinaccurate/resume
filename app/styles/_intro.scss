@@ -1,0 +1,24 @@
+.intro-wrap {
+  background: url(images/marrakech.jpg) no-repeat;
+  background-size: cover;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
+.intro {
+  background-color: rgba($gray-lighter, 0.85);
+}
+
+@media (min-width: 979px) {
+  // Add margin below navigation on wide screens
+  .intro-wrap {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-wrap {
+    margin: -20px;
+    padding: 20px;
+  }
+}
