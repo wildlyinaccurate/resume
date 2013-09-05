@@ -9,6 +9,6 @@
             <b>{{role.title}}</b>
             <span ng-show="role.employer">at <a href="{{role.employer.url}}">{{role.employer.name}}</a></span>
         </p>
-        <p ng-bind-html-unsafe="role.description"></p>
+        <p ng-bind-html="role.description"></p>
     </div>
 </div>

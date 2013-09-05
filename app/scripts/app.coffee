@@ -1,3 +1,3 @@
 'use strict'
 
-angular.module 'resumeApp', []
+angular.module 'resumeApp', ['ngSanitize']
