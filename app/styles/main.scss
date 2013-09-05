@@ -1,7 +1,8 @@
-$fontAwesomePath: "fonts";
+$FontAwesomePath: "/bower_components/font-awesome/font";
 
-@import "themes/united";
 @import "bootstrap-sass/lib/bootstrap";
+@import "themes/united";
+@import "font-awesome/scss/font-awesome";
 
 @import "repositories";
 
