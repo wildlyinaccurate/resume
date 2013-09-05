@@ -2,17 +2,19 @@
 
 window.Github = window.Github || {}
 
-$http = angular.injector(['ng']).get('$http')
+injector = angular.injector(['ng'])
 
 class window.Github.User
   constructor: (@username) ->
     @repos = []
 
   repositories: (callback) ->
-    $http.jsonp("https://api.github.com/users/#{@username}/repos?per_page=100").success (response) =>
-      return callback @repos if @repos.length > 0
+    injector.get('$rootScope').$apply =>
+      injector.get('$http').get("https://api.github.com/users/#{@username}/repos?per_page=100")
+        .success (data) =>
+          return callback @repos if @repos.length > 0
 
-      @repos = []
-      @repos.push new Github.Repository(repo) for repo in response.data
+          @repos = []
+          @repos.push new Github.Repository(repo) for repo in data
 
-      callback @repos
+          callback @repos
