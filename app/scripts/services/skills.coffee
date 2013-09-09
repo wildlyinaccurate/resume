@@ -18,11 +18,10 @@ class SkillsService
     ]),
 
     new Skill('JavaScript', [
-      'Angular',
+      'AngularJS',
       'jQuery',
       'Knockout',
-      'Backbone',
-      'YUI'
+      'CoffeeScript'
     ]),
 
     new Skill('Version control', [
@@ -33,16 +32,17 @@ class SkillsService
     new Skill('Testing', [
       'PHPUnit',
       'Behat',
-      'Mocha',
-      'Karma'
+      'Jasmine',
+      'Roundup'
     ]),
 
     new Skill('Server administration', [
+      'Vagrant',
+      'Chef',
       'Nginx',
       'Apache',
       'MySQL',
-      'Monitoring',
-      'Security'
+      'Munin'
     ])
   ]
 
