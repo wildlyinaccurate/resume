@@ -8,17 +8,3 @@
 .intro {
   background-color: rgba($gray-lighter, 0.85);
 }
-
-@media (min-width: 979px) {
-  // Add margin below navigation on wide screens
-  .intro-wrap {
-    padding-top: 80px;
-  }
-}
-
-@media (max-width: 767px) {
-  .intro-wrap {
-    margin: -20px;
-    padding: 20px;
-  }
-}
