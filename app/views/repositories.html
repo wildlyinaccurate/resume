@@ -7,14 +7,17 @@
 <div class="well repository" ng-hide="repository.fork && ! showForks" ng-repeat="repository in repositories">
     <div class="row">
         <div class="col-md-8">
-            <h4><a href="{{repository.html_url}}">{{repository.name}}</a></h4>
+            <h4>
+                <i ng-show="repository.fork" class="fa fa-code-fork fa-lg"></i>
+                <a href="{{repository.html_url}}">{{repository.name}}</a>
+            </h4>
             <p>{{repository.description}}<p>
         </div>
         <div class="col-md-2">
-            <h4><i class="icon-star"></i> &nbsp; {{repository.watchers}}</h4>
+            <h4><i class="fa fa-star"></i> &nbsp; {{repository.watchers}}</h4>
         </div>
         <div class="col-md-2">
-            <h4><i class="icon-random"></i> &nbsp; {{repository.forks}}</h4>
+            <h4><i class="fa fa-code-fork"></i> &nbsp; {{repository.forks}}</h4>
         </div>
     </div>
 </div>
