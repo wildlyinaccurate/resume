@@ -33,10 +33,6 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/scripts/**/*.coffee'],
         tasks: ['coffee:dist']
       },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
@@ -81,16 +77,6 @@ module.exports = function (grunt) {
               lrSnippet,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, yeomanConfig.app)
-            ];
-          }
-        }
-      },
-      test: {
-        options: {
-          middleware: function (connect) {
-            return [
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')
             ];
           }
         }
@@ -145,15 +131,6 @@ module.exports = function (grunt) {
           dest: '.tmp/scripts',
           ext: '.js'
         }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '{,*/}*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
       }
     },
     compass: {
@@ -170,7 +147,11 @@ module.exports = function (grunt) {
         httpFontsPath: '/styles/fonts',
         relativeAssets: false
       },
-      dist: {},
+      dist: {
+        options: {
+          cssDir: '<%= yeoman.dist %>/styles'
+        }
+      },
       server: {
         options: {
           debugInfo: true
@@ -287,11 +268,6 @@ module.exports = function (grunt) {
         'compass:server',
         'copy:styles'
       ],
-      test: [
-        'coffee',
-        'compass',
-        'copy:styles'
-      ],
       dist: [
         'coffee',
         'compass:dist',
@@ -300,12 +276,6 @@ module.exports = function (grunt) {
         'svgmin',
         'htmlmin'
       ]
-    },
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      }
     },
     cdnify: {
       dist: {
@@ -325,9 +295,8 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
-          ]
+          '<%= yeoman.dist %>/scripts/vendor.js': ['<%= yeoman.dist %>/scripts/vendor.js'],
+          '<%= yeoman.dist %>/scripts/app.js': ['<%= yeoman.dist %>/scripts/app.js'],
         }
       }
     }
@@ -348,14 +317,6 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('test', [
-    'clean:server',
-    'concurrent:test',
-    'autoprefixer',
-    'connect:test',
-    'karma'
-  ]);
-
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
@@ -372,7 +333,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'jshint',
-    'test',
     'build'
   ]);
 };
