@@ -14,7 +14,7 @@ class SkillsService
       'HTML5',
       'CSS3',
       'Performance',
-      'Mobile optimisation'
+      'Mobile Optimisation'
     ]),
 
     new Skill('JavaScript', [
@@ -24,19 +24,22 @@ class SkillsService
       'CoffeeScript'
     ]),
 
-    new Skill('Version control', [
-      'Git',
-      'SVN',
-    ]),
-
     new Skill('Testing', [
       'PHPUnit',
+      'Mockery',
       'Behat',
       'Jasmine',
-      'Roundup'
+      'Sinon'
     ]),
 
-    new Skill('Server administration', [
+    new Skill('Workflow', [
+      'Git',
+      'Vagrant',
+      'Grunt',
+      'Jenkins'
+    ]),
+
+    new Skill('Server Administration', [
       'Vagrant',
       'Chef',
       'Nginx',
