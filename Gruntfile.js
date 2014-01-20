@@ -289,6 +289,8 @@ module.exports = function (grunt) {
         base: 'dist'
       },
       src: [
+        'CNAME',
+        'favicon.ico',
         'index.html',
         'images/*',
         'scripts/*',
