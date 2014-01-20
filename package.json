@@ -26,7 +26,8 @@
     "load-grunt-tasks": "~0.1",
     "connect-livereload": "~0.2",
     "grunt-ngmin": "~0.0.3",
-    "time-grunt": "~0.1"
+    "time-grunt": "~0.1",
+    "grunt-gh-pages": "~0.8"
   },
   "engines": {
     "node": ">=0.8"

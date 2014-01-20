@@ -283,6 +283,20 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/app.js': ['<%= yeoman.dist %>/scripts/app.js'],
         }
       }
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: [
+        'index.html',
+        'images/*',
+        'scripts/*',
+        'styles/*',
+        'views/*',
+        'bower_components/es5-shim/es5-shim.js',
+        'bower_components/json3/lib/json3.js'
+      ]
     }
   });
 
@@ -311,7 +325,8 @@ module.exports = function (grunt) {
     'ngmin',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'gh-pages'
   ]);
 
   grunt.registerTask('default', [
