@@ -2,8 +2,16 @@
 
 class EmploymentHistoryService
   all: ->
-    ipc_senior = new Role 'Senior Developer', new Date('2013-09-01')
-    ipc_senior.setEmployer new Employer('IPC Media', 'http://www.ipcmedia.com/')
+    rightster = new Role 'Senior Developer', new Date('2013-12-01')
+    rightster.setEmployer new Employer('Rightster', 'http://rightster.com/')
+    rightster.setDescription """
+    I am currently working with team of talented developers building Rightster's next-generation video distribution platform. We're using Zend Framework 2 to power our application, and AngularJS to create amazing user interfaces.
+    """
+
+    ipc_media = new Employer('IPC Media', 'http://www.ipcmedia.com/')
+
+    ipc_senior = new Role 'Senior Developer', new Date('2013-09-01'), new Date('2013-12-01')
+    ipc_senior.setEmployer ipc_media
     ipc_senior.setDescription """
     I helped to define a Git workflow during our department's move from SVN to Git, and supported other teams throughout the migration.<br>
     <br>
@@ -11,7 +19,7 @@ class EmploymentHistoryService
     """
 
     ipc = new Role 'Developer', new Date('2012-05-01'), new Date('2013-09-01')
-    ipc.setEmployer new Employer('IPC Media', 'http://www.ipcmedia.com/')
+    ipc.setEmployer ipc_media
     ipc.setDescription """
     Our team developed and maintained the platform which serves the mobile version of several websites including <a href="http://www.marieclaire.co.uk/">Marie Claire</a> and <a href="http://www.goodtoknow.co.uk/">goodtoknow</a>.
     The platform is built on Symfony2 and works as an API client by retrieving data from the desktop version of each website.<br>
@@ -43,7 +51,7 @@ class EmploymentHistoryService
     Some of the websites I worked on are <a href="http://www.prologue.co.nz/">Prologue</a>, <a href="http://www.2feettall.com/">2FeetTall</a> and <a href="http://www.bali-direct-villa.com/">Villa Puri Indah</a>.
     """
 
-    [ipc_senior, ipc, chroma, zeevo, mind_media]
+    [rightster, ipc_senior, ipc, chroma, zeevo, mind_media]
 
 angular.module('resumeApp').factory 'employmentHistoryService', ->
   new EmploymentHistoryService
