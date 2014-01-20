@@ -39,8 +39,7 @@ class SkillsService
       'Jenkins'
     ]),
 
-    new Skill('Server Administration', [
-      'Vagrant',
+    new Skill('System Administration', [
       'Chef',
       'Nginx',
       'Apache',
