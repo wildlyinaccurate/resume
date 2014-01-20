@@ -1,0 +1,10 @@
+<div class="row" ng-repeat="skill in skills">
+    <div class="col-md-12">
+        <h4>{{skill.name}}</h4>
+        <p>
+            <span ng-repeat="subSkill in skill.subSkills">
+                <span class="label label-info">{{subSkill}}</span>
+            </span>
+        </p>
+    </div>
+</div>

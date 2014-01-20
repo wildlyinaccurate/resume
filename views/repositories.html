@@ -1,0 +1,25 @@
+<h2>GitHub Repositories</h2>
+
+<p>Below are some of my popular GitHub repositories. The source code for this website is <a href="https://github.com/wildlyinaccurate/resume">also on GitHub</a>.</p>
+
+<div class="progress progress-striped active" ng-hide="repositories">
+    <div class="progress-bar progress-bar-info" role="progressbar" style="width: 100%">Loading repositories...</div>
+</div>
+
+<div class="well repository" ng-hide="repository.fork && ! showForks" ng-repeat="repository in repositories">
+    <div class="row">
+        <div class="col-md-8">
+            <h4>
+                <i ng-show="repository.fork" class="fa fa-code-fork fa-lg"></i>
+                <a href="{{repository.html_url}}">{{repository.name}}</a>
+            </h4>
+            <p>{{repository.description}}</p><p>
+        </p></div>
+        <div class="col-md-2">
+            <h4><i class="fa fa-star"></i> &nbsp; {{repository.watchers}}</h4>
+        </div>
+        <div class="col-md-2">
+            <h4><i class="fa fa-code-fork"></i> &nbsp; {{repository.forks}}</h4>
+        </div>
+    </div>
+</div>
