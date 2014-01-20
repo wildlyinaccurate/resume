@@ -44,14 +44,7 @@ class EmploymentHistoryService
     I was also involved in designing and building a secure file sharing application using the Dropbox API.
     """
 
-    mind_media = new Role 'Developer', new Date('2008-04-01'), new Date('2010-06-01')
-    mind_media.setEmployer new Employer 'Mind Media', 'http://www.mindmedia.co.nz/'
-    mind_media.setDescription """
-    At Mind Media I built websites using Wordpress and bespoke PHP systems.
-    Some of the websites I worked on are <a href="http://www.prologue.co.nz/">Prologue</a>, <a href="http://www.2feettall.com/">2FeetTall</a> and <a href="http://www.bali-direct-villa.com/">Villa Puri Indah</a>.
-    """
-
-    [rightster, ipc_senior, ipc, chroma, zeevo, mind_media]
+    [rightster, ipc_senior, ipc, chroma, zeevo]
 
 angular.module('resumeApp').factory 'employmentHistoryService', ->
   new EmploymentHistoryService
