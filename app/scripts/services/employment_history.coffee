@@ -5,7 +5,7 @@ class EmploymentHistoryService
     rightster = new Role 'Senior Developer', new Date('2013-12-01')
     rightster.setEmployer new Employer('Rightster', 'http://rightster.com/')
     rightster.setDescription """
-    I am currently working with team of talented developers building Rightster's next-generation video distribution platform. We're using Zend Framework 2 to power our application, and AngularJS to create amazing user interfaces.
+    I am currently working with a team of talented developers building Rightster's next-generation video distribution platform. We're using Zend Framework 2 to power our application, and AngularJS to create amazing user interfaces.
     """
 
     ipc_media = new Employer('IPC Media', 'http://www.ipcmedia.com/')
