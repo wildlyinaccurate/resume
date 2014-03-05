@@ -329,7 +329,11 @@ module.exports = function (grunt) {
     'ngmin',
     'uglify',
     'rev',
-    'usemin',
+    'usemin'
+  ]);
+
+  grunt.registerTask('release', [
+    'build',
     'gh-pages'
   ]);
 
