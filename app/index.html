@@ -35,7 +35,7 @@
             </div>
         </nav>
 
-        <div class="intro-wrap">
+        <div class="intro-wrap" ng-controller="introController">
             <div class="container">
                 <div class="row jumbotron intro">
                     <p>
@@ -44,6 +44,16 @@
                     <p>
                         Outside of programming I enjoy cooking, running, rock climbing and playing guitar. I'm also a self-confessed beer enthusiast and wine snob. I sometimes blog at <a href="http://wildlyinaccurate.com/">Wildly Inaccurate</a>.
                     </p>
+                    <p>
+                        I am currently <strong>looking for work</strong>. If you think you'd like to work with me, <a href ng-click="showContactDetails = true">let's talk</a>.
+                    </p>
+
+                    <div class="contact-details ng-cloak" ng-show="showContactDetails">
+                        <h2>Contact Me</h2>
+
+                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:{{ emailAddress }}">{{ emailAddress}}</a></p>
+                        <p><i class="fa fa-twitter"></i> <a href="https://twitter.com/Joseph_Wynn">@Joseph_Wynn</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -91,6 +101,7 @@
         <script src="scripts/services/skills.js"></script>
         <script src="scripts/services/employment_history.js"></script>
 
+        <script src="scripts/controllers/intro.js"></script>
         <script src="scripts/controllers/skills.js"></script>
         <script src="scripts/controllers/employment_history.js"></script>
         <script src="scripts/controllers/github_repositories.js"></script>
