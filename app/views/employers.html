@@ -2,11 +2,11 @@
     <div class="col-md-4">
         {{role.startDate | date:'MMMM y'}} &ndash;
         <span ng-hide="role.endDate">Present</span>
-        {{role.endDate | date:'MMMM y'}}
+        <span ng-show="role.endDate">{{role.endDate | date:'MMMM y'}}</span>
     </div>
     <div class="col-md-8">
         <p>
-            <b>{{role.title}}</b>
+            <strong>{{role.title}}</strong>
             <span ng-show="role.employer">at <a href="{{role.employer.url}}">{{role.employer.name}}</a></span>
         </p>
         <p ng-bind-html="role.description"></p>
