@@ -2,7 +2,12 @@
 
 class EmploymentHistoryService
   all: ->
-    rightster = new Role 'Senior Developer', new Date('2013-12-01')
+    bbc = new Role 'Senior Developer', new Date('2014-08-01')
+    bbc.setEmployer new Employer('BBC', 'http://www.bbc.co.uk/')
+    bbc.setDescription """
+    """
+
+    rightster = new Role 'Senior Developer', new Date('2013-12-01'), new Date('2014-08-01')
     rightster.setEmployer new Employer('Rightster', 'http://rightster.com/')
     rightster.setDescription """
     I am currently working with a team of talented developers building Rightster's next-generation video distribution platform. We're using Zend Framework 2 to power our application, and AngularJS to create amazing user interfaces.
@@ -44,7 +49,7 @@ class EmploymentHistoryService
     I was also involved in designing and building a secure file sharing application using the Dropbox API.
     """
 
-    [rightster, ipc_senior, ipc, chroma, zeevo]
+    [bbc, rightster, ipc_senior, ipc, chroma, zeevo]
 
 angular.module('resumeApp').factory 'employmentHistoryService', ->
   new EmploymentHistoryService
