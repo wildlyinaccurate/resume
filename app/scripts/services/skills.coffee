@@ -7,13 +7,14 @@ class SkillsService
       'Doctrine',
       'Laravel',
       'Slim',
-      'SPL'
+      'SPL',
+      'HHVM'
     ]),
 
     new Skill('JavaScript', [
       'AngularJS',
       'jQuery',
-      'Knockout',
+      'Lodash / Underscore',
       'CoffeeScript'
     ]),
 
@@ -35,7 +36,7 @@ class SkillsService
 
     new Skill('Databases', [
       'MySQL',
-      'Postgres'
+      'PostgreSQL'
     ]),
 
     new Skill('Web Servers', [
@@ -51,7 +52,7 @@ class SkillsService
       'Jenkins'
     ]),
 
-    new Skill('System Administration', [
+    new Skill('DevOps', [
       'Puppet',
       'Chef',
       'Munin'
