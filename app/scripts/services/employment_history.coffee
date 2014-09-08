@@ -3,8 +3,9 @@
 class EmploymentHistoryService
   all: ->
     bbc = new Role 'Senior Developer', new Date('2014-08-01')
-    bbc.setEmployer new Employer('BBC', 'http://www.bbc.co.uk/')
+    bbc.setEmployer new Employer('BBC News', 'http://www.bbc.co.uk/news')
     bbc.setDescription """
+    I currently work for BBC's world services team, who are responsible for the 36 non-English BBC News websites. Our biggest challenge right now is rolling out the responsive version of the BBC News website for all of these services.
     """
 
     rightster = new Role 'Senior Developer', new Date('2013-12-01'), new Date('2014-08-01')
@@ -20,15 +21,15 @@ class EmploymentHistoryService
     ipc_senior = new Role 'Senior Developer', new Date('2013-09-01'), new Date('2013-12-01')
     ipc_senior.setEmployer ipc_media
     ipc_senior.setDescription """
-    I helped to define a Git workflow during our department's move from SVN to Git, and supported other teams throughout the migration.
+    While working on IPC's mobile website platform I became interested in automated testing as a way to improve the quality of our products. I developed a smoke test tool which used PhantomJS to check for common errors and take a screenshot of each page it tested. This allowed us to find bugs much more easily, and deploy our websites with more confidence.
 
-    After pushing for Node.js on our build servers, I evangelised JavaScript unit testing by writing test suites for several of our key JavaScript projects. I also spoke to the department about JavaScript unit testing to encourage other developers to test their JavaScript. The slides for my talk are <a href="http://slid.es/wildlyinaccurate/automated-javascript-testing">available here</a>.
+    I later introduced JavaScript unit testing to the department by writing test suites for some of our projects. I demonstrated these test suites at our monthly developer gathering to encourage other teams to start writing test suites. The slides for my talk are <a href="http://slid.es/wildlyinaccurate/automated-javascript-testing">available here</a>.
     """
 
     ipc = new Role 'Developer', new Date('2012-05-01'), new Date('2013-09-01')
     ipc.setEmployer ipc_media
     ipc.setDescription """
-    Our team developed and maintained the platform which serves the mobile version of several websites including <a href="http://www.marieclaire.co.uk/">Marie Claire</a> and <a href="http://www.goodtoknow.co.uk/">goodtoknow</a>. The platform is built on Symfony2 and works as an API client by retrieving data from the desktop version of each website.
+    Our team developed and maintained the mobile website platform which serves the mobile version of several websites including <a href="http://www.marieclaire.co.uk/">Marie Claire</a> and <a href="http://www.goodtoknow.co.uk/">goodtoknow</a>. The platform is built on Symfony2 and works by consuming a JSON feed from the desktop version of each website.
 
     I was also involved in developing some interesting products including goodtoknow's <a href="http://www.goodtoknow.co.uk/recipes/myrecipes">My Recipe Book</a>, <a href="http://www.womanandhome.com/">Woman & Home</a> and <a href="http://www.nowmagazine.co.uk/">Now</a>.
     """
