@@ -10,7 +10,9 @@ class EmploymentHistoryService
     rightster = new Role 'Senior Developer', new Date('2013-12-01'), new Date('2014-08-01')
     rightster.setEmployer new Employer('Rightster', 'http://rightster.com/')
     rightster.setDescription """
-    I am currently working with a team of talented developers building Rightster's next-generation video distribution platform. We're using Zend Framework 2 to power our application, and AngularJS to create amazing user interfaces.
+    I worked with an amazing team at Rightster, building the front-end of the company's next-generation video distribution platform. We used Zend Framework 2 as a back-end & presenter layer, and made extensive use of AngularJS to build rich user interfaces.
+
+    As well as leading the JavaScript development, I helped to define a solid architecture and build process for the project's front-end. This was vitally important as the application contained over 20,000 lines of JavaScript (not including vendor code). We used RequireJS and Angular's module system to decouple the code into small, easily-testable components.
     """
 
     ipc_media = new Employer('IPC Media', 'http://www.ipcmedia.com/')
