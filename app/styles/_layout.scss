@@ -4,10 +4,14 @@
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 85px;
 }
 
 @media (max-width: $screen-sm) {
+  .navbar-brand {
+    font-size: 22px;
+  }
+
   .intro-wrap {
     padding: 10px;
   }

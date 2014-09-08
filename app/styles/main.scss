@@ -1,7 +1,6 @@
 $fa-font-path: "/bower_components/font-awesome/fonts";
 
-@import "bootstrap/variables";
-@import "themes/lumen";
+@import "bootswatch-scss/paper/variables";
 
 @import "font-awesome/scss/font-awesome";
 
@@ -18,6 +17,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import "bootstrap/jumbotron";
 @import "bootstrap/wells";
 @import "bootstrap/utilities";
+
+@import "bootswatch-scss/paper/bootswatch";
 
 @import "layout";
 @import "navigation";

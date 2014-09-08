@@ -4,6 +4,7 @@
   "dependencies": {
     "json3": "~3.2",
     "bootstrap-sass-official": "~3.2",
+    "bootswatch-scss": "master",
     "font-awesome": "~4.1",
     "es5-shim": "~2.1",
     "angular": "~1.3",
