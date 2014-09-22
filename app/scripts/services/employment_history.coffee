@@ -5,7 +5,7 @@ class EmploymentHistoryService
     bbc = new Role 'Senior Developer', new Date('2014-08-01')
     bbc.setEmployer new Employer('BBC News', 'http://www.bbc.co.uk/news')
     bbc.setDescription """
-    I currently work for BBC's world services team, who are responsible for the 36 non-English BBC News websites. Our biggest challenge right now is rolling out the responsive version of the BBC News website for all of these services.
+    I currently work for BBC's world services team, who are responsible for the 31 non-English BBC News websites. Our biggest challenge right now is rolling out the responsive version of the BBC News website for all of these services.
     """
 
     rightster = new Role 'Senior Developer', new Date('2013-12-01'), new Date('2014-08-01')
