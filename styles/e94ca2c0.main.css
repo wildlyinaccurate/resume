@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /*!
- *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
@@ -7,19 +8,17 @@
 @import url("//fonts.googleapis.com/css?family=Roboto:300,400,500");
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0");
-  src: url("/bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  src: url("/bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("/bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("/bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 4, ../../app/bower_components/font-awesome/scss/_core.scss */
 .fa {
   display: inline-block;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -85,7 +84,7 @@
 /* line 4, ../../app/bower_components/font-awesome/scss/_bordered-pulled.scss */
 .fa-border {
   padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
+  border: solid 0.08em #eee;
   border-radius: .1em;
 }
 
@@ -110,69 +109,35 @@
 
 /* line 4, ../../app/bower_components/font-awesome/scss/_spinning.scss */
 .fa-spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
 }
 
-@-moz-keyframes spin {
-  /* line 12, ../../app/bower_components/font-awesome/scss/_spinning.scss */
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-
-  /* line 13, ../../app/bower_components/font-awesome/scss/_spinning.scss */
-  100% {
-    -moz-transform: rotate(359deg);
-  }
-}
-
-@-webkit-keyframes spin {
-  /* line 16, ../../app/bower_components/font-awesome/scss/_spinning.scss */
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  /* line 17, ../../app/bower_components/font-awesome/scss/_spinning.scss */
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-@-o-keyframes spin {
-  /* line 20, ../../app/bower_components/font-awesome/scss/_spinning.scss */
-  0% {
-    -o-transform: rotate(0deg);
-  }
-
-  /* line 21, ../../app/bower_components/font-awesome/scss/_spinning.scss */
-  100% {
-    -o-transform: rotate(359deg);
-  }
-}
-
-@keyframes spin {
-  /* line 24, ../../app/bower_components/font-awesome/scss/_spinning.scss */
+@-webkit-keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
-  /* line 28, ../../app/bower_components/font-awesome/scss/_spinning.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
-
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 /* line 4, ../../app/bower_components/font-awesome/scss/_rotated-flipped.scss */
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -180,9 +145,7 @@
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -190,9 +153,7 @@
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
@@ -200,9 +161,7 @@
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
-  -moz-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
@@ -210,10 +169,17 @@
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
-  -moz-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
-  -o-transform: scale(1, -1);
   transform: scale(1, -1);
+}
+
+/* line 14, ../../app/bower_components/font-awesome/scss/_rotated-flipped.scss */
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none;
 }
 
 /* line 4, ../../app/bower_components/font-awesome/scss/_stacked.scss */
@@ -246,1585 +212,1588 @@
 
 /* line 20, ../../app/bower_components/font-awesome/scss/_stacked.scss */
 .fa-inverse {
-  color: white;
+  color: #fff;
 }
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 /* line 4, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-glass:before {
-  content: "\f000";
+  content: "";
 }
 
 /* line 5, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-music:before {
-  content: "\f001";
+  content: "";
 }
 
 /* line 6, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-search:before {
-  content: "\f002";
+  content: "";
 }
 
 /* line 7, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-envelope-o:before {
-  content: "\f003";
+  content: "";
 }
 
 /* line 8, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-heart:before {
-  content: "\f004";
+  content: "";
 }
 
 /* line 9, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-star:before {
-  content: "\f005";
+  content: "";
 }
 
 /* line 10, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-star-o:before {
-  content: "\f006";
+  content: "";
 }
 
 /* line 11, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-user:before {
-  content: "\f007";
+  content: "";
 }
 
 /* line 12, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-film:before {
-  content: "\f008";
+  content: "";
 }
 
 /* line 13, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-th-large:before {
-  content: "\f009";
+  content: "";
 }
 
 /* line 14, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-th:before {
-  content: "\f00a";
+  content: "";
 }
 
 /* line 15, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-th-list:before {
-  content: "\f00b";
+  content: "";
 }
 
 /* line 16, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-check:before {
-  content: "\f00c";
+  content: "";
 }
 
 /* line 17, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-remove:before,
+.fa-close:before,
 .fa-times:before {
-  content: "\f00d";
-}
-
-/* line 18, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-search-plus:before {
-  content: "\f00e";
-}
-
-/* line 19, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-search-minus:before {
-  content: "\f010";
+  content: "";
 }
 
 /* line 20, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-power-off:before {
-  content: "\f011";
+.fa-search-plus:before {
+  content: "";
 }
 
 /* line 21, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-signal:before {
-  content: "\f012";
+.fa-search-minus:before {
+  content: "";
+}
+
+/* line 22, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-power-off:before {
+  content: "";
 }
 
 /* line 23, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-gear:before,
-.fa-cog:before {
-  content: "\f013";
+.fa-signal:before {
+  content: "";
 }
 
 /* line 24, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-trash-o:before {
-  content: "\f014";
-}
-
-/* line 25, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-home:before {
-  content: "\f015";
+.fa-gear:before,
+.fa-cog:before {
+  content: "";
 }
 
 /* line 26, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-o:before {
-  content: "\f016";
+.fa-trash-o:before {
+  content: "";
 }
 
 /* line 27, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-clock-o:before {
-  content: "\f017";
+.fa-home:before {
+  content: "";
 }
 
 /* line 28, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-road:before {
-  content: "\f018";
+.fa-file-o:before {
+  content: "";
 }
 
 /* line 29, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-download:before {
-  content: "\f019";
+.fa-clock-o:before {
+  content: "";
 }
 
 /* line 30, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-o-down:before {
-  content: "\f01a";
+.fa-road:before {
+  content: "";
 }
 
 /* line 31, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-o-up:before {
-  content: "\f01b";
+.fa-download:before {
+  content: "";
 }
 
 /* line 32, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-inbox:before {
-  content: "\f01c";
+.fa-arrow-circle-o-down:before {
+  content: "";
 }
 
 /* line 33, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-play-circle-o:before {
-  content: "\f01d";
+.fa-arrow-circle-o-up:before {
+  content: "";
+}
+
+/* line 34, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-inbox:before {
+  content: "";
 }
 
 /* line 35, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-rotate-right:before,
-.fa-repeat:before {
-  content: "\f01e";
+.fa-play-circle-o:before {
+  content: "";
 }
 
 /* line 36, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-refresh:before {
-  content: "\f021";
-}
-
-/* line 37, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-list-alt:before {
-  content: "\f022";
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "";
 }
 
 /* line 38, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-lock:before {
-  content: "\f023";
+.fa-refresh:before {
+  content: "";
 }
 
 /* line 39, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-flag:before {
-  content: "\f024";
+.fa-list-alt:before {
+  content: "";
 }
 
 /* line 40, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-headphones:before {
-  content: "\f025";
+.fa-lock:before {
+  content: "";
 }
 
 /* line 41, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-volume-off:before {
-  content: "\f026";
+.fa-flag:before {
+  content: "";
 }
 
 /* line 42, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-volume-down:before {
-  content: "\f027";
+.fa-headphones:before {
+  content: "";
 }
 
 /* line 43, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-volume-up:before {
-  content: "\f028";
+.fa-volume-off:before {
+  content: "";
 }
 
 /* line 44, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-qrcode:before {
-  content: "\f029";
+.fa-volume-down:before {
+  content: "";
 }
 
 /* line 45, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-barcode:before {
-  content: "\f02a";
+.fa-volume-up:before {
+  content: "";
 }
 
 /* line 46, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tag:before {
-  content: "\f02b";
+.fa-qrcode:before {
+  content: "";
 }
 
 /* line 47, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tags:before {
-  content: "\f02c";
+.fa-barcode:before {
+  content: "";
 }
 
 /* line 48, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-book:before {
-  content: "\f02d";
+.fa-tag:before {
+  content: "";
 }
 
 /* line 49, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bookmark:before {
-  content: "\f02e";
+.fa-tags:before {
+  content: "";
 }
 
 /* line 50, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-print:before {
-  content: "\f02f";
+.fa-book:before {
+  content: "";
 }
 
 /* line 51, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-camera:before {
-  content: "\f030";
+.fa-bookmark:before {
+  content: "";
 }
 
 /* line 52, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-font:before {
-  content: "\f031";
+.fa-print:before {
+  content: "";
 }
 
 /* line 53, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bold:before {
-  content: "\f032";
+.fa-camera:before {
+  content: "";
 }
 
 /* line 54, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-italic:before {
-  content: "\f033";
+.fa-font:before {
+  content: "";
 }
 
 /* line 55, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-text-height:before {
-  content: "\f034";
+.fa-bold:before {
+  content: "";
 }
 
 /* line 56, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-text-width:before {
-  content: "\f035";
+.fa-italic:before {
+  content: "";
 }
 
 /* line 57, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-align-left:before {
-  content: "\f036";
+.fa-text-height:before {
+  content: "";
 }
 
 /* line 58, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-align-center:before {
-  content: "\f037";
+.fa-text-width:before {
+  content: "";
 }
 
 /* line 59, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-align-right:before {
-  content: "\f038";
+.fa-align-left:before {
+  content: "";
 }
 
 /* line 60, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-align-justify:before {
-  content: "\f039";
+.fa-align-center:before {
+  content: "";
 }
 
 /* line 61, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-list:before {
-  content: "\f03a";
+.fa-align-right:before {
+  content: "";
+}
+
+/* line 62, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-align-justify:before {
+  content: "";
 }
 
 /* line 63, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-dedent:before,
-.fa-outdent:before {
-  content: "\f03b";
+.fa-list:before {
+  content: "";
 }
 
 /* line 64, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-indent:before {
-  content: "\f03c";
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "";
 }
 
-/* line 65, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 66, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-indent:before {
+  content: "";
+}
+
+/* line 67, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-video-camera:before {
-  content: "\f03d";
+  content: "";
 }
 
 /* line 68, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-photo:before,
 .fa-image:before,
 .fa-picture-o:before {
-  content: "\f03e";
-}
-
-/* line 69, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pencil:before {
-  content: "\f040";
-}
-
-/* line 70, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-map-marker:before {
-  content: "\f041";
+  content: "";
 }
 
 /* line 71, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-adjust:before {
-  content: "\f042";
+.fa-pencil:before {
+  content: "";
 }
 
 /* line 72, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tint:before {
-  content: "\f043";
+.fa-map-marker:before {
+  content: "";
+}
+
+/* line 73, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-adjust:before {
+  content: "";
 }
 
 /* line 74, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-edit:before,
-.fa-pencil-square-o:before {
-  content: "\f044";
+.fa-tint:before {
+  content: "";
 }
 
 /* line 75, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-share-square-o:before {
-  content: "\f045";
-}
-
-/* line 76, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-check-square-o:before {
-  content: "\f046";
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "";
 }
 
 /* line 77, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrows:before {
-  content: "\f047";
+.fa-share-square-o:before {
+  content: "";
 }
 
 /* line 78, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-step-backward:before {
-  content: "\f048";
+.fa-check-square-o:before {
+  content: "";
 }
 
 /* line 79, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-fast-backward:before {
-  content: "\f049";
+.fa-arrows:before {
+  content: "";
 }
 
 /* line 80, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-backward:before {
-  content: "\f04a";
+.fa-step-backward:before {
+  content: "";
 }
 
 /* line 81, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-play:before {
-  content: "\f04b";
+.fa-fast-backward:before {
+  content: "";
 }
 
 /* line 82, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pause:before {
-  content: "\f04c";
+.fa-backward:before {
+  content: "";
 }
 
 /* line 83, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-stop:before {
-  content: "\f04d";
+.fa-play:before {
+  content: "";
 }
 
 /* line 84, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-forward:before {
-  content: "\f04e";
+.fa-pause:before {
+  content: "";
 }
 
 /* line 85, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-fast-forward:before {
-  content: "\f050";
+.fa-stop:before {
+  content: "";
 }
 
 /* line 86, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-step-forward:before {
-  content: "\f051";
+.fa-forward:before {
+  content: "";
 }
 
 /* line 87, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-eject:before {
-  content: "\f052";
+.fa-fast-forward:before {
+  content: "";
 }
 
 /* line 88, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-left:before {
-  content: "\f053";
+.fa-step-forward:before {
+  content: "";
 }
 
 /* line 89, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-right:before {
-  content: "\f054";
+.fa-eject:before {
+  content: "";
 }
 
 /* line 90, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-plus-circle:before {
-  content: "\f055";
+.fa-chevron-left:before {
+  content: "";
 }
 
 /* line 91, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-minus-circle:before {
-  content: "\f056";
+.fa-chevron-right:before {
+  content: "";
 }
 
 /* line 92, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-times-circle:before {
-  content: "\f057";
+.fa-plus-circle:before {
+  content: "";
 }
 
 /* line 93, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-check-circle:before {
-  content: "\f058";
+.fa-minus-circle:before {
+  content: "";
 }
 
 /* line 94, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-question-circle:before {
-  content: "\f059";
+.fa-times-circle:before {
+  content: "";
 }
 
 /* line 95, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-info-circle:before {
-  content: "\f05a";
+.fa-check-circle:before {
+  content: "";
 }
 
 /* line 96, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-crosshairs:before {
-  content: "\f05b";
+.fa-question-circle:before {
+  content: "";
 }
 
 /* line 97, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-times-circle-o:before {
-  content: "\f05c";
+.fa-info-circle:before {
+  content: "";
 }
 
 /* line 98, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-check-circle-o:before {
-  content: "\f05d";
+.fa-crosshairs:before {
+  content: "";
 }
 
 /* line 99, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ban:before {
-  content: "\f05e";
+.fa-times-circle-o:before {
+  content: "";
 }
 
 /* line 100, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-left:before {
-  content: "\f060";
+.fa-check-circle-o:before {
+  content: "";
 }
 
 /* line 101, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-right:before {
-  content: "\f061";
+.fa-ban:before {
+  content: "";
 }
 
 /* line 102, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-up:before {
-  content: "\f062";
+.fa-arrow-left:before {
+  content: "";
 }
 
 /* line 103, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-down:before {
-  content: "\f063";
+.fa-arrow-right:before {
+  content: "";
+}
+
+/* line 104, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-arrow-up:before {
+  content: "";
 }
 
 /* line 105, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-mail-forward:before,
-.fa-share:before {
-  content: "\f064";
+.fa-arrow-down:before {
+  content: "";
 }
 
 /* line 106, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-expand:before {
-  content: "\f065";
-}
-
-/* line 107, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-compress:before {
-  content: "\f066";
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "";
 }
 
 /* line 108, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-plus:before {
-  content: "\f067";
+.fa-expand:before {
+  content: "";
 }
 
 /* line 109, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-minus:before {
-  content: "\f068";
+.fa-compress:before {
+  content: "";
 }
 
 /* line 110, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-asterisk:before {
-  content: "\f069";
+.fa-plus:before {
+  content: "";
 }
 
 /* line 111, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-exclamation-circle:before {
-  content: "\f06a";
+.fa-minus:before {
+  content: "";
 }
 
 /* line 112, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-gift:before {
-  content: "\f06b";
+.fa-asterisk:before {
+  content: "";
 }
 
 /* line 113, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-leaf:before {
-  content: "\f06c";
+.fa-exclamation-circle:before {
+  content: "";
 }
 
 /* line 114, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-fire:before {
-  content: "\f06d";
+.fa-gift:before {
+  content: "";
 }
 
 /* line 115, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-eye:before {
-  content: "\f06e";
+.fa-leaf:before {
+  content: "";
 }
 
 /* line 116, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-eye-slash:before {
-  content: "\f070";
+.fa-fire:before {
+  content: "";
+}
+
+/* line 117, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-eye:before {
+  content: "";
 }
 
 /* line 118, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-warning:before,
-.fa-exclamation-triangle:before {
-  content: "\f071";
+.fa-eye-slash:before {
+  content: "";
 }
 
 /* line 119, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-plane:before {
-  content: "\f072";
-}
-
-/* line 120, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-calendar:before {
-  content: "\f073";
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "";
 }
 
 /* line 121, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-random:before {
-  content: "\f074";
+.fa-plane:before {
+  content: "";
 }
 
 /* line 122, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-comment:before {
-  content: "\f075";
+.fa-calendar:before {
+  content: "";
 }
 
 /* line 123, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-magnet:before {
-  content: "\f076";
+.fa-random:before {
+  content: "";
 }
 
 /* line 124, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-up:before {
-  content: "\f077";
+.fa-comment:before {
+  content: "";
 }
 
 /* line 125, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-down:before {
-  content: "\f078";
+.fa-magnet:before {
+  content: "";
 }
 
 /* line 126, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-retweet:before {
-  content: "\f079";
+.fa-chevron-up:before {
+  content: "";
 }
 
 /* line 127, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-shopping-cart:before {
-  content: "\f07a";
+.fa-chevron-down:before {
+  content: "";
 }
 
 /* line 128, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-folder:before {
-  content: "\f07b";
+.fa-retweet:before {
+  content: "";
 }
 
 /* line 129, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-folder-open:before {
-  content: "\f07c";
+.fa-shopping-cart:before {
+  content: "";
 }
 
 /* line 130, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrows-v:before {
-  content: "\f07d";
+.fa-folder:before {
+  content: "";
 }
 
 /* line 131, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrows-h:before {
-  content: "\f07e";
+.fa-folder-open:before {
+  content: "";
 }
 
 /* line 132, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bar-chart-o:before {
-  content: "\f080";
+.fa-arrows-v:before {
+  content: "";
 }
 
 /* line 133, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-twitter-square:before {
-  content: "\f081";
+.fa-arrows-h:before {
+  content: "";
 }
 
 /* line 134, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-facebook-square:before {
-  content: "\f082";
-}
-
-/* line 135, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-camera-retro:before {
-  content: "\f083";
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "";
 }
 
 /* line 136, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-key:before {
-  content: "\f084";
+.fa-twitter-square:before {
+  content: "";
+}
+
+/* line 137, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-facebook-square:before {
+  content: "";
 }
 
 /* line 138, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-gears:before,
-.fa-cogs:before {
-  content: "\f085";
+.fa-camera-retro:before {
+  content: "";
 }
 
 /* line 139, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-comments:before {
-  content: "\f086";
+.fa-key:before {
+  content: "";
 }
 
 /* line 140, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-thumbs-o-up:before {
-  content: "\f087";
-}
-
-/* line 141, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-thumbs-o-down:before {
-  content: "\f088";
+.fa-gears:before,
+.fa-cogs:before {
+  content: "";
 }
 
 /* line 142, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-star-half:before {
-  content: "\f089";
+.fa-comments:before {
+  content: "";
 }
 
 /* line 143, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-heart-o:before {
-  content: "\f08a";
+.fa-thumbs-o-up:before {
+  content: "";
 }
 
 /* line 144, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sign-out:before {
-  content: "\f08b";
+.fa-thumbs-o-down:before {
+  content: "";
 }
 
 /* line 145, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-linkedin-square:before {
-  content: "\f08c";
+.fa-star-half:before {
+  content: "";
 }
 
 /* line 146, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-thumb-tack:before {
-  content: "\f08d";
+.fa-heart-o:before {
+  content: "";
 }
 
 /* line 147, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-external-link:before {
-  content: "\f08e";
+.fa-sign-out:before {
+  content: "";
 }
 
 /* line 148, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sign-in:before {
-  content: "\f090";
+.fa-linkedin-square:before {
+  content: "";
 }
 
 /* line 149, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-trophy:before {
-  content: "\f091";
+.fa-thumb-tack:before {
+  content: "";
 }
 
 /* line 150, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-github-square:before {
-  content: "\f092";
+.fa-external-link:before {
+  content: "";
 }
 
 /* line 151, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-upload:before {
-  content: "\f093";
+.fa-sign-in:before {
+  content: "";
 }
 
 /* line 152, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-lemon-o:before {
-  content: "\f094";
+.fa-trophy:before {
+  content: "";
 }
 
 /* line 153, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-phone:before {
-  content: "\f095";
+.fa-github-square:before {
+  content: "";
 }
 
 /* line 154, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-square-o:before {
-  content: "\f096";
+.fa-upload:before {
+  content: "";
 }
 
 /* line 155, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bookmark-o:before {
-  content: "\f097";
+.fa-lemon-o:before {
+  content: "";
 }
 
 /* line 156, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-phone-square:before {
-  content: "\f098";
+.fa-phone:before {
+  content: "";
 }
 
 /* line 157, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-twitter:before {
-  content: "\f099";
+.fa-square-o:before {
+  content: "";
 }
 
 /* line 158, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-facebook:before {
-  content: "\f09a";
+.fa-bookmark-o:before {
+  content: "";
 }
 
 /* line 159, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-github:before {
-  content: "\f09b";
+.fa-phone-square:before {
+  content: "";
 }
 
 /* line 160, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-unlock:before {
-  content: "\f09c";
+.fa-twitter:before {
+  content: "";
 }
 
 /* line 161, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-credit-card:before {
-  content: "\f09d";
+.fa-facebook:before {
+  content: "";
 }
 
 /* line 162, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-rss:before {
-  content: "\f09e";
+.fa-github:before {
+  content: "";
 }
 
 /* line 163, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hdd-o:before {
-  content: "\f0a0";
+.fa-unlock:before {
+  content: "";
 }
 
 /* line 164, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bullhorn:before {
-  content: "\f0a1";
+.fa-credit-card:before {
+  content: "";
 }
 
 /* line 165, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bell:before {
-  content: "\f0f3";
+.fa-rss:before {
+  content: "";
 }
 
 /* line 166, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-certificate:before {
-  content: "\f0a3";
+.fa-hdd-o:before {
+  content: "";
 }
 
 /* line 167, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hand-o-right:before {
-  content: "\f0a4";
+.fa-bullhorn:before {
+  content: "";
 }
 
 /* line 168, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hand-o-left:before {
-  content: "\f0a5";
+.fa-bell:before {
+  content: "";
 }
 
 /* line 169, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hand-o-up:before {
-  content: "\f0a6";
+.fa-certificate:before {
+  content: "";
 }
 
 /* line 170, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hand-o-down:before {
-  content: "\f0a7";
+.fa-hand-o-right:before {
+  content: "";
 }
 
 /* line 171, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-left:before {
-  content: "\f0a8";
+.fa-hand-o-left:before {
+  content: "";
 }
 
 /* line 172, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-right:before {
-  content: "\f0a9";
+.fa-hand-o-up:before {
+  content: "";
 }
 
 /* line 173, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-up:before {
-  content: "\f0aa";
+.fa-hand-o-down:before {
+  content: "";
 }
 
 /* line 174, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-down:before {
-  content: "\f0ab";
+.fa-arrow-circle-left:before {
+  content: "";
 }
 
 /* line 175, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-globe:before {
-  content: "\f0ac";
+.fa-arrow-circle-right:before {
+  content: "";
 }
 
 /* line 176, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-wrench:before {
-  content: "\f0ad";
+.fa-arrow-circle-up:before {
+  content: "";
 }
 
 /* line 177, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tasks:before {
-  content: "\f0ae";
+.fa-arrow-circle-down:before {
+  content: "";
 }
 
 /* line 178, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-filter:before {
-  content: "\f0b0";
+.fa-globe:before {
+  content: "";
 }
 
 /* line 179, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-briefcase:before {
-  content: "\f0b1";
+.fa-wrench:before {
+  content: "";
 }
 
 /* line 180, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrows-alt:before {
-  content: "\f0b2";
+.fa-tasks:before {
+  content: "";
+}
+
+/* line 181, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-filter:before {
+  content: "";
 }
 
 /* line 182, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-group:before,
-.fa-users:before {
-  content: "\f0c0";
+.fa-briefcase:before {
+  content: "";
+}
+
+/* line 183, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-arrows-alt:before {
+  content: "";
 }
 
 /* line 184, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chain:before,
-.fa-link:before {
-  content: "\f0c1";
-}
-
-/* line 185, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cloud:before {
-  content: "\f0c2";
+.fa-group:before,
+.fa-users:before {
+  content: "";
 }
 
 /* line 186, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-flask:before {
-  content: "\f0c3";
+.fa-chain:before,
+.fa-link:before {
+  content: "";
 }
 
 /* line 188, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cut:before,
-.fa-scissors:before {
-  content: "\f0c4";
+.fa-cloud:before {
+  content: "";
+}
+
+/* line 189, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-flask:before {
+  content: "";
 }
 
 /* line 190, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "";
+}
+
+/* line 192, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-copy:before,
 .fa-files-o:before {
-  content: "\f0c5";
-}
-
-/* line 191, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-paperclip:before {
-  content: "\f0c6";
-}
-
-/* line 193, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-save:before,
-.fa-floppy-o:before {
-  content: "\f0c7";
+  content: "";
 }
 
 /* line 194, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-square:before {
-  content: "\f0c8";
+.fa-paperclip:before {
+  content: "";
+}
+
+/* line 195, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "";
 }
 
 /* line 197, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-navicon:before,
-.fa-reorder:before,
-.fa-bars:before {
-  content: "\f0c9";
+.fa-square:before {
+  content: "";
 }
 
 /* line 198, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-list-ul:before {
-  content: "\f0ca";
-}
-
-/* line 199, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-list-ol:before {
-  content: "\f0cb";
-}
-
-/* line 200, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-strikethrough:before {
-  content: "\f0cc";
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "";
 }
 
 /* line 201, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-underline:before {
-  content: "\f0cd";
+.fa-list-ul:before {
+  content: "";
 }
 
 /* line 202, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-table:before {
-  content: "\f0ce";
+.fa-list-ol:before {
+  content: "";
 }
 
 /* line 203, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-magic:before {
-  content: "\f0d0";
+.fa-strikethrough:before {
+  content: "";
 }
 
 /* line 204, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-truck:before {
-  content: "\f0d1";
+.fa-underline:before {
+  content: "";
 }
 
 /* line 205, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pinterest:before {
-  content: "\f0d2";
+.fa-table:before {
+  content: "";
 }
 
 /* line 206, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pinterest-square:before {
-  content: "\f0d3";
+.fa-magic:before {
+  content: "";
 }
 
 /* line 207, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-google-plus-square:before {
-  content: "\f0d4";
+.fa-truck:before {
+  content: "";
 }
 
 /* line 208, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-google-plus:before {
-  content: "\f0d5";
+.fa-pinterest:before {
+  content: "";
 }
 
 /* line 209, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-money:before {
-  content: "\f0d6";
+.fa-pinterest-square:before {
+  content: "";
 }
 
 /* line 210, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-caret-down:before {
-  content: "\f0d7";
+.fa-google-plus-square:before {
+  content: "";
 }
 
 /* line 211, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-caret-up:before {
-  content: "\f0d8";
+.fa-google-plus:before {
+  content: "";
 }
 
 /* line 212, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-caret-left:before {
-  content: "\f0d9";
+.fa-money:before {
+  content: "";
 }
 
 /* line 213, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-caret-right:before {
-  content: "\f0da";
+.fa-caret-down:before {
+  content: "";
 }
 
 /* line 214, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-columns:before {
-  content: "\f0db";
+.fa-caret-up:before {
+  content: "";
+}
+
+/* line 215, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-caret-left:before {
+  content: "";
 }
 
 /* line 216, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-unsorted:before,
-.fa-sort:before {
-  content: "\f0dc";
+.fa-caret-right:before {
+  content: "";
+}
+
+/* line 217, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-columns:before {
+  content: "";
 }
 
 /* line 218, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-down:before,
-.fa-sort-desc:before {
-  content: "\f0dd";
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "";
 }
 
 /* line 220, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-up:before,
-.fa-sort-asc:before {
-  content: "\f0de";
-}
-
-/* line 221, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-envelope:before {
-  content: "\f0e0";
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "";
 }
 
 /* line 222, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-linkedin:before {
-  content: "\f0e1";
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "";
 }
 
 /* line 224, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-rotate-left:before,
-.fa-undo:before {
-  content: "\f0e2";
+.fa-envelope:before {
+  content: "";
+}
+
+/* line 225, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-linkedin:before {
+  content: "";
 }
 
 /* line 226, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-legal:before,
-.fa-gavel:before {
-  content: "\f0e3";
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "";
 }
 
 /* line 228, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-dashboard:before,
-.fa-tachometer:before {
-  content: "\f0e4";
-}
-
-/* line 229, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-comment-o:before {
-  content: "\f0e5";
+.fa-legal:before,
+.fa-gavel:before {
+  content: "";
 }
 
 /* line 230, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-comments-o:before {
-  content: "\f0e6";
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "";
 }
 
 /* line 232, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-flash:before,
-.fa-bolt:before {
-  content: "\f0e7";
+.fa-comment-o:before {
+  content: "";
 }
 
 /* line 233, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sitemap:before {
-  content: "\f0e8";
+.fa-comments-o:before {
+  content: "";
 }
 
 /* line 234, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-umbrella:before {
-  content: "\f0e9";
+.fa-flash:before,
+.fa-bolt:before {
+  content: "";
 }
 
 /* line 236, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-paste:before,
-.fa-clipboard:before {
-  content: "\f0ea";
+.fa-sitemap:before {
+  content: "";
 }
 
 /* line 237, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-lightbulb-o:before {
-  content: "\f0eb";
+.fa-umbrella:before {
+  content: "";
 }
 
 /* line 238, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-exchange:before {
-  content: "\f0ec";
-}
-
-/* line 239, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cloud-download:before {
-  content: "\f0ed";
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "";
 }
 
 /* line 240, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cloud-upload:before {
-  content: "\f0ee";
+.fa-lightbulb-o:before {
+  content: "";
 }
 
 /* line 241, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-user-md:before {
-  content: "\f0f0";
+.fa-exchange:before {
+  content: "";
 }
 
 /* line 242, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-stethoscope:before {
-  content: "\f0f1";
+.fa-cloud-download:before {
+  content: "";
 }
 
 /* line 243, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-suitcase:before {
-  content: "\f0f2";
+.fa-cloud-upload:before {
+  content: "";
 }
 
 /* line 244, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bell-o:before {
-  content: "\f0a2";
+.fa-user-md:before {
+  content: "";
 }
 
 /* line 245, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-coffee:before {
-  content: "\f0f4";
+.fa-stethoscope:before {
+  content: "";
 }
 
 /* line 246, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cutlery:before {
-  content: "\f0f5";
+.fa-suitcase:before {
+  content: "";
 }
 
 /* line 247, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-text-o:before {
-  content: "\f0f6";
+.fa-bell-o:before {
+  content: "";
 }
 
 /* line 248, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-building-o:before {
-  content: "\f0f7";
+.fa-coffee:before {
+  content: "";
 }
 
 /* line 249, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hospital-o:before {
-  content: "\f0f8";
+.fa-cutlery:before {
+  content: "";
 }
 
 /* line 250, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ambulance:before {
-  content: "\f0f9";
+.fa-file-text-o:before {
+  content: "";
 }
 
 /* line 251, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-medkit:before {
-  content: "\f0fa";
+.fa-building-o:before {
+  content: "";
 }
 
 /* line 252, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-fighter-jet:before {
-  content: "\f0fb";
+.fa-hospital-o:before {
+  content: "";
 }
 
 /* line 253, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-beer:before {
-  content: "\f0fc";
+.fa-ambulance:before {
+  content: "";
 }
 
 /* line 254, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-h-square:before {
-  content: "\f0fd";
+.fa-medkit:before {
+  content: "";
 }
 
 /* line 255, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-plus-square:before {
-  content: "\f0fe";
+.fa-fighter-jet:before {
+  content: "";
 }
 
 /* line 256, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-double-left:before {
-  content: "\f100";
+.fa-beer:before {
+  content: "";
 }
 
 /* line 257, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-double-right:before {
-  content: "\f101";
+.fa-h-square:before {
+  content: "";
 }
 
 /* line 258, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-double-up:before {
-  content: "\f102";
+.fa-plus-square:before {
+  content: "";
 }
 
 /* line 259, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-double-down:before {
-  content: "\f103";
+.fa-angle-double-left:before {
+  content: "";
 }
 
 /* line 260, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-left:before {
-  content: "\f104";
+.fa-angle-double-right:before {
+  content: "";
 }
 
 /* line 261, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-right:before {
-  content: "\f105";
+.fa-angle-double-up:before {
+  content: "";
 }
 
 /* line 262, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-up:before {
-  content: "\f106";
+.fa-angle-double-down:before {
+  content: "";
 }
 
 /* line 263, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-angle-down:before {
-  content: "\f107";
+.fa-angle-left:before {
+  content: "";
 }
 
 /* line 264, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-desktop:before {
-  content: "\f108";
+.fa-angle-right:before {
+  content: "";
 }
 
 /* line 265, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-laptop:before {
-  content: "\f109";
+.fa-angle-up:before {
+  content: "";
 }
 
 /* line 266, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tablet:before {
-  content: "\f10a";
+.fa-angle-down:before {
+  content: "";
+}
+
+/* line 267, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-desktop:before {
+  content: "";
 }
 
 /* line 268, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-mobile-phone:before,
-.fa-mobile:before {
-  content: "\f10b";
+.fa-laptop:before {
+  content: "";
 }
 
 /* line 269, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-circle-o:before {
-  content: "\f10c";
+.fa-tablet:before {
+  content: "";
 }
 
 /* line 270, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-quote-left:before {
-  content: "\f10d";
-}
-
-/* line 271, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-quote-right:before {
-  content: "\f10e";
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "";
 }
 
 /* line 272, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-spinner:before {
-  content: "\f110";
+.fa-circle-o:before {
+  content: "";
 }
 
 /* line 273, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-circle:before {
-  content: "\f111";
+.fa-quote-left:before {
+  content: "";
+}
+
+/* line 274, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-quote-right:before {
+  content: "";
 }
 
 /* line 275, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-mail-reply:before,
-.fa-reply:before {
-  content: "\f112";
+.fa-spinner:before {
+  content: "";
 }
 
 /* line 276, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-github-alt:before {
-  content: "\f113";
+.fa-circle:before {
+  content: "";
 }
 
 /* line 277, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-folder-o:before {
-  content: "\f114";
-}
-
-/* line 278, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-folder-open-o:before {
-  content: "\f115";
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "";
 }
 
 /* line 279, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-smile-o:before {
-  content: "\f118";
+.fa-github-alt:before {
+  content: "";
 }
 
 /* line 280, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-frown-o:before {
-  content: "\f119";
+.fa-folder-o:before {
+  content: "";
 }
 
 /* line 281, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-meh-o:before {
-  content: "\f11a";
+.fa-folder-open-o:before {
+  content: "";
 }
 
 /* line 282, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-gamepad:before {
-  content: "\f11b";
+.fa-smile-o:before {
+  content: "";
 }
 
 /* line 283, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-keyboard-o:before {
-  content: "\f11c";
+.fa-frown-o:before {
+  content: "";
 }
 
 /* line 284, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-flag-o:before {
-  content: "\f11d";
+.fa-meh-o:before {
+  content: "";
 }
 
 /* line 285, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-flag-checkered:before {
-  content: "\f11e";
+.fa-gamepad:before {
+  content: "";
 }
 
 /* line 286, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-terminal:before {
-  content: "\f120";
+.fa-keyboard-o:before {
+  content: "";
 }
 
 /* line 287, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-code:before {
-  content: "\f121";
+.fa-flag-o:before {
+  content: "";
+}
+
+/* line 288, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-flag-checkered:before {
+  content: "";
 }
 
 /* line 289, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-mail-reply-all:before,
-.fa-reply-all:before {
-  content: "\f122";
+.fa-terminal:before {
+  content: "";
 }
 
-/* line 292, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-star-half-empty:before,
-.fa-star-half-full:before,
-.fa-star-half-o:before {
-  content: "\f123";
+/* line 290, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-code:before {
+  content: "";
+}
+
+/* line 291, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "";
 }
 
 /* line 293, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "";
+}
+
+/* line 296, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-location-arrow:before {
-  content: "\f124";
-}
-
-/* line 294, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-crop:before {
-  content: "\f125";
-}
-
-/* line 295, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-code-fork:before {
-  content: "\f126";
+  content: "";
 }
 
 /* line 297, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-unlink:before,
-.fa-chain-broken:before {
-  content: "\f127";
+.fa-crop:before {
+  content: "";
 }
 
 /* line 298, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-question:before {
-  content: "\f128";
+.fa-code-fork:before {
+  content: "";
 }
 
 /* line 299, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-info:before {
-  content: "\f129";
-}
-
-/* line 300, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-exclamation:before {
-  content: "\f12a";
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "";
 }
 
 /* line 301, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-superscript:before {
-  content: "\f12b";
+.fa-question:before {
+  content: "";
 }
 
 /* line 302, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-subscript:before {
-  content: "\f12c";
+.fa-info:before {
+  content: "";
 }
 
 /* line 303, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-eraser:before {
-  content: "\f12d";
+.fa-exclamation:before {
+  content: "";
 }
 
 /* line 304, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-puzzle-piece:before {
-  content: "\f12e";
+.fa-superscript:before {
+  content: "";
 }
 
 /* line 305, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-microphone:before {
-  content: "\f130";
+.fa-subscript:before {
+  content: "";
 }
 
 /* line 306, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-microphone-slash:before {
-  content: "\f131";
+.fa-eraser:before {
+  content: "";
 }
 
 /* line 307, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-shield:before {
-  content: "\f132";
+.fa-puzzle-piece:before {
+  content: "";
 }
 
 /* line 308, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-calendar-o:before {
-  content: "\f133";
+.fa-microphone:before {
+  content: "";
 }
 
 /* line 309, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-fire-extinguisher:before {
-  content: "\f134";
+.fa-microphone-slash:before {
+  content: "";
 }
 
 /* line 310, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-rocket:before {
-  content: "\f135";
+.fa-shield:before {
+  content: "";
 }
 
 /* line 311, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-maxcdn:before {
-  content: "\f136";
+.fa-calendar-o:before {
+  content: "";
 }
 
 /* line 312, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-circle-left:before {
-  content: "\f137";
+.fa-fire-extinguisher:before {
+  content: "";
 }
 
 /* line 313, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-circle-right:before {
-  content: "\f138";
+.fa-rocket:before {
+  content: "";
 }
 
 /* line 314, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-circle-up:before {
-  content: "\f139";
+.fa-maxcdn:before {
+  content: "";
 }
 
 /* line 315, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-chevron-circle-down:before {
-  content: "\f13a";
+.fa-chevron-circle-left:before {
+  content: "";
 }
 
 /* line 316, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-html5:before {
-  content: "\f13b";
+.fa-chevron-circle-right:before {
+  content: "";
 }
 
 /* line 317, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-css3:before {
-  content: "\f13c";
+.fa-chevron-circle-up:before {
+  content: "";
 }
 
 /* line 318, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-anchor:before {
-  content: "\f13d";
+.fa-chevron-circle-down:before {
+  content: "";
 }
 
 /* line 319, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-unlock-alt:before {
-  content: "\f13e";
+.fa-html5:before {
+  content: "";
 }
 
 /* line 320, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bullseye:before {
-  content: "\f140";
+.fa-css3:before {
+  content: "";
 }
 
 /* line 321, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ellipsis-h:before {
-  content: "\f141";
+.fa-anchor:before {
+  content: "";
 }
 
 /* line 322, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ellipsis-v:before {
-  content: "\f142";
+.fa-unlock-alt:before {
+  content: "";
 }
 
 /* line 323, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-rss-square:before {
-  content: "\f143";
+.fa-bullseye:before {
+  content: "";
 }
 
 /* line 324, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-play-circle:before {
-  content: "\f144";
+.fa-ellipsis-h:before {
+  content: "";
 }
 
 /* line 325, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ticket:before {
-  content: "\f145";
+.fa-ellipsis-v:before {
+  content: "";
 }
 
 /* line 326, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-minus-square:before {
-  content: "\f146";
+.fa-rss-square:before {
+  content: "";
 }
 
 /* line 327, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-minus-square-o:before {
-  content: "\f147";
+.fa-play-circle:before {
+  content: "";
 }
 
 /* line 328, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-level-up:before {
-  content: "\f148";
+.fa-ticket:before {
+  content: "";
 }
 
 /* line 329, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-level-down:before {
-  content: "\f149";
+.fa-minus-square:before {
+  content: "";
 }
 
 /* line 330, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-check-square:before {
-  content: "\f14a";
+.fa-minus-square-o:before {
+  content: "";
 }
 
 /* line 331, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pencil-square:before {
-  content: "\f14b";
+.fa-level-up:before {
+  content: "";
 }
 
 /* line 332, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-external-link-square:before {
-  content: "\f14c";
+.fa-level-down:before {
+  content: "";
 }
 
 /* line 333, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-share-square:before {
-  content: "\f14d";
+.fa-check-square:before {
+  content: "";
 }
 
 /* line 334, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-compass:before {
-  content: "\f14e";
+.fa-pencil-square:before {
+  content: "";
+}
+
+/* line 335, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-external-link-square:before {
+  content: "";
 }
 
 /* line 336, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-toggle-down:before,
-.fa-caret-square-o-down:before {
-  content: "\f150";
+.fa-share-square:before {
+  content: "";
+}
+
+/* line 337, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-compass:before {
+  content: "";
 }
 
 /* line 338, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-toggle-up:before,
-.fa-caret-square-o-up:before {
-  content: "\f151";
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "";
 }
 
 /* line 340, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-toggle-right:before,
-.fa-caret-square-o-right:before {
-  content: "\f152";
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "";
 }
 
 /* line 342, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "";
+}
+
+/* line 344, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-euro:before,
 .fa-eur:before {
-  content: "\f153";
+  content: "";
 }
 
-/* line 343, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 346, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-gbp:before {
-  content: "\f154";
-}
-
-/* line 345, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-dollar:before,
-.fa-usd:before {
-  content: "\f155";
+  content: "";
 }
 
 /* line 347, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "";
+}
+
+/* line 349, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-rupee:before,
 .fa-inr:before {
-  content: "\f156";
+  content: "";
 }
 
 /* line 351, ../../app/bower_components/font-awesome/scss/_icons.scss */
@@ -1832,685 +1801,888 @@
 .fa-rmb:before,
 .fa-yen:before,
 .fa-jpy:before {
-  content: "\f157";
+  content: "";
 }
 
-/* line 354, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 355, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-ruble:before,
 .fa-rouble:before,
 .fa-rub:before {
-  content: "\f158";
-}
-
-/* line 356, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-won:before,
-.fa-krw:before {
-  content: "\f159";
+  content: "";
 }
 
 /* line 358, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bitcoin:before,
-.fa-btc:before {
-  content: "\f15a";
-}
-
-/* line 359, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file:before {
-  content: "\f15b";
+.fa-won:before,
+.fa-krw:before {
+  content: "";
 }
 
 /* line 360, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-text:before {
-  content: "\f15c";
-}
-
-/* line 361, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-alpha-asc:before {
-  content: "\f15d";
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "";
 }
 
 /* line 362, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-alpha-desc:before {
-  content: "\f15e";
+.fa-file:before {
+  content: "";
 }
 
 /* line 363, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-amount-asc:before {
-  content: "\f160";
+.fa-file-text:before {
+  content: "";
 }
 
 /* line 364, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-amount-desc:before {
-  content: "\f161";
+.fa-sort-alpha-asc:before {
+  content: "";
 }
 
 /* line 365, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-numeric-asc:before {
-  content: "\f162";
+.fa-sort-alpha-desc:before {
+  content: "";
 }
 
 /* line 366, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sort-numeric-desc:before {
-  content: "\f163";
+.fa-sort-amount-asc:before {
+  content: "";
 }
 
 /* line 367, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-thumbs-up:before {
-  content: "\f164";
+.fa-sort-amount-desc:before {
+  content: "";
 }
 
 /* line 368, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-thumbs-down:before {
-  content: "\f165";
+.fa-sort-numeric-asc:before {
+  content: "";
 }
 
 /* line 369, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-youtube-square:before {
-  content: "\f166";
+.fa-sort-numeric-desc:before {
+  content: "";
 }
 
 /* line 370, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-youtube:before {
-  content: "\f167";
+.fa-thumbs-up:before {
+  content: "";
 }
 
 /* line 371, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-xing:before {
-  content: "\f168";
+.fa-thumbs-down:before {
+  content: "";
 }
 
 /* line 372, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-xing-square:before {
-  content: "\f169";
+.fa-youtube-square:before {
+  content: "";
 }
 
 /* line 373, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-youtube-play:before {
-  content: "\f16a";
+.fa-youtube:before {
+  content: "";
 }
 
 /* line 374, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-dropbox:before {
-  content: "\f16b";
+.fa-xing:before {
+  content: "";
 }
 
 /* line 375, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-stack-overflow:before {
-  content: "\f16c";
+.fa-xing-square:before {
+  content: "";
 }
 
 /* line 376, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-instagram:before {
-  content: "\f16d";
+.fa-youtube-play:before {
+  content: "";
 }
 
 /* line 377, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-flickr:before {
-  content: "\f16e";
+.fa-dropbox:before {
+  content: "";
 }
 
 /* line 378, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-adn:before {
-  content: "\f170";
+.fa-stack-overflow:before {
+  content: "";
 }
 
 /* line 379, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bitbucket:before {
-  content: "\f171";
+.fa-instagram:before {
+  content: "";
 }
 
 /* line 380, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bitbucket-square:before {
-  content: "\f172";
+.fa-flickr:before {
+  content: "";
 }
 
 /* line 381, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tumblr:before {
-  content: "\f173";
+.fa-adn:before {
+  content: "";
 }
 
 /* line 382, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tumblr-square:before {
-  content: "\f174";
+.fa-bitbucket:before {
+  content: "";
 }
 
 /* line 383, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-long-arrow-down:before {
-  content: "\f175";
+.fa-bitbucket-square:before {
+  content: "";
 }
 
 /* line 384, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-long-arrow-up:before {
-  content: "\f176";
+.fa-tumblr:before {
+  content: "";
 }
 
 /* line 385, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-long-arrow-left:before {
-  content: "\f177";
+.fa-tumblr-square:before {
+  content: "";
 }
 
 /* line 386, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-long-arrow-right:before {
-  content: "\f178";
+.fa-long-arrow-down:before {
+  content: "";
 }
 
 /* line 387, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-apple:before {
-  content: "\f179";
+.fa-long-arrow-up:before {
+  content: "";
 }
 
 /* line 388, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-windows:before {
-  content: "\f17a";
+.fa-long-arrow-left:before {
+  content: "";
 }
 
 /* line 389, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-android:before {
-  content: "\f17b";
+.fa-long-arrow-right:before {
+  content: "";
 }
 
 /* line 390, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-linux:before {
-  content: "\f17c";
+.fa-apple:before {
+  content: "";
 }
 
 /* line 391, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-dribbble:before {
-  content: "\f17d";
+.fa-windows:before {
+  content: "";
 }
 
 /* line 392, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-skype:before {
-  content: "\f17e";
+.fa-android:before {
+  content: "";
 }
 
 /* line 393, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-foursquare:before {
-  content: "\f180";
+.fa-linux:before {
+  content: "";
 }
 
 /* line 394, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-trello:before {
-  content: "\f181";
+.fa-dribbble:before {
+  content: "";
 }
 
 /* line 395, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-female:before {
-  content: "\f182";
+.fa-skype:before {
+  content: "";
 }
 
 /* line 396, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-male:before {
-  content: "\f183";
+.fa-foursquare:before {
+  content: "";
 }
 
 /* line 397, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-gittip:before {
-  content: "\f184";
+.fa-trello:before {
+  content: "";
 }
 
 /* line 398, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sun-o:before {
-  content: "\f185";
+.fa-female:before {
+  content: "";
 }
 
 /* line 399, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-moon-o:before {
-  content: "\f186";
+.fa-male:before {
+  content: "";
 }
 
 /* line 400, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-archive:before {
-  content: "\f187";
+.fa-gittip:before {
+  content: "";
 }
 
 /* line 401, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bug:before {
-  content: "\f188";
+.fa-sun-o:before {
+  content: "";
 }
 
 /* line 402, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-vk:before {
-  content: "\f189";
+.fa-moon-o:before {
+  content: "";
 }
 
 /* line 403, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-weibo:before {
-  content: "\f18a";
+.fa-archive:before {
+  content: "";
 }
 
 /* line 404, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-renren:before {
-  content: "\f18b";
+.fa-bug:before {
+  content: "";
 }
 
 /* line 405, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pagelines:before {
-  content: "\f18c";
+.fa-vk:before {
+  content: "";
 }
 
 /* line 406, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-stack-exchange:before {
-  content: "\f18d";
+.fa-weibo:before {
+  content: "";
 }
 
 /* line 407, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-o-right:before {
-  content: "\f18e";
+.fa-renren:before {
+  content: "";
 }
 
 /* line 408, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-arrow-circle-o-left:before {
-  content: "\f190";
+.fa-pagelines:before {
+  content: "";
+}
+
+/* line 409, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-stack-exchange:before {
+  content: "";
 }
 
 /* line 410, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-toggle-left:before,
-.fa-caret-square-o-left:before {
-  content: "\f191";
+.fa-arrow-circle-o-right:before {
+  content: "";
 }
 
 /* line 411, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-dot-circle-o:before {
-  content: "\f192";
+.fa-arrow-circle-o-left:before {
+  content: "";
 }
 
 /* line 412, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-wheelchair:before {
-  content: "\f193";
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "";
 }
 
-/* line 413, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-vimeo-square:before {
-  content: "\f194";
+/* line 414, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "";
 }
 
 /* line 415, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-turkish-lira:before,
-.fa-try:before {
-  content: "\f195";
+.fa-wheelchair:before {
+  content: "";
 }
 
 /* line 416, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-plus-square-o:before {
-  content: "\f196";
+.fa-vimeo-square:before {
+  content: "";
 }
 
 /* line 417, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-space-shuttle:before {
-  content: "\f197";
-}
-
-/* line 418, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-slack:before {
-  content: "\f198";
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "";
 }
 
 /* line 419, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-envelope-square:before {
-  content: "\f199";
+.fa-plus-square-o:before {
+  content: "";
 }
 
 /* line 420, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-wordpress:before {
-  content: "\f19a";
+.fa-space-shuttle:before {
+  content: "";
 }
 
 /* line 421, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-openid:before {
-  content: "\f19b";
+.fa-slack:before {
+  content: "";
+}
+
+/* line 422, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-envelope-square:before {
+  content: "";
+}
+
+/* line 423, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-wordpress:before {
+  content: "";
 }
 
 /* line 424, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-openid:before {
+  content: "";
+}
+
+/* line 425, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-institution:before,
 .fa-bank:before,
 .fa-university:before {
-  content: "\f19c";
-}
-
-/* line 426, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-mortar-board:before,
-.fa-graduation-cap:before {
-  content: "\f19d";
-}
-
-/* line 427, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-yahoo:before {
-  content: "\f19e";
+  content: "";
 }
 
 /* line 428, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-google:before {
-  content: "\f1a0";
-}
-
-/* line 429, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-reddit:before {
-  content: "\f1a1";
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "";
 }
 
 /* line 430, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-reddit-square:before {
-  content: "\f1a2";
+.fa-yahoo:before {
+  content: "";
 }
 
 /* line 431, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-stumbleupon-circle:before {
-  content: "\f1a3";
+.fa-google:before {
+  content: "";
 }
 
 /* line 432, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-stumbleupon:before {
-  content: "\f1a4";
+.fa-reddit:before {
+  content: "";
 }
 
 /* line 433, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-delicious:before {
-  content: "\f1a5";
+.fa-reddit-square:before {
+  content: "";
 }
 
 /* line 434, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-digg:before {
-  content: "\f1a6";
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+/* line 435, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-stumbleupon:before {
+  content: "";
 }
 
 /* line 436, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pied-piper-square:before,
-.fa-pied-piper:before {
-  content: "\f1a7";
+.fa-delicious:before {
+  content: "";
 }
 
 /* line 437, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-pied-piper-alt:before {
-  content: "\f1a8";
+.fa-digg:before {
+  content: "";
 }
 
 /* line 438, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-drupal:before {
-  content: "\f1a9";
+.fa-pied-piper:before {
+  content: "";
 }
 
 /* line 439, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-joomla:before {
-  content: "\f1aa";
+.fa-pied-piper-alt:before {
+  content: "";
 }
 
 /* line 440, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-language:before {
-  content: "\f1ab";
+.fa-drupal:before {
+  content: "";
 }
 
 /* line 441, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-fax:before {
-  content: "\f1ac";
+.fa-joomla:before {
+  content: "";
 }
 
 /* line 442, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-building:before {
-  content: "\f1ad";
+.fa-language:before {
+  content: "";
 }
 
 /* line 443, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-child:before {
-  content: "\f1ae";
+.fa-fax:before {
+  content: "";
 }
 
 /* line 444, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-paw:before {
-  content: "\f1b0";
+.fa-building:before {
+  content: "";
 }
 
 /* line 445, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-spoon:before {
-  content: "\f1b1";
+.fa-child:before {
+  content: "";
 }
 
 /* line 446, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cube:before {
-  content: "\f1b2";
+.fa-paw:before {
+  content: "";
 }
 
 /* line 447, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cubes:before {
-  content: "\f1b3";
+.fa-spoon:before {
+  content: "";
 }
 
 /* line 448, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-behance:before {
-  content: "\f1b4";
+.fa-cube:before {
+  content: "";
 }
 
 /* line 449, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-behance-square:before {
-  content: "\f1b5";
+.fa-cubes:before {
+  content: "";
 }
 
 /* line 450, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-steam:before {
-  content: "\f1b6";
+.fa-behance:before {
+  content: "";
 }
 
 /* line 451, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-steam-square:before {
-  content: "\f1b7";
+.fa-behance-square:before {
+  content: "";
 }
 
 /* line 452, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-recycle:before {
-  content: "\f1b8";
+.fa-steam:before {
+  content: "";
+}
+
+/* line 453, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-steam-square:before {
+  content: "";
 }
 
 /* line 454, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-automobile:before,
-.fa-car:before {
-  content: "\f1b9";
+.fa-recycle:before {
+  content: "";
 }
 
-/* line 456, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-cab:before,
-.fa-taxi:before {
-  content: "\f1ba";
+/* line 455, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-automobile:before,
+.fa-car:before {
+  content: "";
 }
 
 /* line 457, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tree:before {
-  content: "\f1bb";
-}
-
-/* line 458, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-spotify:before {
-  content: "\f1bc";
+.fa-cab:before,
+.fa-taxi:before {
+  content: "";
 }
 
 /* line 459, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-deviantart:before {
-  content: "\f1bd";
+.fa-tree:before {
+  content: "";
 }
 
 /* line 460, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-soundcloud:before {
-  content: "\f1be";
+.fa-spotify:before {
+  content: "";
 }
 
 /* line 461, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-database:before {
-  content: "\f1c0";
+.fa-deviantart:before {
+  content: "";
 }
 
 /* line 462, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-pdf-o:before {
-  content: "\f1c1";
+.fa-soundcloud:before {
+  content: "";
 }
 
 /* line 463, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-word-o:before {
-  content: "\f1c2";
+.fa-database:before {
+  content: "";
 }
 
 /* line 464, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-excel-o:before {
-  content: "\f1c3";
+.fa-file-pdf-o:before {
+  content: "";
 }
 
 /* line 465, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-file-word-o:before {
+  content: "";
+}
+
+/* line 466, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-file-excel-o:before {
+  content: "";
+}
+
+/* line 467, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-file-powerpoint-o:before {
-  content: "\f1c4";
+  content: "";
 }
 
 /* line 468, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-file-photo-o:before,
 .fa-file-picture-o:before,
 .fa-file-image-o:before {
-  content: "\f1c5";
+  content: "";
 }
 
-/* line 470, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 471, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-file-zip-o:before,
 .fa-file-archive-o:before {
-  content: "\f1c6";
+  content: "";
 }
 
-/* line 472, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 473, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-file-sound-o:before,
 .fa-file-audio-o:before {
-  content: "\f1c7";
-}
-
-/* line 474, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-movie-o:before,
-.fa-file-video-o:before {
-  content: "\f1c8";
+  content: "";
 }
 
 /* line 475, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-file-code-o:before {
-  content: "\f1c9";
-}
-
-/* line 476, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-vine:before {
-  content: "\f1ca";
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "";
 }
 
 /* line 477, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-codepen:before {
-  content: "\f1cb";
+.fa-file-code-o:before {
+  content: "";
 }
 
 /* line 478, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-jsfiddle:before {
-  content: "\f1cc";
+.fa-vine:before {
+  content: "";
 }
 
-/* line 482, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 479, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-codepen:before {
+  content: "";
+}
+
+/* line 480, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-jsfiddle:before {
+  content: "";
+}
+
+/* line 481, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-life-bouy:before,
+.fa-life-buoy:before,
 .fa-life-saver:before,
 .fa-support:before,
 .fa-life-ring:before {
-  content: "\f1cd";
+  content: "";
 }
 
-/* line 483, ../../app/bower_components/font-awesome/scss/_icons.scss */
+/* line 486, ../../app/bower_components/font-awesome/scss/_icons.scss */
 .fa-circle-o-notch:before {
-  content: "\f1ce";
-}
-
-/* line 485, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ra:before,
-.fa-rebel:before {
-  content: "\f1d0";
+  content: "";
 }
 
 /* line 487, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-ge:before,
-.fa-empire:before {
-  content: "\f1d1";
-}
-
-/* line 488, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-git-square:before {
-  content: "\f1d2";
+.fa-ra:before,
+.fa-rebel:before {
+  content: "";
 }
 
 /* line 489, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-git:before {
-  content: "\f1d3";
-}
-
-/* line 490, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-hacker-news:before {
-  content: "\f1d4";
+.fa-ge:before,
+.fa-empire:before {
+  content: "";
 }
 
 /* line 491, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-tencent-weibo:before {
-  content: "\f1d5";
+.fa-git-square:before {
+  content: "";
 }
 
 /* line 492, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-qq:before {
-  content: "\f1d6";
+.fa-git:before {
+  content: "";
+}
+
+/* line 493, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-hacker-news:before {
+  content: "";
 }
 
 /* line 494, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-wechat:before,
-.fa-weixin:before {
-  content: "\f1d7";
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+/* line 495, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-qq:before {
+  content: "";
 }
 
 /* line 496, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-send:before,
-.fa-paper-plane:before {
-  content: "\f1d8";
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "";
 }
 
 /* line 498, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-send-o:before,
-.fa-paper-plane-o:before {
-  content: "\f1d9";
-}
-
-/* line 499, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-history:before {
-  content: "\f1da";
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "";
 }
 
 /* line 500, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-circle-thin:before {
-  content: "\f1db";
-}
-
-/* line 501, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-header:before {
-  content: "\f1dc";
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "";
 }
 
 /* line 502, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-paragraph:before {
-  content: "\f1dd";
+.fa-history:before {
+  content: "";
 }
 
 /* line 503, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-sliders:before {
-  content: "\f1de";
+.fa-circle-thin:before {
+  content: "";
 }
 
 /* line 504, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-share-alt:before {
-  content: "\f1e0";
+.fa-header:before {
+  content: "";
 }
 
 /* line 505, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-share-alt-square:before {
-  content: "\f1e1";
+.fa-paragraph:before {
+  content: "";
 }
 
 /* line 506, ../../app/bower_components/font-awesome/scss/_icons.scss */
-.fa-bomb:before {
-  content: "\f1e2";
+.fa-sliders:before {
+  content: "";
 }
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/* line 507, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-share-alt:before {
+  content: "";
+}
+
+/* line 508, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-share-alt-square:before {
+  content: "";
+}
+
+/* line 509, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-bomb:before {
+  content: "";
+}
+
+/* line 510, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "";
+}
+
+/* line 512, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-tty:before {
+  content: "";
+}
+
+/* line 513, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-binoculars:before {
+  content: "";
+}
+
+/* line 514, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-plug:before {
+  content: "";
+}
+
+/* line 515, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-slideshare:before {
+  content: "";
+}
+
+/* line 516, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-twitch:before {
+  content: "";
+}
+
+/* line 517, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-yelp:before {
+  content: "";
+}
+
+/* line 518, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-newspaper-o:before {
+  content: "";
+}
+
+/* line 519, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-wifi:before {
+  content: "";
+}
+
+/* line 520, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-calculator:before {
+  content: "";
+}
+
+/* line 521, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-paypal:before {
+  content: "";
+}
+
+/* line 522, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-google-wallet:before {
+  content: "";
+}
+
+/* line 523, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc-visa:before {
+  content: "";
+}
+
+/* line 524, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+/* line 525, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc-discover:before {
+  content: "";
+}
+
+/* line 526, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc-amex:before {
+  content: "";
+}
+
+/* line 527, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc-paypal:before {
+  content: "";
+}
+
+/* line 528, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc-stripe:before {
+  content: "";
+}
+
+/* line 529, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-bell-slash:before {
+  content: "";
+}
+
+/* line 530, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-bell-slash-o:before {
+  content: "";
+}
+
+/* line 531, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-trash:before {
+  content: "";
+}
+
+/* line 532, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-copyright:before {
+  content: "";
+}
+
+/* line 533, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-at:before {
+  content: "";
+}
+
+/* line 534, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-eyedropper:before {
+  content: "";
+}
+
+/* line 535, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-paint-brush:before {
+  content: "";
+}
+
+/* line 536, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-birthday-cake:before {
+  content: "";
+}
+
+/* line 537, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-area-chart:before {
+  content: "";
+}
+
+/* line 538, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-pie-chart:before {
+  content: "";
+}
+
+/* line 539, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-line-chart:before {
+  content: "";
+}
+
+/* line 540, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-lastfm:before {
+  content: "";
+}
+
+/* line 541, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-lastfm-square:before {
+  content: "";
+}
+
+/* line 542, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-toggle-off:before {
+  content: "";
+}
+
+/* line 543, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-toggle-on:before {
+  content: "";
+}
+
+/* line 544, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-bicycle:before {
+  content: "";
+}
+
+/* line 545, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-bus:before {
+  content: "";
+}
+
+/* line 546, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-ioxhost:before {
+  content: "";
+}
+
+/* line 547, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-angellist:before {
+  content: "";
+}
+
+/* line 548, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-cc:before {
+  content: "";
+}
+
+/* line 549, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "";
+}
+
+/* line 552, ../../app/bower_components/font-awesome/scss/_icons.scss */
+.fa-meanpath:before {
+  content: "";
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /* line 9, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 html {
   font-family: sans-serif;
@@ -2523,7 +2695,7 @@ body {
   margin: 0;
 }
 
-/* line 43, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 33, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 article,
 aside,
 details,
@@ -2533,13 +2705,14 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
   display: block;
 }
 
-/* line 55, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 54, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -2548,63 +2721,63 @@ video {
   vertical-align: baseline;
 }
 
-/* line 65, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 67, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 76, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 77, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 [hidden],
 template {
   display: none;
 }
 
-/* line 87, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 89, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
-/* line 96, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 97, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
-/* line 107, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 109, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 116, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 117, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 124, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 126, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 133, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 135, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 142, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 144, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 151, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 153, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 small {
   font-size: 80%;
 }
 
-/* line 160, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 161, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -2613,44 +2786,44 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 167, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 169, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 171, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 173, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 182, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 184, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 img {
   border: 0;
 }
 
-/* line 190, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 192, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 201, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 203, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 figure {
   margin: 1em 40px;
 }
 
-/* line 209, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 211, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 219, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 221, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 pre {
   overflow: auto;
 }
 
-/* line 230, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 229, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 code,
 kbd,
 pre,
@@ -2659,7 +2832,7 @@ samp {
   font-size: 1em;
 }
 
-/* line 254, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 252, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 button,
 input,
 optgroup,
@@ -2670,18 +2843,18 @@ textarea {
   margin: 0;
 }
 
-/* line 264, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 266, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 button {
   overflow: visible;
 }
 
-/* line 276, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 277, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 291, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 290, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -2690,38 +2863,38 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 301, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 302, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 310, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 311, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 320, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 322, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 input {
   line-height: normal;
 }
 
-/* line 333, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 334, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 345, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 346, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 355, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 357, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -2729,102 +2902,105 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 369, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 370, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 377, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 379, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 388, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 390, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 397, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 399, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 406, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 408, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
 
-/* line 417, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 419, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 423, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
+/* line 424, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 td,
 th {
   padding: 0;
 }
 
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  /* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
-  * {
-    text-shadow: none !important;
-    color: #000 !important;
+  /* line 9, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
+    color: #000 !important;
     box-shadow: none !important;
+    text-shadow: none !important;
   }
 
-  /* line 16, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 18, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 20, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 23, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 24, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 27, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 30, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  /* line 33, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 35, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 38, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 40, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 44, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 45, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 48, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 49, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 53, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   img {
     max-width: 100% !important;
   }
 
-  /* line 55, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 57, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   p,
   h2,
   h3 {
@@ -2832,26 +3008,20 @@ th {
     widows: 3;
   }
 
-  /* line 61, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 64, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 67, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 73, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   select {
     background: #fff !important;
   }
 
-  /* line 72, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 78, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   .navbar {
     display: none;
-  }
-
-  /* line 77, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
-  .table td,
-  .table th {
-    background-color: #fff !important;
   }
 
   /* line 83, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
@@ -2869,8 +3039,13 @@ th {
   .table {
     border-collapse: collapse !important;
   }
+  /* line 94, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
 
-  /* line 96, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
+  /* line 100, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_print.scss */
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important;
@@ -2883,7 +3058,7 @@ th {
   box-sizing: border-box;
 }
 
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -2894,7 +3069,7 @@ th {
 /* line 22, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* line 27, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -2902,11 +3077,11 @@ body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.846;
-  color: #666666;
-  background-color: white;
+  color: #666;
+  background-color: #fff;
 }
 
-/* line 39, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
+/* line 36, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 input,
 button,
 select,
@@ -2918,10 +3093,10 @@ textarea {
 
 /* line 48, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 a {
-  color: #2196f3;
+  color: #2196F3;
   text-decoration: none;
 }
-/* line 53, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
+/* line 52, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
   color: #0a6ebd;
   text-decoration: underline;
@@ -2946,7 +3121,6 @@ img {
 /* line 81, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 .img-responsive {
   display: block;
-  width: 100% \9;
   max-width: 100%;
   height: auto;
 }
@@ -2960,14 +3134,13 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.846;
-  background-color: white;
-  border: 1px solid #dddddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 3px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
-  width: 100% \9;
   max-width: 100%;
   height: auto;
 }
@@ -2997,7 +3170,7 @@ hr {
   border: 0;
 }
 
-/* line 142, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
+/* line 141, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 .sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
@@ -3007,15 +3180,15 @@ hr {
   clip: auto;
 }
 
-/* line 10, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 9, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 400;
   line-height: 1.1;
-  color: #444444;
+  color: #444;
 }
-/* line 17, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 16, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
 h1 .small, h2 small,
 h2 .small, h3 small,
@@ -3032,17 +3205,17 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #bbbbbb;
+  color: #bbb;
 }
 
-/* line 26, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 24, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1,
 h2, .h2,
 h3, .h3 {
   margin-top: 23px;
   margin-bottom: 11.5px;
 }
-/* line 31, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 30, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
 h1 .small, .h1 small,
 .h1 .small,
@@ -3055,14 +3228,14 @@ h3 .small, .h3 small,
   font-size: 65%;
 }
 
-/* line 37, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 35, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 11.5px;
   margin-bottom: 11.5px;
 }
-/* line 42, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 41, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
 h4 .small, .h4 small,
 .h4 .small,
@@ -3124,72 +3297,67 @@ p {
   }
 }
 
-/* line 79, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 78, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small {
   font-size: 92%;
 }
 
-/* line 84, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
-cite {
-  font-style: normal;
-}
-
-/* line 89, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 83, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 mark,
 .mark {
   background-color: #ffe0b2;
   padding: .2em;
 }
 
-/* line 95, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 90, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 96, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 91, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 97, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 92, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 98, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 93, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-justify {
   text-align: justify;
 }
 
-/* line 99, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 94, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-nowrap {
   white-space: nowrap;
 }
 
-/* line 102, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 97, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-lowercase {
   text-transform: lowercase;
 }
 
-/* line 103, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 98, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-uppercase {
   text-transform: uppercase;
 }
 
-/* line 104, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 99, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-capitalize {
   text-transform: capitalize;
 }
 
-/* line 107, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 102, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .text-muted {
-  color: #bbbbbb;
+  color: #bbb;
 }
 
 /* line 5, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
 .text-primary {
-  color: #2196f3;
+  color: #2196F3;
 }
 
 /* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
@@ -3199,7 +3367,7 @@ a.text-primary:hover {
 
 /* line 5, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
 .text-success {
-  color: #4caf50;
+  color: #4CAF50;
 }
 
 /* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
@@ -3209,7 +3377,7 @@ a.text-success:hover {
 
 /* line 5, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
 .text-info {
-  color: #9c27b0;
+  color: #9C27B0;
 }
 
 /* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss */
@@ -3237,14 +3405,14 @@ a.text-danger:hover {
   color: #b9151b;
 }
 
-/* line 124, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 119, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .bg-primary {
   color: #fff;
 }
 
 /* line 5, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
 .bg-primary {
-  background-color: #2196f3;
+  background-color: #2196F3;
 }
 
 /* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_background-variant.scss */
@@ -3292,20 +3460,20 @@ a.bg-danger:hover {
   background-color: #f5908c;
 }
 
-/* line 143, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 138, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .page-header {
   padding-bottom: 10.5px;
   margin: 46px 0 23px;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* line 155, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 149, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 ul,
 ol {
   margin-top: 0;
   margin-bottom: 11.5px;
 }
-/* line 159, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 153, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 ul ul,
 ul ol,
 ol ul,
@@ -3314,13 +3482,15 @@ ol ol {
 }
 
 /* line 167, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
-.list-unstyled, .list-inline {
+.list-unstyled {
   padding-left: 0;
   list-style: none;
 }
 
 /* line 173, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .list-inline {
+  padding-left: 0;
+  list-style: none;
   margin-left: -5px;
 }
 /* line 177, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -3336,7 +3506,7 @@ dl {
   margin-bottom: 23px;
 }
 
-/* line 190, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 189, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 dt,
 dd {
   line-height: 1.846;
@@ -3352,7 +3522,7 @@ dd {
   margin-left: 0;
 }
 
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .dl-horizontal dd:before, .dl-horizontal dd:after {
   content: " ";
   display: table;
@@ -3378,11 +3548,11 @@ dd {
   }
 }
 
-/* line 231, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 229, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #bbbbbb;
+  border-bottom: 1px dotted #bbb;
 }
 
 /* line 235, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -3404,14 +3574,14 @@ blockquote ul:last-child,
 blockquote ol:last-child {
   margin-bottom: 0;
 }
-/* line 259, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 257, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 blockquote footer,
 blockquote small,
 blockquote .small {
   display: block;
   font-size: 80%;
   line-height: 1.846;
-  color: #bbbbbb;
+  color: #bbb;
 }
 /* line 265, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 blockquote footer:before,
@@ -3420,7 +3590,7 @@ blockquote .small:before {
   content: '\2014 \00A0';
 }
 
-/* line 275, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 274, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .blockquote-reverse,
 blockquote.pull-right {
   padding-right: 15px;
@@ -3448,13 +3618,7 @@ blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
 
-/* line 295, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
-blockquote:before,
-blockquote:after {
-  content: "";
-}
-
-/* line 300, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
+/* line 294, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 address {
   margin-bottom: 23px;
   font-style: normal;
@@ -3468,7 +3632,7 @@ address {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .container:before, .container:after {
   content: " ";
   display: table;
@@ -3503,7 +3667,7 @@ address {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .container-fluid:before, .container-fluid:after {
   content: " ";
   display: table;
@@ -3518,7 +3682,7 @@ address {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .row:before, .row:after {
   content: " ";
   display: table;
@@ -4594,30 +4758,35 @@ address {
 /* line 18, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
 .collapse {
   display: none;
+  visibility: hidden;
 }
-/* line 21, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
+/* line 22, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
 .collapse.in {
   display: block;
+  visibility: visible;
 }
 
-/* line 26, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
+/* line 27, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
 tr.collapse.in {
   display: table-row;
 }
 
-/* line 28, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
+/* line 29, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
 tbody.collapse.in {
   display: table-row-group;
 }
 
-/* line 30, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
+/* line 31, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_component-animations.scss */
 .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 /* line 9, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
@@ -4626,7 +4795,7 @@ tbody.collapse.in {
   padding-left: 0;
   list-style: none;
 }
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .nav:before, .nav:after {
   content: " ";
   display: table;
@@ -4646,26 +4815,26 @@ tbody.collapse.in {
   display: block;
   padding: 10px 15px;
 }
-/* line 24, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 23, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
   background-color: #eeeeee;
 }
 /* line 31, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav > li.disabled > a {
-  color: #bbbbbb;
+  color: #bbb;
 }
-/* line 35, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 34, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
-  color: #bbbbbb;
+  color: #bbb;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
 }
-/* line 48, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 46, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #2196f3;
+  border-color: #2196F3;
 }
 /* line 59, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav .nav-divider {
@@ -4699,9 +4868,9 @@ tbody.collapse.in {
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee rgba(255, 255, 255, 0);
 }
-/* line 98, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 96, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #666666;
+  color: #666;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid rgba(255, 255, 255, 0);
   border-bottom-color: transparent;
@@ -4720,10 +4889,10 @@ tbody.collapse.in {
 .nav-pills > li + li {
   margin-left: 2px;
 }
-/* line 133, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 131, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: white;
-  background-color: #2196f3;
+  color: #fff;
+  background-color: #2196F3;
 }
 
 /* line 144, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
@@ -4775,40 +4944,42 @@ tbody.collapse.in {
   margin-right: 0;
   border-radius: 3px;
 }
-/* line 201, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 199, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
 .nav-tabs-justified > .active > a:hover,
 .nav-tabs.nav-justified > .active > a:hover,
 .nav-tabs-justified > .active > a:focus,
 .nav-tabs.nav-justified > .active > a:focus {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 @media (min-width: 768px) {
   /* line 206, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
   .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #ddd;
     border-radius: 3px 3px 0 0;
   }
-  /* line 212, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+  /* line 210, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: white;
+    border-bottom-color: #fff;
   }
 }
 
 /* line 224, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .tab-content > .tab-pane {
   display: none;
+  visibility: hidden;
 }
-/* line 227, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 228, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .tab-content > .active {
   display: block;
+  visibility: visible;
 }
 
-/* line 237, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
+/* line 239, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
   border-top-right-radius: 0;
@@ -4822,7 +4993,7 @@ tbody.collapse.in {
   margin-bottom: 23px;
   border: 1px solid transparent;
 }
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .navbar:before, .navbar:after {
   content: " ";
   display: table;
@@ -4838,7 +5009,7 @@ tbody.collapse.in {
   }
 }
 
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .navbar-header:before, .navbar-header:after {
   content: " ";
   display: table;
@@ -4863,7 +5034,7 @@ tbody.collapse.in {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .navbar-collapse:before, .navbar-collapse:after {
   content: " ";
   display: table;
@@ -4886,28 +5057,29 @@ tbody.collapse.in {
   /* line 68, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-collapse.collapse {
     display: block !important;
+    visibility: visible !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
   }
-  /* line 75, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 76, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-collapse.in {
     overflow-y: visible;
   }
-  /* line 83, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 82, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-/* line 92, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 93, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 340px;
 }
-@media (max-width: 480px) and (orientation: landscape) {
-  /* line 92, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+@media (max-device-width: 480px) and (orientation: landscape) {
+  /* line 93, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-fixed-top .navbar-collapse,
   .navbar-fixed-bottom .navbar-collapse {
     max-height: 200px;
@@ -4933,13 +5105,13 @@ tbody.collapse.in {
   }
 }
 
-/* line 128, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 129, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
-  /* line 128, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 129, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-static-top {
     border-radius: 0;
   }
@@ -4952,8 +5124,6 @@ tbody.collapse.in {
   right: 0;
   left: 0;
   z-index: 1030;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 @media (min-width: 768px) {
   /* line 139, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4984,18 +5154,22 @@ tbody.collapse.in {
   line-height: 23px;
   height: 64px;
 }
-/* line 172, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 171, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
 }
+/* line 176, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-brand > img {
+  display: block;
+}
 @media (min-width: 768px) {
-  /* line 178, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 181, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
   }
 }
 
-/* line 190, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 194, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle {
   position: relative;
   float: right;
@@ -5008,40 +5182,40 @@ tbody.collapse.in {
   border: 1px solid transparent;
   border-radius: 3px;
 }
-/* line 203, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 207, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle:focus {
   outline: 0;
 }
-/* line 208, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 212, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;
 }
-/* line 214, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 218, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
 @media (min-width: 768px) {
-  /* line 190, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 194, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-toggle {
     display: none;
   }
 }
 
-/* line 229, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 233, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
   margin: 10.25px -15px;
 }
-/* line 232, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 236, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 23px;
 }
 @media (max-width: 767px) {
-  /* line 240, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 244, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -5051,53 +5225,38 @@ tbody.collapse.in {
     border: 0;
     box-shadow: none;
   }
-  /* line 249, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 252, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
     padding: 5px 15px 5px 25px;
   }
-  /* line 252, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 256, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a {
     line-height: 23px;
   }
-  /* line 255, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 258, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
   }
 }
 @media (min-width: 768px) {
-  /* line 229, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 233, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav {
     float: left;
     margin: 0;
   }
-  /* line 267, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 271, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li {
     float: left;
   }
-  /* line 269, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 273, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
     padding-top: 20.5px;
     padding-bottom: 20.5px;
   }
-  /* line 275, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-nav.navbar-right:last-child {
-    margin-right: -15px;
-  }
 }
 
-@media (min-width: 768px) {
-  /* line 289, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-left {
-    float: left !important;
-  }
-
-  /* line 292, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-right {
-    float: right !important;
-  }
-}
-/* line 303, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 287, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-form {
   margin-left: -15px;
   margin-right: -15px;
@@ -5110,13 +5269,17 @@ tbody.collapse.in {
   margin-bottom: 13.5px;
 }
 @media (max-width: 767px) {
-  /* line 315, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 299, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
+  /* line 303, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  .navbar-form .form-group:last-child {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
-  /* line 303, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 287, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-form {
     width: auto;
     border: 0;
@@ -5127,267 +5290,277 @@ tbody.collapse.in {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-  /* line 335, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-form.navbar-right:last-child {
-    margin-right: -15px;
-  }
 }
 
-/* line 345, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 328, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-/* line 350, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 333, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* line 359, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 343, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
   margin-top: 13.5px;
   margin-bottom: 13.5px;
 }
-/* line 362, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 346, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm {
   margin-top: 17px;
   margin-bottom: 17px;
 }
-/* line 365, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 349, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs {
   margin-top: 21px;
   margin-bottom: 21px;
 }
 
-/* line 375, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 359, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
   margin-top: 20.5px;
   margin-bottom: 20.5px;
 }
 @media (min-width: 768px) {
-  /* line 375, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 359, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-text {
     float: left;
     margin-left: 15px;
     margin-right: 15px;
   }
-  /* line 384, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-text.navbar-right:last-child {
+}
+
+@media (min-width: 768px) {
+  /* line 379, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  .navbar-left {
+    float: left !important;
+  }
+
+  /* line 382, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  .navbar-right {
+    float: right !important;
+    margin-right: -15px;
+  }
+  /* line 386, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  .navbar-right ~ .navbar-right {
     margin-right: 0;
   }
 }
-
-/* line 394, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 397, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: white;
+  background-color: #fff;
   border-color: rgba(255, 255, 255, 0);
 }
-/* line 398, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .navbar-brand {
-  color: #666666;
-}
 /* line 401, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-brand {
+  color: #666;
+}
+/* line 403, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #212121;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 407, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 410, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-text {
-  color: #bbbbbb;
+  color: #bbb;
 }
-/* line 412, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 415, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
-  color: #666666;
+  color: #666;
 }
-/* line 416, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 418, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #212121;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 424, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 425, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #212121;
   background-color: #eeeeee;
 }
-/* line 432, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 433, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
+  color: #ccc;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 439, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 442, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-toggle {
   border-color: rgba(255, 255, 255, 0);
 }
-/* line 442, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 444, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 445, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 448, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-toggle .icon-bar {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 451, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 453, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: rgba(255, 255, 255, 0);
 }
-/* line 461, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 462, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #eeeeee;
   color: #212121;
 }
 @media (max-width: 767px) {
-  /* line 470, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #666666;
-  }
   /* line 473, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #666;
+  }
+  /* line 475, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #212121;
     background-color: rgba(255, 255, 255, 0);
   }
-  /* line 481, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 482, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #212121;
     background-color: #eeeeee;
   }
-  /* line 489, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 490, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
+    color: #ccc;
     background-color: rgba(255, 255, 255, 0);
   }
 }
-/* line 503, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 506, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link {
-  color: #666666;
+  color: #666;
 }
-/* line 505, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 508, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link:hover {
   color: #212121;
 }
-/* line 510, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-default .btn-link {
-  color: #666666;
-}
 /* line 513, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .btn-link {
+  color: #666;
+}
+/* line 515, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
   color: #212121;
 }
-/* line 519, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 521, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #cccccc;
+  color: #ccc;
 }
 
-/* line 528, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 531, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse {
-  background-color: #2196f3;
+  background-color: #2196F3;
   border-color: rgba(255, 255, 255, 0);
 }
-/* line 532, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 535, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-brand {
   color: #b2dbfb;
 }
-/* line 535, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 537, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: white;
+  color: #fff;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 541, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 544, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-text {
-  color: #bbbbbb;
+  color: #bbb;
 }
-/* line 546, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 549, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a {
   color: #b2dbfb;
 }
-/* line 550, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 552, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: white;
+  color: #fff;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 558, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 559, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  color: white;
+  color: #fff;
   background-color: #0c7cd5;
 }
-/* line 566, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 567, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
-  color: #444444;
+  color: #444;
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 574, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 577, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-toggle {
   border-color: rgba(255, 255, 255, 0);
 }
-/* line 577, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 579, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
   background-color: rgba(255, 255, 255, 0);
 }
-/* line 580, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 583, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 586, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 588, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-color: #0c84e4;
 }
-/* line 595, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 596, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: #0c7cd5;
-  color: white;
+  color: #fff;
 }
 @media (max-width: 767px) {
-  /* line 604, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 607, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: rgba(255, 255, 255, 0);
   }
-  /* line 607, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 610, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
     background-color: rgba(255, 255, 255, 0);
   }
-  /* line 610, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 613, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
     color: #b2dbfb;
   }
-  /* line 613, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 615, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: white;
+    color: #fff;
     background-color: rgba(255, 255, 255, 0);
   }
-  /* line 621, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 622, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: white;
+    color: #fff;
     background-color: #0c7cd5;
   }
-  /* line 629, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+  /* line 630, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #444444;
+    color: #444;
     background-color: rgba(255, 255, 255, 0);
   }
 }
-/* line 638, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 641, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-link {
   color: #b2dbfb;
 }
-/* line 640, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 643, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .navbar-link:hover {
-  color: white;
+  color: #fff;
 }
-/* line 645, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 648, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .btn-link {
   color: #b2dbfb;
 }
-/* line 648, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 650, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus {
-  color: white;
+  color: #fff;
 }
-/* line 654, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
+/* line 656, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-inverse .btn-link[disabled]:hover, .navbar-inverse .btn-link[disabled]:focus, fieldset[disabled] .navbar-inverse .btn-link:hover, fieldset[disabled] .navbar-inverse .btn-link:focus {
-  color: #444444;
+  color: #444;
 }
 
 /* line 5, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
@@ -5397,7 +5570,7 @@ tbody.collapse.in {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: white;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -5413,45 +5586,45 @@ tbody.collapse.in {
   top: -1px;
 }
 
-/* line 34, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
+/* line 33, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
 a.label:hover, a.label:focus {
-  color: white;
+  color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
 
 /* line 44, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
 .label-default {
-  background-color: #bbbbbb;
+  background-color: #bbb;
 }
-/* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
+/* line 7, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-default[href]:hover, .label-default[href]:focus {
   background-color: #a2a2a2;
 }
 
 /* line 48, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
 .label-primary {
-  background-color: #2196f3;
+  background-color: #2196F3;
 }
-/* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
+/* line 7, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-primary[href]:hover, .label-primary[href]:focus {
   background-color: #0c7cd5;
 }
 
 /* line 52, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
 .label-success {
-  background-color: #4caf50;
+  background-color: #4CAF50;
 }
-/* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
+/* line 7, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-success[href]:hover, .label-success[href]:focus {
   background-color: #3d8b40;
 }
 
 /* line 56, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_labels.scss */
 .label-info {
-  background-color: #9c27b0;
+  background-color: #9C27B0;
 }
-/* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
+/* line 7, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-info[href]:hover, .label-info[href]:focus {
   background-color: #771e86;
 }
@@ -5460,7 +5633,7 @@ a.label:hover, a.label:focus {
 .label-warning {
   background-color: #ff9800;
 }
-/* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
+/* line 7, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-warning[href]:hover, .label-warning[href]:focus {
   background-color: #cc7a00;
 }
@@ -5469,22 +5642,22 @@ a.label:hover, a.label:focus {
 .label-danger {
   background-color: #e51c23;
 }
-/* line 8, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
+/* line 7, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-danger[href]:hover, .label-danger[href]:focus {
   background-color: #b9151b;
 }
 
 /* line 6, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron {
-  padding: 30px;
+  padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #f9f9f9;
 }
-/* line 13, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
+/* line 12, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron h1,
 .jumbotron .h1 {
-  color: #444444;
+  color: #444;
 }
 /* line 16, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron p {
@@ -5497,21 +5670,20 @@ a.label:hover, a.label:focus {
   border-top-color: #e0e0e0;
 }
 /* line 26, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
-.container .jumbotron {
+.container .jumbotron, .container-fluid .jumbotron {
   border-radius: 3px;
 }
-/* line 30, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
+/* line 31, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron .container {
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   /* line 6, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding: 48px 0;
   }
   /* line 38, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
-  .container .jumbotron {
+  .container .jumbotron, .container-fluid .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -5551,7 +5723,7 @@ a.label:hover, a.label:focus {
   border-radius: 3px;
 }
 
-/* line 15, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+/* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
@@ -5611,8 +5783,6 @@ a.label:hover, a.label:focus {
 /* line 54, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_utilities.scss */
 .affix {
   position: fixed;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 /* line 9, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
@@ -5631,16 +5801,16 @@ a.label:hover, a.label:focus {
 .navbar-inverse .form-control {
   color: #fff;
 }
-/* line 102, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+/* line 103, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
 .navbar-inverse .form-control::-moz-placeholder {
   color: #b2dbfb;
   opacity: 1;
 }
-/* line 104, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+/* line 107, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
 .navbar-inverse .form-control:-ms-input-placeholder {
   color: #b2dbfb;
 }
-/* line 105, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
+/* line 108, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
 .navbar-inverse .form-control::-webkit-input-placeholder {
   color: #b2dbfb;
 }
@@ -5651,8 +5821,8 @@ a.label:hover, a.label:focus {
 }
 /* line 26, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .navbar-inverse .form-control[type=text]:focus {
-  -webkit-box-shadow: inset 0 -2px 0 white;
-  box-shadow: inset 0 -2px 0 white;
+  -webkit-box-shadow: inset 0 -2px 0 #fff;
+  box-shadow: inset 0 -2px 0 #fff;
 }
 
 /* line 33, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
@@ -5743,15 +5913,15 @@ a.label:hover, a.label:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 119, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 118, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #2196f3;
+  color: #2196F3;
   text-decoration: none;
 }
 
 /* line 125, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .btn-default.disabled {
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
 }
 
 /* line 131, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
@@ -5780,7 +5950,7 @@ a {
   transition: all 0.2s;
 }
 
-/* line 161, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 155, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 input[type=text],
 input[type=password],
 input[type=email],
@@ -5791,8 +5961,8 @@ textarea.form-control {
   padding: 0;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: inset 0 -1px 0 #dddddd;
-  box-shadow: inset 0 -1px 0 #dddddd;
+  -webkit-box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: inset 0 -1px 0 #ddd;
   font-size: 16px;
 }
 /* line 168, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
@@ -5803,10 +5973,10 @@ textarea:focus,
 [type=text].form-control:focus,
 [type=password].form-control:focus,
 textarea.form-control:focus {
-  -webkit-box-shadow: inset 0 -2px 0 #2196f3;
-  box-shadow: inset 0 -2px 0 #2196f3;
+  -webkit-box-shadow: inset 0 -2px 0 #2196F3;
+  box-shadow: inset 0 -2px 0 #2196F3;
 }
-/* line 173, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 172, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 input[type=text][disabled], input[type=text][readonly],
 input[type=password][disabled],
 input[type=password][readonly],
@@ -5825,7 +5995,7 @@ textarea.form-control[readonly] {
   border-bottom: 1px dotted #ddd;
 }
 
-/* line 180, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 179, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 select,
 select.form-control {
   background-color: #fff;
@@ -5834,7 +6004,7 @@ select.form-control {
   box-shadow: none;
 }
 
-/* line 190, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 187, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .has-warning input,
 .has-warning .form-control,
 .has-warning input:focus,
@@ -5843,7 +6013,7 @@ select.form-control {
   box-shadow: inset 0 -2px 0 #ff9800;
 }
 
-/* line 199, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 196, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .has-error input,
 .has-error .form-control,
 .has-error input:focus,
@@ -5852,22 +6022,22 @@ select.form-control {
   box-shadow: inset 0 -2px 0 #e51c23;
 }
 
-/* line 208, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 205, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .has-success input,
 .has-success .form-control,
 .has-success input:focus,
 .has-success .form-control:focus {
-  -webkit-box-shadow: inset 0 -2px 0 #4caf50;
-  box-shadow: inset 0 -2px 0 #4caf50;
+  -webkit-box-shadow: inset 0 -2px 0 #4CAF50;
+  box-shadow: inset 0 -2px 0 #4CAF50;
 }
 
 /* line 216, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .nav-tabs > li > a {
   border: none;
   margin-right: 0;
-  color: #666666;
-  -webkit-box-shadow: inset 0 -1px 0 #dddddd;
-  box-shadow: inset 0 -1px 0 #dddddd;
+  color: #666;
+  -webkit-box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: inset 0 -1px 0 #ddd;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -5875,16 +6045,16 @@ select.form-control {
 /* line 223, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .nav-tabs > li > a:hover {
   background-color: transparent;
-  -webkit-box-shadow: inset 0 -2px 0 #2196f3;
-  box-shadow: inset 0 -2px 0 #2196f3;
-  color: #2196f3;
+  -webkit-box-shadow: inset 0 -2px 0 #2196F3;
+  box-shadow: inset 0 -2px 0 #2196F3;
+  color: #2196F3;
 }
 /* line 230, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .nav-tabs > li.active > a {
   border: none;
-  -webkit-box-shadow: inset 0 -2px 0 #2196f3;
-  box-shadow: inset 0 -2px 0 #2196f3;
-  color: #2196f3;
+  -webkit-box-shadow: inset 0 -2px 0 #2196F3;
+  box-shadow: inset 0 -2px 0 #2196F3;
+  color: #2196F3;
 }
 /* line 235, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .nav-tabs > li.active > a:hover {
@@ -5892,8 +6062,8 @@ select.form-control {
 }
 /* line 240, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .nav-tabs > li.disabled > a {
-  -webkit-box-shadow: inset 0 -1px 0 #dddddd;
-  box-shadow: inset 0 -1px 0 #dddddd;
+  -webkit-box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: inset 0 -1px 0 #ddd;
 }
 /* line 244, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .nav-tabs .dropdown-menu {
@@ -5912,7 +6082,7 @@ select.form-control {
   border: none;
   color: #fff;
 }
-/* line 261, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
+/* line 260, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .alert a,
 .alert .alert-link {
   color: #fff;
@@ -5925,12 +6095,12 @@ select.form-control {
 
 /* line 271, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .alert-success {
-  background-color: #4caf50;
+  background-color: #4CAF50;
 }
 
 /* line 275, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .alert-info {
-  background-color: #9c27b0;
+  background-color: #9C27B0;
 }
 
 /* line 279, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
@@ -6019,7 +6189,7 @@ select.form-control {
 
 /* line 354, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .list-group-item-text {
-  color: #bbbbbb;
+  color: #bbb;
 }
 
 /* line 358, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
@@ -6049,7 +6219,7 @@ select.form-control {
 
 /* line 378, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .panel-success .panel-heading {
-  background-color: #4caf50;
+  background-color: #4CAF50;
 }
 /* line 382, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .panel-success .panel-title {
@@ -6058,7 +6228,7 @@ select.form-control {
 
 /* line 388, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .panel-info .panel-heading {
-  background-color: #9c27b0;
+  background-color: #9C27B0;
 }
 /* line 392, ../../app/bower_components/bootswatch-scss/paper/_bootswatch.scss */
 .panel-info .panel-title {
@@ -6150,7 +6320,7 @@ body {
   text-align: center;
 }
 
-/* line 29, ../../app/styles/main.scss */
+/* line 34, ../../app/styles/main.scss */
 a {
   -webkit-transition-duration: 0.45s;
   transition-duration: 0.45s;
