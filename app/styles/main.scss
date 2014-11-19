@@ -1,9 +1,14 @@
 $fa-font-path: "/bower_components/font-awesome/fonts";
 
-@import "bootswatch-scss/paper/variables";
-
 @import "font-awesome/scss/font-awesome";
 
+@mixin form-inline {
+    // bootstrap/navbar requires this mixin to compile. I'd rather not pull
+    // in the entire forms component, so this will do.
+}
+
+@import "bootswatch-scss/paper/variables";
+@import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "bootstrap/normalize";
 @import "bootstrap/print";
