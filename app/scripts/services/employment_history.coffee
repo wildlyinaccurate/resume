@@ -21,9 +21,9 @@ class EmploymentHistoryService
     ipc_senior = new Role 'Senior Developer', new Date('2013-09-01'), new Date('2013-12-01')
     ipc_senior.setEmployer ipc_media
     ipc_senior.setDescription """
-    While working on IPC's mobile website platform I became interested in automated testing as a way to improve the quality of our products. I developed a smoke test tool which used PhantomJS to check for common errors and take a screenshot of each page it tested. This allowed us to find bugs much more easily, and deploy our websites with more confidence.
+    While working on IPC's mobile website platform I became interested in automated testing as a way to improve the quality of our products. I developed a smoke test tool which uses PhantomJS to check for common errors, and takes a screenshot of each page for visual checks. This allowed us to find bugs much more easily and to deploy our websites with more confidence.
 
-    I later introduced JavaScript unit testing to the department by writing test suites for some of our projects. I demonstrated these test suites at our monthly developer gathering to encourage other teams to start writing test suites. The slides for my talk are <a href="http://slid.es/wildlyinaccurate/automated-javascript-testing">available here</a>.
+    I later introduced JavaScript unit testing to the department by writing test suites for some of our projects. I demonstrated these test suites at our monthly developer gathering. The slides for my talk are <a href="http://slid.es/wildlyinaccurate/automated-javascript-testing">available here</a>.
     """
 
     ipc = new Role 'Developer', new Date('2012-05-01'), new Date('2013-09-01')
