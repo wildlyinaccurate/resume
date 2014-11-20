@@ -7,6 +7,10 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     // in the entire forms component, so this will do.
 }
 
+$border-radius-base:  0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
 @import "bootswatch-scss/paper/variables";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
