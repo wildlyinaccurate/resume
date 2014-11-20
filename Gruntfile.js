@@ -27,13 +27,13 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/scripts/**/*.coffee'],
         tasks: ['coffee:dist']
       },
-      compass: {
+      libsass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
+        tasks: ['libsass:server']
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['copy:styles', 'autoprefixer']
+        tasks: ['copy:styles']
       },
       livereload: {
         options: {
@@ -45,17 +45,6 @@ module.exports = function (grunt) {
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
-      }
-    },
-    autoprefixer: {
-      options: ['last 1 version'],
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
-          dest: '.tmp/styles/'
-        }]
       }
     },
     connect: {
@@ -127,32 +116,20 @@ module.exports = function (grunt) {
         }]
       }
     },
-    compass: {
+    libsass: {
       options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: [
+        loadPath: [
           '<%= yeoman.app %>/bower_components/bootstrap-sass-official/assets/stylesheets',
           '<%= yeoman.app %>/bower_components'
-        ],
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
-        relativeAssets: false
-      },
-      dist: {
-        options: {
-          cssDir: '<%= yeoman.dist %>/styles'
-        }
+        ]
       },
       server: {
-        options: {
-          debugInfo: true
-        }
+        src: '<%= yeoman.app %>/styles/main.scss',
+        dest: '.tmp/styles/main.css'
+      },
+      dist: {
+        src: '<%= yeoman.app %>/styles/main.scss',
+        dest: '<%= yeoman.dist %>/styles/main.css'
       }
     },
     rev: {
@@ -190,37 +167,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
-    htmlmin: {
-      dist: {
-        options: {
-          /*removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
-          dest: '<%= yeoman.dist %>'
-        }]
-      }
-    },
     // Put files not handled in other tasks here
     copy: {
       dist: {
@@ -232,6 +178,7 @@ module.exports = function (grunt) {
           src: [
             'CNAME',
             'index.html',
+            'views/*.html',
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
@@ -257,16 +204,14 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee:dist',
-        'compass:server',
+        'libsass:server',
         'copy:styles'
       ],
       dist: [
         'coffee',
-        'compass:dist',
+        'libsass:dist',
         'copy:styles',
-        'imagemin',
-        'svgmin',
-        'htmlmin'
+        'imagemin'
       ]
     },
     ngmin: {
@@ -315,7 +260,6 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      'autoprefixer',
       'connect:livereload',
       'open',
       'watch'
@@ -326,7 +270,6 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
     'concat',
     'copy:dist',
     'ngmin',
