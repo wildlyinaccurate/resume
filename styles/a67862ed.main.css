@@ -3075,7 +3075,7 @@ html {
 /* line 27, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.846;
   color: #666;
   background-color: #fff;
@@ -3127,7 +3127,7 @@ img {
 
 /* line 86, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 .img-rounded {
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 93, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -3136,7 +3136,7 @@ img {
   line-height: 1.846;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -3152,8 +3152,8 @@ img {
 
 /* line 113, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 23px;
-  margin-bottom: 23px;
+  margin-top: 29px;
+  margin-bottom: 29px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -3212,8 +3212,8 @@ h6 .small,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 23px;
-  margin-bottom: 11.5px;
+  margin-top: 29px;
+  margin-bottom: 14.5px;
 }
 /* line 30, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
@@ -3232,8 +3232,8 @@ h3 .small, .h3 small,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 11.5px;
-  margin-bottom: 11.5px;
+  margin-top: 14.5px;
+  margin-bottom: 14.5px;
 }
 /* line 41, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
@@ -3280,27 +3280,27 @@ h6, .h6 {
 
 /* line 58, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 p {
-  margin: 0 0 11.5px;
+  margin: 0 0 14.5px;
 }
 
 /* line 62, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 23px;
-  font-size: 14px;
+  margin-bottom: 29px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   /* line 62, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
   .lead {
-    font-size: 19.5px;
+    font-size: 24px;
   }
 }
 
 /* line 78, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small {
-  font-size: 92%;
+  font-size: 87%;
 }
 
 /* line 83, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -3462,8 +3462,8 @@ a.bg-danger:hover {
 
 /* line 138, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 .page-header {
-  padding-bottom: 10.5px;
-  margin: 46px 0 23px;
+  padding-bottom: 13.5px;
+  margin: 58px 0 29px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -3471,7 +3471,7 @@ a.bg-danger:hover {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 11.5px;
+  margin-bottom: 14.5px;
 }
 /* line 153, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 ul ul,
@@ -3503,7 +3503,7 @@ ol ol {
 /* line 185, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 29px;
 }
 
 /* line 189, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -3563,9 +3563,9 @@ abbr[data-original-title] {
 
 /* line 241, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 blockquote {
-  padding: 11.5px 23px;
-  margin: 0 0 23px;
-  font-size: 16.25px;
+  padding: 14.5px 29px;
+  margin: 0 0 29px;
+  font-size: 20px;
   border-left: 5px solid #eeeeee;
 }
 /* line 250, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
@@ -3620,7 +3620,7 @@ blockquote.pull-right .small:after {
 
 /* line 294, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_type.scss */
 address {
-  margin-bottom: 23px;
+  margin-bottom: 29px;
   font-style: normal;
   line-height: 1.846;
 }
@@ -4839,7 +4839,7 @@ tbody.collapse.in {
 /* line 59, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav .nav-divider {
   height: 1px;
-  margin: 10.5px 0;
+  margin: 13.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4862,7 +4862,7 @@ tbody.collapse.in {
   margin-right: 2px;
   line-height: 1.846;
   border: 1px solid transparent;
-  border-radius: 3px 3px 0 0;
+  border-radius: 0 0 0 0;
 }
 /* line 89, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li > a:hover {
@@ -4883,7 +4883,7 @@ tbody.collapse.in {
 }
 /* line 122, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li > a {
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 125, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li + li {
@@ -4942,7 +4942,7 @@ tbody.collapse.in {
 /* line 193, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 199, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -4956,7 +4956,7 @@ tbody.collapse.in {
   /* line 206, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
   .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #ddd;
-    border-radius: 3px 3px 0 0;
+    border-radius: 0 0 0 0;
   }
   /* line 210, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navs.scss */
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -4990,7 +4990,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 64px;
-  margin-bottom: 23px;
+  margin-bottom: 29px;
   border: 1px solid transparent;
 }
 /* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
@@ -5005,7 +5005,7 @@ tbody.collapse.in {
 @media (min-width: 768px) {
   /* line 11, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar {
-    border-radius: 3px;
+    border-radius: 0;
   }
 }
 
@@ -5149,9 +5149,9 @@ tbody.collapse.in {
 /* line 164, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 20.5px 15px;
-  font-size: 17px;
-  line-height: 23px;
+  padding: 17.5px 15px;
+  font-size: 20px;
+  line-height: 29px;
   height: 64px;
 }
 /* line 171, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5180,7 +5180,7 @@ tbody.collapse.in {
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 207, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle:focus {
@@ -5206,13 +5206,13 @@ tbody.collapse.in {
 
 /* line 233, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 10.25px -15px;
+  margin: 8.75px -15px;
 }
 /* line 236, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 23px;
+  line-height: 29px;
 }
 @media (max-width: 767px) {
   /* line 244, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5232,7 +5232,7 @@ tbody.collapse.in {
   }
   /* line 256, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 23px;
+    line-height: 29px;
   }
   /* line 258, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -5251,8 +5251,8 @@ tbody.collapse.in {
   }
   /* line 273, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 20.5px;
-    padding-bottom: 20.5px;
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
   }
 }
 
@@ -5265,8 +5265,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 13.5px;
-  margin-bottom: 13.5px;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
 }
 @media (max-width: 767px) {
   /* line 299, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5301,21 +5301,21 @@ tbody.collapse.in {
 
 /* line 333, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* line 343, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 13.5px;
-  margin-bottom: 13.5px;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
 }
 /* line 346, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 15.5px;
+  margin-bottom: 15.5px;
 }
 /* line 349, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs {
@@ -5325,8 +5325,8 @@ tbody.collapse.in {
 
 /* line 359, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 20.5px;
-  margin-bottom: 20.5px;
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
 }
 @media (min-width: 768px) {
   /* line 359, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5662,7 +5662,7 @@ a.label:hover, a.label:focus {
 /* line 16, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 200;
 }
 /* line 22, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
@@ -5671,7 +5671,7 @@ a.label:hover, a.label:focus {
 }
 /* line 26, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .container .jumbotron, .container-fluid .jumbotron {
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 31, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron .container {
@@ -5690,7 +5690,7 @@ a.label:hover, a.label:focus {
   /* line 44, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_jumbotron.scss */
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 58.5px;
+    font-size: 72px;
   }
 }
 
@@ -5701,7 +5701,7 @@ a.label:hover, a.label:focus {
   margin-bottom: 20px;
   background-color: #f9f9f9;
   border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 3px;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -5714,13 +5714,13 @@ a.label:hover, a.label:focus {
 /* line 22, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_wells.scss */
 .well-lg {
   padding: 24px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 26, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_wells.scss */
 .well-sm {
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 14, ../../app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
@@ -6294,12 +6294,14 @@ body {
 
 /* line 1, ../../app/styles/_skills.scss */
 .skills .label {
+  border-radius: 0;
   font-size: 90%;
+  font-weight: normal;
 }
 
 /* line 1, ../../app/styles/_repositories.scss */
 .show-forks {
-  padding-top: 30px;
+  padding-top: 14px;
 }
 
 /* line 1, ../../app/styles/_intro.scss */
@@ -6320,7 +6322,7 @@ body {
   text-align: center;
 }
 
-/* line 34, ../../app/styles/main.scss */
+/* line 40, ../../app/styles/main.scss */
 a {
   -webkit-transition-duration: 0.45s;
   transition-duration: 0.45s;
