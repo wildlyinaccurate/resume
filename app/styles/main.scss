@@ -26,10 +26,9 @@ $font-size-base:      16px;
 @import "bootstrap/navbar";
 @import "bootstrap/labels";
 @import "bootstrap/jumbotron";
+@import "bootstrap/progress-bars";
 @import "bootstrap/wells";
 @import "bootstrap/utilities";
-
-@import "bootswatch-scss/paper/bootswatch";
 
 @import "layout";
 @import "navigation";
