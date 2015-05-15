@@ -27,9 +27,9 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/scripts/**/*.coffee'],
         tasks: ['coffee:dist']
       },
-      libsass: {
+      sass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['libsass:server']
+        tasks: ['sass:server']
       },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
@@ -116,9 +116,9 @@ module.exports = function (grunt) {
         }]
       }
     },
-    libsass: {
+    sass: {
       options: {
-        loadPath: [
+        includePaths: [
           '<%= yeoman.app %>/bower_components/bootstrap-sass-official/assets/stylesheets',
           '<%= yeoman.app %>/bower_components'
         ]
@@ -145,7 +145,7 @@ module.exports = function (grunt) {
       }
     },
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: '<%= yeoman.app %>/enhanced.html',
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -177,6 +177,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             'CNAME',
+            'enhanced.html',
             'index.html',
             'views/*.html',
             '*.{ico,png,txt}',
@@ -204,12 +205,12 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'coffee:dist',
-        'libsass:server',
+        'sass:server',
         'copy:styles'
       ],
       dist: [
         'coffee',
-        'libsass:dist',
+        'sass:dist',
         'copy:styles',
         'imagemin'
       ]
@@ -240,6 +241,7 @@ module.exports = function (grunt) {
       src: [
         'CNAME',
         'favicon.ico',
+        'enhanced.html',
         'index.html',
         'images/*',
         'scripts/*',
