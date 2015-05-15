@@ -1,87 +1,19 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8"/>
+<html>
+  <head>
+    <meta charset="utf-8"/>
 
-        <title>Joseph Wynn &ndash; Web Developer</title>
+    <title>Joseph Wynn</title>
 
-        <meta name="description" content="The online résumé of Joseph Wynn.">
-        <meta name="viewport" content="width=device-width">
-
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500">
-        <link rel="stylesheet" href="styles/38e62253.main.css"/>
-    </head>
-    <body ng-app="resumeApp">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <a class="navbar-brand" href>
-                    Joseph Wynn
-                    <span class="navbar-rocket-icon fa fa-rocket fa-lg"></span>
-                    Web Developer
-                </a>
-
-                <ul class="nav navbar-nav pull-right">
-                    <li><a href="https://github.com/wildlyinaccurate"><i class="fa fa-github-alt fa-lg"></i> GitHub</a></li>
-                    <li><a href="https://twitter.com/Joseph_Wynn"><i class="fa fa-twitter fa-lg"></i> Twitter</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="intro-wrap">
-            <div class="container">
-                <div class="row jumbotron intro">
-                    <p>
-                        Hi there! I'm a developer based in London, UK. Right now I am working as a PHP and JavaScript developer, but in my spare time I like to write Ruby and Clojure. I'm really passionate about automated testing and readable code.
-                    </p>
-                    <p>
-                        Outside of programming I enjoy cooking, running, rock climbing and playing guitar. I'm also a self-confessed beer enthusiast and wine snob. I sometimes blog at <a href="http://wildlyinaccurate.com/">Wildly Inaccurate</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="section row">
-                <div class="col-md-5" ng-controller="skillsController">
-                    <h2>Key Skills</h2>
-                    <div ng-include="'views/skills.html'"></div>
-                </div>
-
-                <div class="col-md-7" ng-controller="employmentHistoryController">
-                    <h2>Employment History</h2>
-                    <div ng-include="'views/employers.html'"></div>
-                </div>
-            </div>
-
-            <div class="section row">
-                <div class="col-md-5">
-                    <div ng-include="'views/publications.html'"></div>
-                    <div ng-include="'views/education.html'"></div>
-                </div>
-
-                <div class="col-md-7" ng-controller="githubRepositoriesController">
-                    <div ng-include="'views/repositories.html'"></div>
-                </div>
-            </div>
-        </div>
-
-        <!--[if lt IE 9]>
-            <script src="bower_components/es5-shim/es5-shim.js"></script>
-            <script src="bower_components/json3/lib/json3.js"></script>
-        <![endif]-->
-
-        <script src="scripts/d7261c8a.vendor.js"></script>
-
-        <script src="scripts/4e5c28e9.app.js"></script>
-
-        <script>
-            var _gaq=[['_setAccount','UA-20744182-4'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+    <style type="text/css">
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>My name is Joseph Wynn. I'm a web developer at <a href="http://www.bbc.co.uk/news">The BBC</a>.</p>
+    <p>I'm not currently looking for work, but I'm always happy to help out with open source projects. Ping me <a href="https://github.com/wildlyinaccurate/">on GitHub</a> if you'd like a hand.</p>
+    <p>Looking for something a bit more detailed? There's an <a href="enhanced.html">enhanced version</a> of this page.</p>
+  </body>
 </html>
