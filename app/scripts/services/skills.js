@@ -2,41 +2,49 @@ class SkillsService {
 
   all () {
     return [
+      new Skill('JavaScript', [
+        'ES6',
+        'AngularJS',
+        'jQuery',
+        'Lodash / Underscore',
+      ]),
+
       new Skill('PHP', [
         'Symfony',
         'Doctrine',
         'Laravel',
         'Slim',
-        'SPL',
-        'HHVM'
-      ]),
-
-      new Skill('JavaScript', [
-        'AngularJS',
-        'jQuery',
-        'Lodash / Underscore',
-        'CoffeeScript'
+        'HHVM',
       ]),
 
       new Skill('HTML & CSS', [
         'HTML5',
         'CSS3',
         'BEM',
-        'Performance',
-        'Mobile Optimisation'
+        'Web Performance',
       ]),
 
-      new Skill('Testing', [
-        'PHPUnit',
-        'Mockery',
-        'Behat',
-        'Jasmine',
-        'Sinon'
+      new Skill('Ruby', [
+        'Sinatra',
+        'JRuby',
+      ]),
+
+      new Skill('DevOps', [
+        'Docker',
+        'AWS',
+        'Puppet',
+        'Chef',
+      ]),
+
+      new Skill('Development Practices', [
+        'Automated Testing',
+        'Functional Programming',
+        'Continuous Integration',
       ]),
 
       new Skill('Databases', [
         'MySQL',
-        'PostgreSQL'
+        'PostgreSQL',
       ]),
 
       new Skill('Web Servers', [
@@ -49,14 +57,8 @@ class SkillsService {
         'Git',
         'Vagrant',
         'Grunt',
-        'Jenkins'
+        'Jenkins',
       ]),
-
-      new Skill('DevOps', [
-        'Puppet',
-        'Chef',
-        'Munin'
-      ])
     ]
   }
 
