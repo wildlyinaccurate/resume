@@ -1917,7 +1917,7 @@ html {
 
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.846;
   color: #666;
   background-color: #fff; }
@@ -1973,8 +1973,8 @@ img {
   border-radius: 50%; }
 
 hr {
-  margin-top: 29px;
-  margin-bottom: 29px;
+  margin-top: 31px;
+  margin-bottom: 31px;
   border: 0;
   border-top: 1px solid #eeeeee; }
 
@@ -1996,9 +1996,6 @@ hr {
   margin: 0;
   overflow: visible;
   clip: auto; }
-
-[role="button"] {
-  cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -2027,8 +2024,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 29px;
-  margin-bottom: 14.5px; }
+  margin-top: 31px;
+  margin-bottom: 15.5px; }
   h1 small,
   h1 .small, .h1 small,
   .h1 .small,
@@ -2043,8 +2040,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 14.5px;
-  margin-bottom: 14.5px; }
+  margin-top: 15.5px;
+  margin-bottom: 15.5px; }
   h4 small,
   h4 .small, .h4 small,
   .h4 .small,
@@ -2075,20 +2072,20 @@ h6, .h6 {
   font-size: 14px; }
 
 p {
-  margin: 0 0 14.5px; }
+  margin: 0 0 15.5px; }
 
 .lead {
-  margin-bottom: 29px;
-  font-size: 18px;
+  margin-bottom: 31px;
+  font-size: 19px;
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 768px) {
     .lead {
-      font-size: 24px; } }
+      font-size: 25.5px; } }
 
 small,
 .small {
-  font-size: 87%; }
+  font-size: 88%; }
 
 mark,
 .mark {
@@ -2113,7 +2110,7 @@ mark,
 .text-lowercase {
   text-transform: lowercase; }
 
-.text-uppercase, .initialism {
+.text-uppercase {
   text-transform: uppercase; }
 
 .text-capitalize {
@@ -2186,14 +2183,14 @@ a.bg-danger:hover {
   background-color: #f5908c; }
 
 .page-header {
-  padding-bottom: 13.5px;
-  margin: 58px 0 29px;
+  padding-bottom: 14.5px;
+  margin: 62px 0 31px;
   border-bottom: 1px solid #eeeeee; }
 
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 14.5px; }
+  margin-bottom: 15.5px; }
   ul ul,
   ul ol,
   ol ul,
@@ -2215,7 +2212,7 @@ ol {
 
 dl {
   margin-top: 0;
-  margin-bottom: 29px; }
+  margin-bottom: 31px; }
 
 dt,
 dd {
@@ -2253,12 +2250,13 @@ abbr[data-original-title] {
   border-bottom: 1px dotted #bbb; }
 
 .initialism {
-  font-size: 90%; }
+  font-size: 90%;
+  text-transform: uppercase; }
 
 blockquote {
-  padding: 14.5px 29px;
-  margin: 0 0 29px;
-  font-size: 20px;
+  padding: 15.5px 31px;
+  margin: 0 0 31px;
+  font-size: 21.25px;
   border-left: 5px solid #eeeeee; }
   blockquote p:last-child,
   blockquote ul:last-child,
@@ -2299,7 +2297,7 @@ blockquote.pull-right {
     content: '\00A0 \2014'; }
 
 address {
-  margin-bottom: 29px;
+  margin-bottom: 31px;
   font-style: normal;
   line-height: 1.846; }
 
@@ -2835,9 +2833,11 @@ address {
     opacity: 1; }
 
 .collapse {
-  display: none; }
+  display: none;
+  visibility: hidden; }
   .collapse.in {
-    display: block; }
+    display: block;
+    visibility: visible; }
 
 tr.collapse.in {
   display: table-row; }
@@ -2892,7 +2892,7 @@ tbody.collapse.in {
     border-color: #2196F3; }
   .nav .nav-divider {
     height: 1px;
-    margin: 13.5px 0;
+    margin: 14.5px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   .nav > li > a > img {
@@ -2973,10 +2973,12 @@ tbody.collapse.in {
       border-bottom-color: #fff; } }
 
 .tab-content > .tab-pane {
-  display: none; }
+  display: none;
+  visibility: hidden; }
 
 .tab-content > .active {
-  display: block; }
+  display: block;
+  visibility: visible; }
 
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -2986,7 +2988,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 64px;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
   border: 1px solid transparent; }
   .navbar:before,
   .navbar:after {
@@ -3032,6 +3034,7 @@ tbody.collapse.in {
       box-shadow: none; }
       .navbar-collapse.collapse {
         display: block !important;
+        visibility: visible !important;
         height: auto !important;
         padding-bottom: 0;
         overflow: visible !important; }
@@ -3094,9 +3097,9 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 17.5px 15px;
-  font-size: 20px;
-  line-height: 29px;
+  padding: 16.5px 15px;
+  font-size: 22px;
+  line-height: 31px;
   height: 64px; }
   .navbar-brand:hover,
   .navbar-brand:focus {
@@ -3133,11 +3136,11 @@ tbody.collapse.in {
       display: none; } }
 
 .navbar-nav {
-  margin: 8.75px -15px; }
+  margin: 8.25px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 29px; }
+    line-height: 31px; }
   @media (max-width: 767px) {
     .navbar-nav .open .dropdown-menu {
       position: static;
@@ -3151,7 +3154,7 @@ tbody.collapse.in {
       .navbar-nav .open .dropdown-menu .dropdown-header {
         padding: 5px 15px 5px 25px; }
       .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 29px; }
+        line-height: 31px; }
         .navbar-nav .open .dropdown-menu > li > a:hover,
         .navbar-nav .open .dropdown-menu > li > a:focus {
           background-image: none; } }
@@ -3162,8 +3165,8 @@ tbody.collapse.in {
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 17.5px;
-          padding-bottom: 17.5px; } }
+          padding-top: 16.5px;
+          padding-bottom: 16.5px; } }
 
 .navbar-form {
   margin-left: -15px;
@@ -3173,8 +3176,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 10.5px;
-  margin-bottom: 10.5px; }
+  margin-top: 9.5px;
+  margin-bottom: 9.5px; }
   @media (max-width: 767px) {
     .navbar-form .form-group {
       margin-bottom: 5px; }
@@ -3197,25 +3200,24 @@ tbody.collapse.in {
   border-top-left-radius: 0; }
 
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  margin-bottom: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 10.5px;
-  margin-bottom: 10.5px; }
+  margin-top: 9.5px;
+  margin-bottom: 9.5px; }
   .navbar-btn.btn-sm {
-    margin-top: 15.5px;
-    margin-bottom: 15.5px; }
+    margin-top: 15px;
+    margin-bottom: 15px; }
   .navbar-btn.btn-xs {
     margin-top: 21px;
     margin-bottom: 21px; }
 
 .navbar-text {
-  margin-top: 17.5px;
-  margin-bottom: 17.5px; }
+  margin-top: 16.5px;
+  margin-bottom: 16.5px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -3452,7 +3454,7 @@ a.label:focus {
     color: #444; }
   .jumbotron p {
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #e0e0e0; }
@@ -3470,7 +3472,7 @@ a.label:focus {
         padding-right: 60px; }
       .jumbotron h1,
       .jumbotron .h1 {
-        font-size: 72px; } }
+        font-size: 76.5px; } }
 
 @-webkit-keyframes progress-bar-stripes {
   from {
@@ -3486,8 +3488,8 @@ a.label:focus {
 
 .progress {
   overflow: hidden;
-  height: 29px;
-  margin-bottom: 29px;
+  height: 31px;
+  margin-bottom: 31px;
   background-color: #f5f5f5;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3497,8 +3499,8 @@ a.label:focus {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 14px;
-  line-height: 29px;
+  font-size: 15px;
+  line-height: 31px;
   color: #fff;
   text-align: center;
   background-color: #2196F3;
@@ -3606,7 +3608,8 @@ a.label:focus {
   border: 0; }
 
 .hidden {
-  display: none !important; }
+  display: none !important;
+  visibility: hidden !important; }
 
 .affix {
   position: fixed; }
