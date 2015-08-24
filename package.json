@@ -23,6 +23,7 @@
     "grunt-uncss": "^0.4.3",
     "grunt-usemin": "^3.1.1",
     "load-grunt-tasks": "^3.2.0",
+    "serve-static": "^1.10.0",
     "time-grunt": "^1.2.1"
   }
 }
