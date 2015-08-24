@@ -4,7 +4,7 @@ class EmploymentHistoryService {
     let bbc = new Role('Senior Developer', new Date('2014-08-01'))
     bbc.setEmployer(new Employer('BBC News', 'http://www.bbc.co.uk/news'))
     bbc.setDescription(`
-    I am currently a part of the World Service team, working on the responsive BBC News website for 31 different countries.
+    I am currently a part of the World Service team, working on the responsive BBC News website for 31 different countries. My focuses over the last few months have been on optimising page performance and building cloud-based (AWS) services to augment the News product.
     `)
 
     let rightster = new Role('Senior Developer', new Date('2013-12-01'), new Date('2014-08-01'))
