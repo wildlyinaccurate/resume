@@ -39,3 +39,7 @@ $font-size-base:      17px;
 a {
   @include transition-duration(0.45s)
 }
+
+h5 {
+  margin-bottom: floor($line-height-computed / 3);
+}
