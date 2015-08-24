@@ -5,8 +5,8 @@
     "bootstrap-sass-official": "~3.3",
     "bootswatch-scss": "master",
     "font-awesome": "~4.2",
-    "angular": "~1.3",
-    "angular-sanitize": "~1.3"
+    "angular": "~1.4",
+    "angular-sanitize": "~1.4"
   },
   "resolutions": {
     "bootstrap-sass-official": "~3.3"
