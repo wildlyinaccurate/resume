@@ -203,7 +203,7 @@ module.exports = function (grunt) {
         'copy:styles'
       ],
       dist: [
-        'babel',
+        'babel:dist',
         'sass:dist',
         'copy:styles',
         'imagemin'
@@ -213,17 +213,26 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>/scripts',
+          cwd: '.tmp/scripts',
           src: '**/*.js',
-          dest: '<%= yeoman.dist %>/scripts'
+          dest: '.tmp/scripts'
         }]
       }
     },
     uglify: {
+      options: {
+        screwIE8: true
+      }
+    },
+    uncss: {
       dist: {
+        options: {
+          ignoreSheets: [/fonts.googleapis/]
+        },
         files: {
-          '<%= yeoman.dist %>/scripts/vendor.js': ['<%= yeoman.dist %>/scripts/vendor.js'],
-          '<%= yeoman.dist %>/scripts/app.js': ['<%= yeoman.dist %>/scripts/app.js'],
+          '<%= yeoman.dist %>/styles/main.css': [
+            '<%= yeoman.dist %>/enhanced.html'
+          ]
         }
       }
     },
@@ -266,12 +275,13 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
+    'ngAnnotate',
     'concat',
     'copy:dist',
-    'ngAnnotate',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'uncss'
   ]);
 
   grunt.registerTask('release', [
