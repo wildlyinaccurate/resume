@@ -1,4 +1,4 @@
-/*** uncss> filename: dist/styles/0870cd1e.main.css ***/
+/*** uncss> filename: dist/styles/8a44636b.main.css ***/
 
 @charset "UTF-8";
 
@@ -240,6 +240,7 @@ ul {
 }
 
 .col-md-4,
+.col-md-6,
 .col-md-8 {
   position: relative;
   min-height: 1px;
@@ -249,12 +250,17 @@ ul {
 
 @media (min-width: 992px) {
   .col-md-4,
+  .col-md-6,
   .col-md-8 {
     float: left;
   }
 
   .col-md-4 {
     width: 33.3333333333%;
+  }
+
+  .col-md-6 {
+    width: 50%;
   }
 
   .col-md-8 {

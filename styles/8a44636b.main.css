@@ -3665,5 +3665,7 @@ a {
   -webkit-transition-duration: 0.45s;
   transition-duration: 0.45s; }
 
-h5 {
+h4,
+h5,
+h6 {
   margin-bottom: 10px; }
