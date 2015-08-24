@@ -207,12 +207,12 @@ module.exports = function (grunt) {
         'imagemin'
       ]
     },
-    ngmin: {
+    ngAnnotate: {
       dist: {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>/scripts',
-          src: '*.js',
+          src: '**/*.js',
           dest: '<%= yeoman.dist %>/scripts'
         }]
       }
@@ -266,7 +266,7 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'concat',
     'copy:dist',
-    'ngmin',
+    'ngAnnotate',
     'uglify',
     'rev',
     'usemin'
