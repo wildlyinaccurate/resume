@@ -40,6 +40,8 @@ a {
   @include transition-duration(0.45s)
 }
 
-h5 {
+h4,
+h5,
+h6 {
   margin-bottom: floor($line-height-computed / 3);
 }
