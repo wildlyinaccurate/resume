@@ -1,14 +1,14 @@
 angular.module('resumeApp')
-  .controller('githubRepositoriesController', ['$scope', ($scope) => {
+  .controller('githubRepositoriesController', ($scope) => {
 
-      let user = new Github.User('wildlyinaccurate')
+    let user = new Github.User('wildlyinaccurate')
 
-      user.repositories((repositories) => {
-        $scope.repositories = repositories.sort((a, b) => {
-          return b.popularity - a.popularity
-        })
-
-        $scope.$apply()
+    user.repositories((repositories) => {
+      $scope.repositories = repositories.sort((a, b) => {
+        return b.popularity - a.popularity
       })
 
-    }])
+      $scope.$apply()
+    })
+
+  })
