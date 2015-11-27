@@ -7,5 +7,8 @@ module.exports = {
         loader: 'babel?presets[]=es2015'
       }
     ]
+  },
+  output: {
+    filename: '[name].js'
   }
 }
