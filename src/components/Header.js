@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 class Header extends Component {
   render() {
     return (
-      <header className="header">
-        <h1>Hello, World!</h1>
-      </header>
+      <nav className="navbar navbar-dark bg-primary">
+        <a className="navbar-brand" href="/">Joseph Wynn</a>
+      </nav>
     )
   }
 }
