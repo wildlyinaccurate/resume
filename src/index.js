@@ -3,11 +3,7 @@ import React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-class App extends React.Component {
-  render() {
-    return <h1>Hello, world!</h1>
-  }
-}
+import App from './containers/App'
 
 const store = createStore(x => x)
 
