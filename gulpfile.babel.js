@@ -7,14 +7,16 @@ import batch from 'gulp-batch'
 gulp.task('default', ['build'])
 
 gulp.task('build', () => {
-  return gulp.src('src/index.jsx')
+  return gulp.src('src/index.js')
     .pipe(named())
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('dist'))
 })
 
 gulp.task('watch', () => {
-  watch('src/**/*.js{,x}', batch((events, done) => {
+  gulp.start('build')
+
+  watch('src/**/*.js', batch((events, done) => {
     gulp.start('build', done)
   }))
 })
