@@ -2,9 +2,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel?presets[]=es2015'
+        loader: 'babel?presets[]=es2015&presets[]=react'
       }
     ]
   },
