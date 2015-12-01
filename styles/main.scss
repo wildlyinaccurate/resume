@@ -1,3 +1,6 @@
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-weight: 400;
+
 // Core variables and mixins
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
@@ -20,3 +23,4 @@
 
 @import 'icons';
 @import 'header-links';
+@import 'introduction';
