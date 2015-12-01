@@ -5,24 +5,28 @@ import Icon from './Icon'
 class Header extends Component {
   render() {
     return (
-      <nav className="navbar navbar-dark bg-primary">
-        <a className="navbar-brand" href="/">Joseph Wynn</a>
+      <div className="row">
+        <div className="col-md-8">
+          <h1 className="pull-left text-center">Joseph Wynn</h1>
+        </div>
 
-        <div className="pull-right">
-          <a className="social-media-link" href="https://github.com/wildlyinaccurate">
-            <Icon name="github"/>
-            <span className="social-media-link__text">GitHub</span>
-          </a>
-          <a className="social-media-link" href="https://twitter.com/Joseph_Wynn">
-            <Icon name="twitter"/>
-            <span className="social-media-link__text">Twitter</span>
-          </a>
-          <a className="social-media-link" href="https://wildlyinaccurate.com/">
+        <div className="header-links col-md-4 pull-right">
+          <a className="header-link" href="https://wildlyinaccurate.com/">
             <Icon name="wildlyinaccurate"/>
-            <span className="social-media-link__text">Blog</span>
+            <span className="header-link__text">wildlyinaccurate.com</span>
+          </a>
+
+          <a className="header-link" href="https://github.com/wildlyinaccurate">
+            <Icon name="github"/>
+            <span className="header-link__text">wildlyinaccurate</span>
+          </a>
+
+          <a className="header-link" href="https://twitter.com/Joseph_Wynn">
+            <Icon name="twitter"/>
+            <span className="header-link__text">@Joseph_Wynn</span>
           </a>
         </div>
-      </nav>
+      </div>
     )
   }
 }

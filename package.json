@@ -24,6 +24,7 @@
     "babel-preset-react": "^6.1.18",
     "gulp": "^3.9.0",
     "gulp-batch": "^1.0.5",
+    "gulp-sass": "^2.1.0",
     "gulp-watch": "^4.3.5",
     "gulp-webpack": "^1.5.0",
     "vinyl-named": "^1.1.0"
