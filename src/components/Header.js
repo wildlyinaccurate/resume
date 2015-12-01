@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="row">
         <div className="col-md-8">
-          <h1 className="pull-left text-center">Joseph Wynn</h1>
+          <h2 className="pull-left">Joseph Wynn</h2>
         </div>
 
         <div className="header-links col-md-4 pull-right">
