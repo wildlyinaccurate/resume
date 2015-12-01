@@ -1,0 +1,10 @@
+.icon {
+    fill: #000;
+    height: $font-size-h1;
+    transition-duration: 0.3s;
+    width: $font-size-h1;
+}
+
+a:hover .icon {
+    fill: $brand-primary;
+}

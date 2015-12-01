@@ -1,0 +1,22 @@
+// Core variables and mixins
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+// // Reset and dependencies
+@import 'bootstrap/scss/normalize';
+@import 'bootstrap/scss/print';
+
+// Core CSS
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/grid';
+
+// Utility classes
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities-spacing';
+@import 'bootstrap/scss/utilities-responsive';
+
+// ---------------
+
+@import 'icons';
+@import 'header-links';
