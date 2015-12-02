@@ -14,6 +14,8 @@ class Experience extends Component {
 
           <div className="col-sm-9">
             <h3>BBC News</h3>
+
+            August 2014 &mdash; Present
           </div>
         </div>
       </div>

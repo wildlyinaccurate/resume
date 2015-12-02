@@ -10,7 +10,7 @@ class Header extends Component {
           <h2 className="pull-left">Joseph Wynn</h2>
         </div>
 
-        <div className="header-links col-md-4 pull-right">
+        <div className="header-links col-md-4 text-right">
           <a className="header-link" href="https://wildlyinaccurate.com/">
             <Icon name="wildlyinaccurate"/>
             <span className="header-link__text">wildlyinaccurate.com</span>
