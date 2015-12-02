@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
-import Icon from './Icon'
+import ExperienceItem from './ExperienceItem'
 
 class Experience extends Component {
   render() {
+    const experience = [
+        {
+            name: 'BBC News',
+            role: 'Senior Developer',
+            startDate: '2014-08-01',
+            icon: 'bbc-news',
+            description: `
+
+            `
+        }
+    ]
+
+    const items = experience.map((x) => {
+        return <ExperienceItem {...x}/>
+    })
+
     return (
       <div className="experience">
         <h2 className="display-1 m-b-md text-center">Experience</h2>
-
-        <div className="row">
-          <div className="col-sm-3">
-            <Icon name="bbc-news" style="full"/>
-          </div>
-
-          <div className="col-sm-9">
-            <h3>BBC News</h3>
-
-            August 2014 &mdash; Present
-          </div>
-        </div>
+        {items}
       </div>
     )
   }
