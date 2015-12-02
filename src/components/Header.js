@@ -4,10 +4,24 @@ import Icon from './Icon'
 
 class Header extends Component {
   render() {
+    const navItems = ['Experience'].map((item) => {
+      const anchor = `#${item.toLowerCase()}`
+
+      return (
+        <li className="nav-item">
+          <a href={anchor} className="nav-link">{item}</a>
+        </li>
+      )
+    })
+
     return (
-      <div className="row">
-        <div className="col-md-8">
-          <h2 className="pull-left">Joseph Wynn</h2>
+      <nav className="navbar navbar-fixed-top bg-faded">
+        <div id="navbar" className="col-md-8">
+          <h2 className="pull-left m-r-md">Joseph Wynn</h2>
+
+          <ul className="nav nav-pills hidden-sm-down">
+            {navItems}
+          </ul>
         </div>
 
         <div className="header-links col-md-4 text-right">
@@ -26,7 +40,7 @@ class Header extends Component {
             <span className="header-link__text">@Joseph_Wynn</span>
           </a>
         </div>
-      </div>
+      </nav>
     )
   }
 }

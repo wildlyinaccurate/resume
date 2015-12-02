@@ -1,15 +1,11 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import ScrollSpy from 'bootstrap/dist/js/umd/scrollspy'
 
 import App from './containers/App'
 
-const store = createStore(x => x)
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById('app-container')
 )
