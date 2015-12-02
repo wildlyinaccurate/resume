@@ -3,6 +3,11 @@
     height: $font-size-h2;
     transition-duration: 0.3s;
     width: $font-size-h2;
+
+    &--full {
+        height: auto;
+        width: 100%;
+    }
 }
 
 a:hover .icon {
