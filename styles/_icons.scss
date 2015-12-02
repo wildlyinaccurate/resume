@@ -13,3 +13,9 @@
 a:hover .icon {
     fill: $brand-primary;
 }
+
+@include media-breakpoint-down(sm) {
+    .icon--full {
+        width: 50%;
+    }
+}

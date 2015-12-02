@@ -12,19 +12,31 @@ class ExperienceItem extends Component {
     return date ? this.dateString(date) : 'Present'
   }
 
+  paragraphs(text) {
+    return `
+      <p>
+        ${text.split('\n\n').join('</p><p>')}
+      </p>
+    `
+  }
+
   render() {
     return (
       <div className="row">
-        <div className="col-sm-3">
-          <Icon name={this.props.icon} style="full"/>
+        <div className="col-sm-3 text-xs-center">
+          <a href={this.props.url}>
+            <Icon name={this.props.icon} style="full"/>
+          </a>
         </div>
 
         <div className="col-sm-9">
-          <h3>{this.props.name}</h3>
+          <h4>
+            {this.props.role} at <a href={this.props.url}>{this.props.name}</a>
+          </h4>
 
           {this.dateString(this.props.startDate)} &mdash; {this.endDate(this.props.endDate)}
 
-          <div dangerouslySetInnerHTML={{ __html: this.props.description }} />
+          <div dangerouslySetInnerHTML={{ __html: this.paragraphs(this.props.description) }} />
         </div>
       </div>
     )
