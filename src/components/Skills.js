@@ -24,7 +24,7 @@ const Skills = React.createClass({
 
   render: function() {
     return (
-      <div id="skills" className="text-center">
+      <div id="skills" className="section text-center">
         <h2 className="display-1 m-b-md text-center">Skills</h2>
 
         <div className="row">
