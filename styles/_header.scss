@@ -9,7 +9,7 @@
 }
 
 .header-link__text {
-    bottom: -$font-size-sm;
+    bottom: -($font-size-sm / 2);
     font-size: $font-size-sm;
     left: -50%;
     opacity: 0;

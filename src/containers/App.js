@@ -8,12 +8,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="container m-t-md">
-        <Header/>
-        <Introduction/>
-        <hr className="m-y-lg"/>
-        <Experience/>
-        <hr className="m-y-lg"/>
-        <Skills/>
+        <Header />
+        <Introduction />
+        <Experience />
+        <Skills />
       </div>
     )
   }
