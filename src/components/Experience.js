@@ -4,9 +4,9 @@ import ExperienceItem from './ExperienceItem'
 
 const Experience = React.createClass({
   getInitialState: function() {
-      return {
-        items: '',
-      }
+    return {
+      items: '',
+    }
   },
 
   componentDidMount: function() {

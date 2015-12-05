@@ -2,11 +2,16 @@
     fill: #000;
     height: $font-size-h2;
     transition-duration: 0.3s;
+    vertical-align: text-bottom;
     width: $font-size-h2;
 
     &--full {
         height: auto;
         width: 100%;
+    }
+
+    &--super {
+        vertical-align: text-top;
     }
 }
 
