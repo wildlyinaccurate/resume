@@ -1,6 +1,7 @@
 $font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-weight: 400;
 $link-color: #73278c;
+$enable-flex: true;
 
 // Core variables and mixins
 @import 'bootstrap/scss/variables';
@@ -29,6 +30,7 @@ $link-color: #73278c;
 
 @import 'icons';
 @import 'header';
+@import 'section';
 @import 'introduction';
 
 a {
