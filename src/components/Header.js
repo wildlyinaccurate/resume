@@ -3,16 +3,19 @@ import React, { Component } from 'react'
 import Icon from './Icon'
 
 class Header extends Component {
-  render() {
-    const navItems = ['Introduction', 'Experience', 'Skills', 'Publications'].map((item) => {
+  navItems() {
+    return ['Introduction', 'Experience', 'Skills', 'Publications'].map((item) => {
       const anchor = `#${item.toLowerCase()}`
 
       return (
-        <li className="nav-item">
+        <li key={item} className="nav-item">
           <a href={anchor} className="nav-link">{item}</a>
         </li>
       )
     })
+  }
+
+  render() {
 
     return (
       <nav className="navbar navbar-fixed-top bg-faded">
@@ -22,7 +25,7 @@ class Header extends Component {
               <h2 className="pull-left m-r-md">Joseph Wynn</h2>
 
               <ul className="nav nav-pills hidden-md-down">
-                {navItems}
+                {this.navItems()}
               </ul>
             </div>
 
