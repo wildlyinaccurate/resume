@@ -6,7 +6,7 @@ class Icon extends Component {
   }
 
   iconHref(icon) {
-    return `icons.svg#icon-${icon}`
+    return `images/icons.svg#icon-${icon}`
   }
 
   render() {
