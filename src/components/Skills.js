@@ -18,7 +18,7 @@ const Skills = React.createClass({
 
   dataToSkillItems: function(data) {
     return data.results.map((props) => {
-      return <SkillItem {...props} />
+      return <SkillItem key={props.name} {...props} />
     })
   },
 
