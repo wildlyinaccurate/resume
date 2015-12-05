@@ -6,7 +6,7 @@
         { "name": "React", "icon": "react" },
         { "name": "AngularJS", "icon": "angular" },
         { "name": "Elm", "icon": "elm" },
-        { "name": "Amazon Web Services", "icon": "aws" },
+        { "name": "AWS", "icon": "aws" },
         { "name": "Docker", "icon": "docker" },
         { "name": "Travis CI", "icon": "travis" },
         { "name": "HTML", "icon": "html" },

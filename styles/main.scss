@@ -1,3 +1,4 @@
+$font-size-root: 17px;
 $font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-weight: 400;
 $link-color: #73278c;
@@ -20,6 +21,7 @@ $enable-flex: true;
 // // Components
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/labels';
 
 // Utility classes
 @import 'bootstrap/scss/utilities';
@@ -35,4 +37,8 @@ $enable-flex: true;
 
 a {
     font-weight: 400;
+}
+
+footer {
+    margin-top: 16em; // Mostly just for ScrollSpy
 }

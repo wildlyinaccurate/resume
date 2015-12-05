@@ -4,7 +4,7 @@ import Icon from './Icon'
 
 class Header extends Component {
   render() {
-    const navItems = ['Introduction', 'Experience', 'Skills'].map((item) => {
+    const navItems = ['Introduction', 'Experience', 'Skills', 'Publications'].map((item) => {
       const anchor = `#${item.toLowerCase()}`
 
       return (
@@ -18,15 +18,15 @@ class Header extends Component {
       <nav className="navbar navbar-fixed-top bg-faded">
         <div className="container">
           <div className="row">
-            <div id="navbar" className="col-md-8">
+            <div id="navbar" className="col-sm-9">
               <h2 className="pull-left m-r-md">Joseph Wynn</h2>
 
-              <ul className="nav nav-pills hidden-sm-down">
+              <ul className="nav nav-pills hidden-md-down">
                 {navItems}
               </ul>
             </div>
 
-            <div className="header-links col-md-4 text-right">
+            <div className="header-links col-sm-3 text-right">
               <a className="header-link" href="https://wildlyinaccurate.com/">
                 <Icon name="wildlyinaccurate" style="super" />
                 <span className="header-link__text">wildlyinaccurate.com</span>

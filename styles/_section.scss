@@ -1,4 +1,12 @@
 .section {
-    border-bottom: $hr-border-width solid $hr-border-color;
+    border-top: $hr-border-width solid $hr-border-color;
     padding: ($spacer-y * 2.5) 0;
+
+    &:first-child {
+        border-top: none;
+    }
+
+    .label {
+        margin-right: 0.25rem;
+    }
 }
