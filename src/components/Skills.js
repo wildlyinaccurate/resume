@@ -1,4 +1,5 @@
 import React from 'react'
+import { map, mapObjIndexed, prop, groupBy, values } from 'ramda'
 import SkillItem from './SkillItem'
 
 const Skills = React.createClass({
@@ -10,17 +11,27 @@ const Skills = React.createClass({
 
   componentDidMount: function() {
     $.getJSON('data/skills.json')
-      .then(this.dataToSkillItems)
+      .then(prop('results'))
+      .then(groupBy(prop('category')))
+      .then(this.toSkillItems)
+      .then(values)
       .then((skills) => {
         this.setState({ skills })
       })
   },
 
-  dataToSkillItems: function(data) {
-    return data.results.map((props) => {
+  toSkillItems: mapObjIndexed((skills, category) => {
+    const items = map((props) => {
       return <SkillItem key={props.name} {...props} />
-    })
-  },
+    }, skills)
+
+    return (
+      <div key={category} className="col-xs-6 col-md-4 m-b-lg">
+        <h3>{category}</h3>
+        {items}
+      </div>
+    )
+  }),
 
   render: function() {
     return (
