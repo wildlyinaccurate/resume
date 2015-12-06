@@ -33,6 +33,7 @@
     "bootstrap": "twbs/bootstrap#v4.0.0-alpha",
     "dateformat": "^1.0.12",
     "jquery": "^2.1.4",
+    "ramda": "^0.18.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
   }
