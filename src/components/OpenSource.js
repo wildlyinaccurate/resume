@@ -1,8 +1,7 @@
 import React from 'react'
 import fetch from 'isomorphic-fetch'
-import ExperienceItem from './ExperienceItem'
 
-const Experience = React.createClass({
+const OpenSource = React.createClass({
   getInitialState: function() {
     return {
       items: '',
@@ -10,26 +9,26 @@ const Experience = React.createClass({
   },
 
   componentDidMount: function() {
-    fetch('data/experience.json')
+    fetch('data/open-source.json')
       .then(response => response.json())
-      .then(this.dataToExperienceItems)
+      .then(this.dataToOpenSourceItems)
       .then(items => this.setState({ items }))
   },
 
-  dataToExperienceItems: function(data) {
+  dataToOpenSourceItems: function(data) {
     return data.results.map((props) => {
-      return <ExperienceItem key={props.name} {...props} />
+      return <OpenSourceItem key={props.name} {...props} />
     })
   },
 
   render: function() {
     return (
-      <div id="experience" className="section">
-        <h2 className="display-1 m-b-md text-center">Experience</h2>
+      <div id="open-source" className="section">
+        <h2 className="display-1 m-b-md text-center">Open Source</h2>
         {this.state.items}
       </div>
     )
   }
 })
 
-export default Experience
+export default OpenSource

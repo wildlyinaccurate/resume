@@ -1,5 +1,5 @@
 import React from 'react'
-import $ from 'jquery'
+import fetch from 'isomorphic-fetch'
 
 const Publications = React.createClass({
   getInitialState: function() {
@@ -9,7 +9,8 @@ const Publications = React.createClass({
   },
 
   componentDidMount: function() {
-    $.getJSON('data/publications.json')
+    fetch('data/publications.json')
+      .then(response => response.json())
       .then(this.dataToPublicationItems)
       .then((publications) => {
         this.setState({ publications })
