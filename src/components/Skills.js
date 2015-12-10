@@ -1,5 +1,6 @@
 import React from 'react'
 import { map, mapObjIndexed, prop, groupBy, values } from 'ramda'
+import fetch from 'isomorphic-fetch'
 import SkillItem from './SkillItem'
 
 const Skills = React.createClass({
@@ -10,7 +11,8 @@ const Skills = React.createClass({
   },
 
   componentDidMount: function() {
-    $.getJSON('data/skills.json')
+    fetch('data/skills.json')
+      .then(response => response.json())
       .then(prop('results'))
       .then(groupBy(prop('category')))
       .then(this.toSkillItems)

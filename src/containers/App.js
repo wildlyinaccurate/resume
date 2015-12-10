@@ -5,6 +5,7 @@ import Introduction from '../components/Introduction'
 import Experience from '../components/Experience'
 import Skills from '../components/Skills'
 import Publications from '../components/Publications'
+import OpenSource from '../components/OpenSource'
 
 export default class App extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class App extends Component {
         <Experience />
         <Skills />
         <Publications />
+        <OpenSource />
 
         <Footer />
       </div>
