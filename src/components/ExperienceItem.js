@@ -18,7 +18,7 @@ class ExperienceItem extends Component {
 
   render() {
     return (
-      <div className="row">
+      <div className="row p-b">
         <div className="col-sm-3 text-xs-center">
           <a href={this.props.url}>
             <img className="img-responsive" src={this.props.image}/>
