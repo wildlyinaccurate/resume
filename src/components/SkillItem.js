@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import Icon from './Icon'
 
 class SkillItem extends Component {
