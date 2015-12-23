@@ -1,5 +1,8 @@
+import { compose, prop, reverse, sortBy, take } from 'ramda'
 import React from 'react'
 import fetch from 'isomorphic-fetch'
+
+import OpenSourceItem from './OpenSourceItem'
 
 const OpenSource = React.createClass({
   getInitialState: function() {
@@ -9,14 +12,21 @@ const OpenSource = React.createClass({
   },
 
   componentDidMount: function() {
-    fetch('data/open-source.json')
+    fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100`)
       .then(response => response.json())
+      .then(this.sortRepositories)
+      .then(take(10))
       .then(this.dataToOpenSourceItems)
       .then(items => this.setState({ items }))
   },
 
-  dataToOpenSourceItems: function(data) {
-    return data.results.map((props) => {
+  sortRepositories: compose(
+    reverse,
+    sortBy(prop('stargazers_count'))
+  ),
+
+  dataToOpenSourceItems: function(results) {
+    return results.map((props) => {
       return <OpenSourceItem key={props.name} {...props} />
     })
   },
@@ -25,7 +35,14 @@ const OpenSource = React.createClass({
     return (
       <div id="open-source" className="section">
         <h2 className="display-4 m-b-2 text-xs-center">Open Source</h2>
-        {this.state.items}
+
+        <p className="text-xs-center">
+          Below is a small collection of my most popular open source work. You can visit <a href="https://github.com/wildlyinaccurate?tab=repositories">my GitHub profile</a> for a more complete picture of the open source work that I do.
+        </p>
+
+        <div className="row">
+          {this.state.items}
+        </div>
       </div>
     )
   }
