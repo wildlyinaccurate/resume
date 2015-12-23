@@ -12,7 +12,7 @@ class OpenSourceItem extends Component {
             <Icon name="star" />
           </span>
 
-          <a href={this.props.html_url}>{this.props.name}</a>
+          <a href={this.props.html_url}>{this.props.name} ({this.props.language})</a>
         </h4>
 
         <p>
