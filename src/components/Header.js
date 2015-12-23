@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
+import slug from '../utils/slug'
 import Icon from './Icon'
 
 class Header extends Component {
   navItems() {
-    return ['Experience', 'Skills', 'Publications'].map((item) => {
-      const anchor = `#${item.toLowerCase()}`
+    return ['Experience', 'Skills', 'Publications', 'Open Source'].map((item) => {
+      const anchor = `#${slug(item)}`
 
       return (
         <li key={item} className="nav-item">
@@ -16,7 +17,6 @@ class Header extends Component {
   }
 
   render() {
-
     return (
       <nav className="navbar navbar-fixed-top bg-faded">
         <div className="container">
