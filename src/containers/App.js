@@ -17,7 +17,7 @@ export default class App extends Component {
         <Experience />
         <Skills />
         <Publications />
-        <OpenSource />
+        <OpenSource username="wildlyinaccurate" />
 
         <Footer />
       </div>
