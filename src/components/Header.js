@@ -4,7 +4,7 @@ import Icon from './Icon'
 
 class Header extends Component {
   navItems() {
-    return ['Introduction', 'Experience', 'Skills', 'Publications'].map((item) => {
+    return ['Experience', 'Skills', 'Publications'].map((item) => {
       const anchor = `#${item.toLowerCase()}`
 
       return (
