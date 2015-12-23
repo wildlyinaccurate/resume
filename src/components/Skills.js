@@ -1,6 +1,7 @@
 import React from 'react'
 import { map, mapObjIndexed, prop, groupBy, values } from 'ramda'
 import fetch from 'isomorphic-fetch'
+
 import SkillItem from './SkillItem'
 
 const Skills = React.createClass({
