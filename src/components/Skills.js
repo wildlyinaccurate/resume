@@ -40,7 +40,7 @@ const Skills = React.createClass({
       <div id="skills" className="section text-xs-center">
         <h2 className="display-4 m-b-2">Skills</h2>
 
-        <div className="row">
+        <div className="row center-cols">
           {this.state.skills}
         </div>
       </div>
