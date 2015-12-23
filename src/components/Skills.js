@@ -28,7 +28,7 @@ const Skills = React.createClass({
     }, skills)
 
     return (
-      <div key={category} className="col-xs-6 col-md-4 m-b-lg">
+      <div key={category} className="col-xs-6 col-md-4 m-b-3">
         <h3>{category}</h3>
         {items}
       </div>
@@ -37,8 +37,8 @@ const Skills = React.createClass({
 
   render: function() {
     return (
-      <div id="skills" className="section text-center">
-        <h2 className="display-1 m-b-md text-center">Skills</h2>
+      <div id="skills" className="section text-xs-center">
+        <h2 className="display-4 m-b-2">Skills</h2>
 
         <div className="row">
           {this.state.skills}

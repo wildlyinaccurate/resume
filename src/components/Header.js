@@ -22,7 +22,7 @@ class Header extends Component {
         <div className="container">
           <div className="row">
             <div id="navbar" className="col-sm-9">
-              <h2 className="pull-left m-r-md">Joseph Wynn</h2>
+              <h2 className="pull-xs-left m-r-2">Joseph Wynn</h2>
 
               <ul className="nav nav-pills hidden-md-down">
                 {this.navItems()}

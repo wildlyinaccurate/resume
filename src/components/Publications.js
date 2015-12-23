@@ -40,7 +40,7 @@ const Publications = React.createClass({
   render: function() {
     return (
       <div id="publications" className="section">
-        <h2 className="display-1 m-b-md text-center">Publications</h2>
+        <h2 className="display-4 m-b-2 text-xs-center">Publications</h2>
 
         <div className="row">
           {this.state.publications}

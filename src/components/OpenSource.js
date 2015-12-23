@@ -24,7 +24,7 @@ const OpenSource = React.createClass({
   render: function() {
     return (
       <div id="open-source" className="section">
-        <h2 className="display-1 m-b-md text-center">Open Source</h2>
+        <h2 className="display-4 m-b-2 text-xs-center">Open Source</h2>
         {this.state.items}
       </div>
     )
