@@ -21,7 +21,7 @@ class ExperienceItem extends Component {
       <div className="row p-b">
         <div className="col-sm-3 text-xs-center">
           <a href={this.props.url}>
-            <img className="img-responsive" src={this.props.image}/>
+            <img className="img-fluid" src={this.props.image}/>
           </a>
         </div>
 
