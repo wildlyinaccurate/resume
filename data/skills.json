@@ -21,11 +21,7 @@
         { "name": "Git", "icon": "git", "category": "Workflow" },
         { "name": "Travis CI", "icon": "travis", "category": "Workflow" },
         { "name": "Gulp", "icon": "gulp", "category": "Workflow" },
-        { "name": "Grunt", "icon": "grunt", "category": "Workflow" },
-
-        { "name": "Functional Programming", "icon": "fp", "category": "Practices" },
-        { "name": "Continuous Integration", "icon": "ci", "category": "Practices" },
-        { "name": "TDD", "icon": "tdd", "category": "Practices" }
+        { "name": "Grunt", "icon": "grunt", "category": "Workflow" }
     ]
 }
 
