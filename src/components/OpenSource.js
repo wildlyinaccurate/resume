@@ -1,4 +1,4 @@
-import { compose, prop, reverse, sortBy, take } from 'ramda'
+import { compose, contains, find, flip, keys, map, not, prop, reverse, sortBy, take } from 'ramda'
 import React from 'react'
 import fetch from 'isomorphic-fetch'
 
@@ -16,6 +16,7 @@ const OpenSource = React.createClass({
       .then(response => response.json())
       .then(this.sortRepositories)
       .then(take(10))
+      .then(this.getRepositoryLanguages)
       .then(this.dataToOpenSourceItems)
       .then(items => this.setState({ items }))
   },
@@ -25,8 +26,26 @@ const OpenSource = React.createClass({
     sortBy(prop('stargazers_count'))
   ),
 
-  dataToOpenSourceItems: function(results) {
-    return results.map((props) => {
+  getRepositoryLanguages: function(repositories) {
+    return Promise.all(map(this.getRepositoryLanguage, repositories))
+  },
+
+  getRepositoryLanguage: function(repository) {
+    return fetch(repository.languages_url)
+      .then(response => response.json())
+      .then(keys)
+      .then(find(this.isRealLanguage))
+      .then((language) => {
+        repository.language = language
+
+        return repository
+      })
+  },
+
+  isRealLanguage: compose(not, flip(contains)(['HTML', 'CSS'])),
+
+  dataToOpenSourceItems: function(repositories) {
+    return repositories.map((props) => {
       return <OpenSourceItem key={props.name} {...props} />
     })
   },
