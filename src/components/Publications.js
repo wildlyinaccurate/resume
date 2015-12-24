@@ -3,9 +3,10 @@ import fetch from 'isomorphic-fetch'
 
 const Publications = React.createClass({
   getInitialState: function() {
-    return {
-      publications: '',
-    }
+    const data = this.props.data
+    const publications = data ? this.dataToPublicationItems(data) : ''
+
+    return { publications }
   },
 
   componentDidMount: function() {

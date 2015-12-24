@@ -10,14 +10,16 @@ import OpenSource from '../components/OpenSource'
 
 export default class App extends Component {
   render() {
+    const data = this.props.data || {}
+
     return (
       <div className="container m-t-md">
         <Header />
 
         <Introduction />
-        <Experience />
-        <Skills />
-        <Publications />
+        <Experience data={data.experience} />
+        <Skills data={data.skills} />
+        <Publications data={data.publications} />
         <OpenSource username="wildlyinaccurate" />
 
         <Footer />
