@@ -4,6 +4,11 @@ $headings-font-weight: 400;
 $link-color: #73278c;
 $enable-flex: true;
 
+// Fix for fluid images in Firefox (https://github.com/twbs/bootstrap/issues/17694)
+.img-fluid {
+    width: 100%;
+}
+
 // Core variables and mixins
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
