@@ -5,9 +5,10 @@ import ExperienceItem from './ExperienceItem'
 
 const Experience = React.createClass({
   getInitialState: function() {
-    return {
-      items: '',
-    }
+    const data = this.props.data
+    const items = data ? this.dataToExperienceItems(data) : ''
+
+    return { items }
   },
 
   componentDidMount: function() {

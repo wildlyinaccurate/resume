@@ -1,29 +1,36 @@
 import React from 'react'
-import { map, mapObjIndexed, prop, groupBy, values } from 'ramda'
+import { compose, groupBy, map, mapObjIndexed, prop, values } from 'ramda'
 import fetch from 'isomorphic-fetch'
 
 import SkillItem from './SkillItem'
 
 const Skills = React.createClass({
   getInitialState: function() {
-    return {
-      skills: ''
-    }
+    const data = this.props.data
+    const skills = data ? this.dataToSkillItems(data) : ''
+
+    return { skills }
   },
 
   componentDidMount: function() {
     fetch('data/skills.json')
       .then(response => response.json())
-      .then(prop('results'))
-      .then(groupBy(prop('category')))
-      .then(this.toSkillItems)
-      .then(values)
+      .then(this.dataToSkillItems)
       .then((skills) => {
         this.setState({ skills })
       })
   },
 
-  toSkillItems: mapObjIndexed((skills, category) => {
+  dataToSkillItems: function(data) {
+    return compose(
+      values,
+      this.mappedDataToSkillItems,
+      groupBy(prop('category')),
+      prop('results')
+    )(data)
+  },
+
+  mappedDataToSkillItems: mapObjIndexed((skills, category) => {
     const items = map((props) => {
       return <SkillItem key={props.name} {...props} />
     }, skills)
