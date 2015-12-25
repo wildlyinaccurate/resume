@@ -21,15 +21,15 @@ class Header extends Component {
       <nav className="navbar navbar-fixed-top bg-faded">
         <div className="container">
           <div className="row">
-            <div id="navbar" className="col-sm-9">
-              <h2 className="pull-xs-left m-r-2">Joseph Wynn</h2>
+            <div id="navbar" className="col-xs-12 col-sm-7 col-md-8">
+              <h2 className="pull-sm-left m-r-2 text-xs-center">Joseph Wynn</h2>
 
               <ul className="nav nav-pills hidden-md-down">
                 {this.navItems()}
               </ul>
             </div>
 
-            <div className="header-links col-sm-3 text-right">
+            <div className="header-links hidden-xs-down col-sm-5 col-md-4 text-xs-right">
               <a className="header-link" href="https://wildlyinaccurate.com/">
                 <Icon name="wildlyinaccurate" style="super" />
                 <span className="header-link__text">wildlyinaccurate.com</span>

@@ -6,3 +6,9 @@
     color: $link-color;
 }
 
+@include media-breakpoint-down(sm) {
+    .introduction {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
