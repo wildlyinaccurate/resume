@@ -1,6 +1,14 @@
 <h1 align="center">Résumé</h1>
 
-<p align="center">An HTML résumé built using ES2015 and universal React.</p>
+<p align="center">
+    <a href="https://travis-ci.org/wildlyinaccurate/resume">
+        <img src="https://travis-ci.org/wildlyinaccurate/resume.svg?branch=master">
+    </a>
+</p>
+
+<p align="center">
+    An HTML résumé built using ES2015 and universal React.
+</p>
 
 ## Building the app
 
