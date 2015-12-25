@@ -19813,10 +19813,10 @@
 	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { id: 'navbar', className: 'col-sm-9' },
+	              { id: 'navbar', className: 'col-xs-12 col-sm-7 col-md-8' },
 	              _react2.default.createElement(
 	                'h2',
-	                { className: 'pull-xs-left m-r-2' },
+	                { className: 'pull-sm-left m-r-2 text-xs-center' },
 	                'Joseph Wynn'
 	              ),
 	              _react2.default.createElement(
@@ -19827,7 +19827,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'header-links col-sm-3 text-right' },
+	              { className: 'header-links hidden-xs-down col-sm-5 col-md-4 text-xs-right' },
 	              _react2.default.createElement(
 	                'a',
 	                { className: 'header-link', href: 'https://wildlyinaccurate.com/' },
