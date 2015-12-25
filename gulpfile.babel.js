@@ -20,7 +20,6 @@ const readFileJSON = compose(
 
 gulp.task('default', ['build'])
 gulp.task('build', ['sass', 'js', 'static', 'copy'])
-gulp.task('release', ['build', 'deploy'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -54,7 +53,7 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('deploy', () => {
+gulp.task('release', ['build'], () => {
   return gulp.src('dist/**/*')
     .pipe(ghPages())
 })
