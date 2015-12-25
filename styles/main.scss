@@ -1,0 +1,52 @@
+$font-size-root: 17px;
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-weight: 400;
+$link-color: #73278c;
+$enable-flex: true;
+
+// Fix for fluid images in Firefox (https://github.com/twbs/bootstrap/issues/17694)
+.img-fluid {
+    width: 100%;
+}
+
+// Core variables and mixins
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+// // Reset and dependencies
+@import 'bootstrap/scss/normalize';
+@import 'bootstrap/scss/print';
+
+// Core CSS
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/grid';
+
+// // Components
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/labels';
+
+// Utility classes
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities-background';
+@import 'bootstrap/scss/utilities-responsive';
+@import 'bootstrap/scss/utilities-spacing';
+
+// ---------------
+
+@import 'utilities';
+@import 'icons';
+@import 'header';
+@import 'section';
+@import 'introduction';
+@import 'open-source';
+
+a {
+    font-weight: 400;
+}
+
+footer {
+    margin-top: 16em; // Mostly just for ScrollSpy
+}
