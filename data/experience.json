@@ -1,0 +1,48 @@
+{
+    "results": [
+        {
+            "name": "BBC News",
+            "url": "http://www.bbc.co.uk/news",
+            "role": "Senior Developer",
+            "startDate": "2014-08-01",
+            "image": "images/bbc-news.png",
+            "description": "I am currently a part of the World Service team, working on the responsive BBC News website for 31 different countries. My focuses over the last few months have been on optimising page performance and building cloud-based (AWS) services to augment the News product"
+        },
+        {
+            "name": "Rightster",
+            "url": "http://rightster.com/",
+            "role": "Senior Developer",
+            "image": "images/rightster.png",
+            "startDate": "2013-12-01",
+            "endDate": "2014-08-01",
+            "description": "At Rightster I helped to build the client-facing interface for the company's video distribution platform. We used Zend Framework 2 as a back-end & presentation layer, and made extensive use of AngularJS to build rich user interfaces.\n\nAs well as leading the JavaScript development, I helped to define a solid architecture and build process for the project's front-end. This was vitally important as the application contained over 20,000 lines of JavaScript. We used RequireJS and the AngularJS module system to decouple the code into small, easily-testable components."
+        },
+        {
+            "name": "Time Inc. UK",
+            "url": "http://www.ipcmedia.com/",
+            "role": "Senior Developer",
+            "image": "images/time-inc-uk.png",
+            "startDate": "2012-05-01",
+            "endDate": "2013-12-01",
+            "description": "At Time Inc. I helped to build the mobile website platform, which used a content data feed from desktop-oriented websites to create mobile optimised pages. During this project I became interested in automated testing as a way to improve the quality of our products. I developed a smoke test tool which uses PhantomJS to check for common errors, and takes a screenshot of each page for manual visual checks. This helped us to catch bugs earlier on, and enabled us to deploy the platform with more confidence.\n\nI also introduced JavaScript unit testing to several teams by helping them to write test suites for their projects. I demonstrated these test suites and encouraged more automated JavaScript testing at our monthly developer gathering. The slides from my talk are <a href=\"http://slid.es/wildlyinaccurate/automated-javascript-testing\">available here</a>."
+        },
+        {
+            "name": "Chroma",
+            "url": "http://www.chromaagency.com/",
+            "role": "Developer",
+            "image": "images/chroma.png",
+            "startDate": "2011-04-01",
+            "endDate": "2012-05-01",
+            "description": "At Chroma I was involved in designing and building an interface for bookmakers to monitor and set pricing in real time. The real-time aspect of this sytem was achieved using long polling, which allowed us to support legacy web browsers.\n\nI also used the Campaign Monitor API to build a module for the ExpressionEngine CMS which allowed editors to create and manage their email campaigns from a familiar interface."
+        },
+        {
+            "name": "Zeevo",
+            "url": "http://www.zeevo.co.nz/",
+            "role": "Developer",
+            "image": "images/zeevo.png",
+            "startDate": "2010-06-01",
+            "endDate": "2011-04-01",
+            "description": "Using the CodeIgniter framework and Doctrine ORM, I helped to build a <a href=\"http://book.totallytourism.co.nz/\">booking and scheduling system</a> used by tourism operators around New Zealand.\n\nI was also involved in designing and building a secure file sharing application using the Dropbox API."
+        }
+    ]
+}
