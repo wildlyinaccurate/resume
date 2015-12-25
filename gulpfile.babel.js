@@ -7,6 +7,7 @@ import sass from 'gulp-sass'
 import named from 'vinyl-named'
 import watch from 'gulp-watch'
 import batch from 'gulp-batch'
+import ghPages from 'gulp-gh-pages'
 
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
@@ -18,11 +19,12 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['sass', 'js', 'static'])
+gulp.task('build', ['sass', 'js', 'static', 'copy'])
+gulp.task('release', ['build', 'deploy'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
-    .pipe(sass({ includePaths: 'node_modules' }).on('error', sass.logError))
+    .pipe(sass({ includePaths: 'node_modules', outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('dist'))
 })
 
@@ -43,8 +45,18 @@ gulp.task('static', (done) => {
 
     const app = ReactDOMServer.renderToString(<App data={data} />)
 
-    fs.writeFile('index.html', template.replace('{{app}}', app), 'utf-8', done)
+    fs.writeFile('dist/index.html', template.replace('{{app}}', app), 'utf-8', done)
   })
+})
+
+gulp.task('copy', () => {
+  return gulp.src('{data/**,images/**,CNAME}')
+    .pipe(gulp.dest('dist'))
+})
+
+gulp.task('deploy', () => {
+  return gulp.src('dist/**/*')
+    .pipe(ghPages())
 })
 
 gulp.task('watch', () => {
