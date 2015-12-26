@@ -42,11 +42,8 @@ $enable-flex: true;
 @import 'section';
 @import 'introduction';
 @import 'open-source';
+@import 'footer';
 
 a {
     font-weight: 400;
-}
-
-footer {
-    margin-top: 16em; // Mostly just for ScrollSpy
 }

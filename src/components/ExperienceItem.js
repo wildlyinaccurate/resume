@@ -19,13 +19,13 @@ class ExperienceItem extends Component {
   render() {
     return (
       <div className="row p-b-1">
-        <div className="col-sm-3 text-xs-center">
+        <div className="col-xs-12 col-sm-3 text-xs-center p-b-1">
           <a href={this.props.url}>
-            <img className="img-fluid" src={this.props.image}/>
+            <img className="img-fluid center-block" src={this.props.image}/>
           </a>
         </div>
 
-        <div className="col-sm-9">
+        <div className="col-xs-12 col-sm-9">
           <h4>
             {this.props.role} at <a href={this.props.url}>{this.props.name}</a>
           </h4>
