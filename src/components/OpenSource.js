@@ -4,6 +4,9 @@ import fetch from 'isomorphic-fetch'
 
 import OpenSourceItem from './OpenSourceItem'
 
+// GitHub personal access token with only public_repo scope
+const ACCESS_TOKEN = 'e9347037f1766571e40b766911ac009e697b41a3'
+
 const OpenSource = React.createClass({
   getInitialState: function() {
     return {
@@ -12,7 +15,7 @@ const OpenSource = React.createClass({
   },
 
   componentDidMount: function() {
-    fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100`)
+    fetch(`https://api.github.com/users/${this.props.username}/repos?access_token=${ACCESS_TOKEN}&per_page=100`)
       .then(response => response.json())
       .then(this.sortRepositories)
       .then(take(10))
