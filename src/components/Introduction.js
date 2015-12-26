@@ -10,7 +10,7 @@ class Introduction extends Component {
         </p>
 
         <p className="lead">
-            Outside of programming I am a cook, runner, rock climber and guitarist. I'm also an <a href="https://wildlyinaccurate.com/accidental-keyboard-enthusiasm/">accidental keyboard enthuiast</a>. I sometimes blog at <a href="http://wildlyinaccurate.com/">Wildly Inaccurate</a>.
+            Outside of programming I am a cook, runner, rock climber and guitarist. I'm also an <a href="https://wildlyinaccurate.com/accidental-keyboard-enthusiasm/">accidental keyboard enthuiast</a>. I sometimes blog at <a href="https://wildlyinaccurate.com/">Wildly Inaccurate</a>.
         </p>
       </div>
     )
