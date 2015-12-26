@@ -28017,7 +28017,7 @@
 	          ". I sometimes blog at ",
 	          _react2.default.createElement(
 	            "a",
-	            { href: "http://wildlyinaccurate.com/" },
+	            { href: "https://wildlyinaccurate.com/" },
 	            "Wildly Inaccurate"
 	          ),
 	          "."
@@ -28558,16 +28558,16 @@
 	        { className: 'row p-b-1' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col-sm-3 text-xs-center' },
+	          { className: 'col-xs-12 col-sm-3 text-xs-center p-b-1' },
 	          _react2.default.createElement(
 	            'a',
 	            { href: this.props.url },
-	            _react2.default.createElement('img', { className: 'img-fluid', src: this.props.image })
+	            _react2.default.createElement('img', { className: 'img-fluid center-block', src: this.props.image })
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col-sm-9' },
+	          { className: 'col-xs-12 col-sm-9' },
 	          _react2.default.createElement(
 	            'h4',
 	            null,
