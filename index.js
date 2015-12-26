@@ -29096,9 +29096,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// GitHub personal access token with only public_repo scope
-	var ACCESS_TOKEN = 'e9347037f1766571e40b766911ac009e697b41a3';
-
 	var OpenSource = _react2.default.createClass({
 	  displayName: 'OpenSource',
 
@@ -29111,7 +29108,7 @@
 	  componentDidMount: function componentDidMount() {
 	    var _this = this;
 
-	    (0, _isomorphicFetch2.default)('https://api.github.com/users/' + this.props.username + '/repos?access_token=' + ACCESS_TOKEN + '&per_page=100').then(function (response) {
+	    (0, _isomorphicFetch2.default)('https://api.github.com/users/' + this.props.username + '/repos?per_page=100').then(function (response) {
 	      return response.json();
 	    }).then(this.sortRepositories).then((0, _ramda.take)(10)).then(this.getRepositoryLanguages).then(this.dataToOpenSourceItems).then(function (items) {
 	      return _this.setState({ items: items });
