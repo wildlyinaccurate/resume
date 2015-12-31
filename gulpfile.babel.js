@@ -49,7 +49,7 @@ gulp.task('static', (done) => {
 })
 
 gulp.task('copy', () => {
-  return gulp.src('{data/**,images/**,CNAME}')
+  return gulp.src('{data/**,images/**,CNAME,favicon.ico}')
     .pipe(gulp.dest('dist'))
 })
 
