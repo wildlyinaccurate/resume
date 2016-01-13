@@ -4,6 +4,7 @@ import { __, compose, curry } from 'ramda'
 import gulp from 'gulp'
 import gutil from 'gulp-util'
 import browserify from 'browserify'
+import uglify from 'gulp-uglify'
 import sass from 'gulp-sass'
 import source from 'vinyl-source-stream'
 import watch from 'gulp-watch'
@@ -20,7 +21,7 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['sass', 'js', 'static', 'copy'])
+gulp.task('build', ['sass', 'js', 'minify', 'static', 'copy'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -36,6 +37,12 @@ gulp.task('js', () => {
   return b.bundle()
     .on('error', (error) => gutil.log('Browserify Error:', error.toString()))
     .pipe(source('index.js'))
+    .pipe(gulp.dest('dist'))
+})
+
+gulp.task('minify', ['js'], () => {
+  return gulp.src('dist/index.js')
+    .pipe(uglify())
     .pipe(gulp.dest('dist'))
 })
 
