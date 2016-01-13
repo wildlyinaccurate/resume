@@ -18,24 +18,26 @@
   },
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
   "devDependencies": {
-    "babel-core": "^6.2.1",
-    "babel-loader": "^6.2.0",
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
     "gulp": "^3.9.0",
     "gulp-batch": "^1.0.5",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-sass": "^2.1.0",
+    "gulp-sass": "^2.1.1",
     "gulp-watch": "^4.3.5",
     "gulp-webpack": "^1.5.0",
-    "vinyl-named": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "bootstrap": "twbs/bootstrap#v4.0.0-alpha.2",
+    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.2",
     "dateformat": "^1.0.12",
     "isomorphic-fetch": "^2.2.0",
     "ramda": "^0.18.0",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
   }
 }

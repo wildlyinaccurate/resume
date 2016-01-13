@@ -2,9 +2,10 @@ import fs from 'fs'
 
 import { __, compose, curry } from 'ramda'
 import gulp from 'gulp'
-import webpack from 'gulp-webpack'
+import gutil from 'gulp-util'
+import browserify from 'browserify'
 import sass from 'gulp-sass'
-import named from 'vinyl-named'
+import source from 'vinyl-source-stream'
 import watch from 'gulp-watch'
 import batch from 'gulp-batch'
 import ghPages from 'gulp-gh-pages'
@@ -28,9 +29,13 @@ gulp.task('sass', () => {
 })
 
 gulp.task('js', () => {
-  return gulp.src('src/index.js')
-    .pipe(named())
-    .pipe(webpack(require('./webpack.config.js')))
+  const b = browserify('src/index.js', {
+    transform: ['babelify']
+  })
+
+  return b.bundle()
+    .on('error', (error) => gutil.log('Browserify Error:', error.toString()))
+    .pipe(source('index.js'))
     .pipe(gulp.dest('dist'))
 })
 
