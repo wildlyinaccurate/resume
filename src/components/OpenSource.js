@@ -16,7 +16,7 @@ const OpenSource = React.createClass({
   componentDidMount: function() {
     Repositories.fetch(ACCESS_TOKEN)
       .then(Repositories.sort('stargazers_count'))
-      .then(take(10))
+      .then(take(12))
       .then(this.getRepositoryLanguages)
       .then(this.dataToOpenSourceItems)
       .then(items => this.setState({ items }))
