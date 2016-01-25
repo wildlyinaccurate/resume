@@ -20,7 +20,7 @@ export default class App extends Component {
         <Experience data={data.experience} />
         <Skills data={data.skills} />
         <Publications data={data.publications} />
-        <OpenSource username="wildlyinaccurate" />
+        <OpenSource />
 
         <Footer />
       </div>

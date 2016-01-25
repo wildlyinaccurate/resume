@@ -1,8 +1,10 @@
-import { compose, contains, find, flip, keys, map, not, prop, reverse, sortBy, take } from 'ramda'
+import { map, reverse, take } from 'ramda'
 import React from 'react'
-import fetch from 'isomorphic-fetch'
 
+import * as Repositories from '../github/repositories'
 import OpenSourceItem from './OpenSourceItem'
+
+const ACCESS_TOKEN = reverse('ff7cece3c58d2a457908136b35475cbdf708d3d6')
 
 const OpenSource = React.createClass({
   getInitialState: function() {
@@ -12,37 +14,17 @@ const OpenSource = React.createClass({
   },
 
   componentDidMount: function() {
-    fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=100`)
-      .then(response => response.json())
-      .then(this.sortRepositories)
+    Repositories.fetch(ACCESS_TOKEN)
+      .then(Repositories.sort('stargazers_count'))
       .then(take(10))
       .then(this.getRepositoryLanguages)
       .then(this.dataToOpenSourceItems)
       .then(items => this.setState({ items }))
   },
 
-  sortRepositories: compose(
-    reverse,
-    sortBy(prop('stargazers_count'))
-  ),
-
   getRepositoryLanguages: function(repositories) {
-    return Promise.all(map(this.getRepositoryLanguage, repositories))
+    return Promise.all(map(Repositories.getLanguage, repositories))
   },
-
-  getRepositoryLanguage: function(repository) {
-    return fetch(repository.languages_url)
-      .then(response => response.json())
-      .then(keys)
-      .then(find(this.isRealLanguage))
-      .then((language) => {
-        repository.language = language
-
-        return repository
-      })
-  },
-
-  isRealLanguage: compose(not, flip(contains)(['HTML', 'CSS'])),
 
   dataToOpenSourceItems: function(repositories) {
     return repositories.map((props) => {
