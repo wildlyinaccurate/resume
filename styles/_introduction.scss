@@ -12,3 +12,9 @@
         padding-right: 0;
     }
 }
+
+@media print {
+    .introduction {
+        padding-top: $spacer-y;
+    }
+}

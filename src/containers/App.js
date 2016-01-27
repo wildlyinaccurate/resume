@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Header from '../components/Header'
+import PrintHeader from '../components/PrintHeader'
 import Footer from '../components/Footer'
 import Introduction from '../components/Introduction'
 import Experience from '../components/Experience'
@@ -13,16 +14,20 @@ export default class App extends Component {
     const data = this.props.data || {}
 
     return (
-      <div className="container m-t-md">
-        <Header />
+      <div>
+        <PrintHeader />
 
-        <Introduction />
-        <Experience data={data.experience} />
-        <Skills data={data.skills} />
-        <Publications data={data.publications} />
-        <OpenSource />
+        <div className="container m-t-md">
+          <Header />
 
-        <Footer />
+          <Introduction />
+          <Experience data={data.experience} />
+          <Skills data={data.skills} />
+          <Publications data={data.publications} />
+          <OpenSource />
+
+          <Footer />
+        </div>
       </div>
     )
   }

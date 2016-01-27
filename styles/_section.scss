@@ -10,3 +10,9 @@
         margin-right: 0.25rem;
     }
 }
+
+@media print {
+    .section {
+        padding: ($spacer-y * 1.5) 0;
+    }
+}
