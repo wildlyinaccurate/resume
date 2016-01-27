@@ -1,9 +1,9 @@
 .section {
-    border-top: $hr-border-width solid $hr-border-color;
+    border-top: none;
     padding: ($spacer-y * 2.5) 0;
 
-    &:first-child {
-        border-top: none;
+    & ~ & {
+        border-top: $hr-border-width solid $hr-border-color;
     }
 
     .label {
