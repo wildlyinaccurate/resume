@@ -16,7 +16,7 @@ const Skills = React.createClass({
     fetch('data/skills.json')
       .then(response => response.json())
       .then(this.dataToSkillItems)
-      .then((skills) => {
+      .then(skills => {
         this.setState({ skills })
       })
   },
@@ -31,7 +31,7 @@ const Skills = React.createClass({
   },
 
   mappedDataToSkillItems: mapObjIndexed((skills, category) => {
-    const items = map((props) => {
+    const items = map(props => {
       return <SkillItem key={props.name} {...props} />
     }, skills)
 

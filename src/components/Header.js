@@ -5,7 +5,7 @@ import Icon from './Icon'
 
 class Header extends Component {
   navItems() {
-    return ['Experience', 'Skills', 'Publications', 'Open Source'].map((item) => {
+    return ['Experience', 'Skills', 'Publications', 'Open Source'].map(item => {
       const anchor = `#${slug(item)}`
 
       return (

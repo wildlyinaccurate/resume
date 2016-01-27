@@ -19,7 +19,7 @@ const Experience = React.createClass({
   },
 
   dataToExperienceItems: function(data) {
-    return data.results.map((props) => {
+    return data.results.map(props => {
       return <ExperienceItem key={props.name} {...props} />
     })
   },

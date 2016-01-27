@@ -13,13 +13,13 @@ const Publications = React.createClass({
     fetch('data/publications.json')
       .then(response => response.json())
       .then(this.dataToPublicationItems)
-      .then((publications) => {
+      .then(publications => {
         this.setState({ publications })
       })
   },
 
   dataToPublicationItems: function(data) {
-    return data.results.map((props) => {
+    return data.results.map(props => {
       return (
         <div key={props.title} className="col-sm-6">
           <h3>{props.title} ({props.year})</h3>
@@ -31,7 +31,7 @@ const Publications = React.createClass({
   },
 
   publicationLinks: function(links) {
-    return links.map((link) => {
+    return links.map(link => {
       return (
         <a key={link.title} className="label label-success" href={link.url}>{link.title}</a>
       )

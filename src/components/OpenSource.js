@@ -9,7 +9,7 @@ const ACCESS_TOKEN = reverse('ff7cece3c58d2a457908136b35475cbdf708d3d6')
 const OpenSource = React.createClass({
   getInitialState: function() {
     return {
-      items: '',
+      items: ''
     }
   },
 
@@ -27,7 +27,7 @@ const OpenSource = React.createClass({
   },
 
   dataToOpenSourceItems: function(repositories) {
-    return repositories.map((props) => {
+    return repositories.map(props => {
       return <OpenSourceItem key={props.name} {...props} />
     })
   },

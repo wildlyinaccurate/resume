@@ -5,6 +5,7 @@ import gulp from 'gulp'
 import gutil from 'gulp-util'
 import browserify from 'browserify'
 import uglify from 'gulp-uglify'
+import eslint from 'gulp-eslint'
 import sass from 'gulp-sass'
 import source from 'vinyl-source-stream'
 import watch from 'gulp-watch'
@@ -21,12 +22,19 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['sass', 'js', 'minify', 'static', 'copy'])
+gulp.task('build', ['lint', 'sass', 'js', 'minify', 'static', 'copy'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
     .pipe(sass({ includePaths: 'node_modules', outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('dist'))
+})
+
+gulp.task('lint', function () {
+  return gulp.src(['src/**/*.js', 'gulpfile.babel.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 })
 
 gulp.task('js', () => {
@@ -35,7 +43,7 @@ gulp.task('js', () => {
   })
 
   return b.bundle()
-    .on('error', (error) => gutil.log('Browserify Error:', error.toString()))
+    .on('error', error => gutil.log('Browserify Error:', error.toString()))
     .pipe(source('index.js'))
     .pipe(gulp.dest('dist'))
 })
@@ -46,12 +54,12 @@ gulp.task('minify', ['js'], () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('static', (done) => {
+gulp.task('static', done => {
   fs.readFile('index.tmpl.html', 'utf-8', (err, template) => {
     const data = {
       experience: readFileJSON('data/experience.json'),
       skills: readFileJSON('data/skills.json'),
-      publications: readFileJSON('data/publications.json'),
+      publications: readFileJSON('data/publications.json')
     }
 
     const app = ReactDOMServer.renderToString(<App data={data} />)
