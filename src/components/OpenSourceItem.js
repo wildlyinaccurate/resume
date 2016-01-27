@@ -5,7 +5,7 @@ import Icon from './Icon'
 class OpenSourceItem extends Component {
   render() {
     return (
-      <div className="col-md-12 col-lg-6 m-b-2">
+      <div className="col-xs-12 col-lg-6 m-b-2">
         <h4>
           <small title={this.props.stargazers_count + ' stars'} className="star-count pull-xs-right">
             {this.props.stargazers_count}
