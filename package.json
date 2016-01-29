@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "",
   "main": "dist/app.js",
   "es6": "src/app.js",
