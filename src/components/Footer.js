@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Footer extends Component {
   render() {
     return (
-      <footer className="section">
+      <footer className="section hidden-print">
         <div className="row">
           <div className="col-xs-12">
             Made with ❤ by Joseph Wynn.
