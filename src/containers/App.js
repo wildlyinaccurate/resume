@@ -21,8 +21,8 @@ export default class App extends Component {
           <Header />
 
           <Introduction />
-          <Experience data={data.experience} />
           <Skills data={data.skills} />
+          <Experience data={data.experience} />
           <Publications data={data.publications} />
           <OpenSource />
 
