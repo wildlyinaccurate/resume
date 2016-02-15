@@ -5,15 +5,17 @@ import Icon from './Icon'
 
 class Header extends Component {
   navItems() {
-    return ['Experience', 'Skills', 'Publications', 'Open Source'].map(item => {
-      const anchor = `#${slug(item)}`
+    return ['Experience', 'Skills', 'Publications', 'Open Source'].map(this.navItem)
+  }
 
-      return (
-        <li key={item} className="nav-item">
-          <a href={anchor} className="nav-link">{item}</a>
-        </li>
-      )
-    })
+  navItem(item) {
+    const anchor = `#${slug(item)}`
+
+    return (
+      <li key={item} className="nav-item">
+        <a href={anchor} className="nav-link">{item}</a>
+      </li>
+    )
   }
 
   render() {
