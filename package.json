@@ -2,8 +2,8 @@
   "name": "resume",
   "version": "2.0.7",
   "description": "",
-  "main": "dist/app.js",
-  "es6": "src/app.js",
+  "main": "dist/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
