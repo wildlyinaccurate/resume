@@ -5,7 +5,7 @@ import Icon from './Icon'
 
 class Header extends Component {
   navItems() {
-    return ['Experience', 'Skills', 'Publications', 'Open Source'].map(this.navItem)
+    return ['Skills', 'Experience', 'Publications', 'Open Source'].map(this.navItem)
   }
 
   navItem(item) {
