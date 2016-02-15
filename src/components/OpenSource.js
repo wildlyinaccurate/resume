@@ -7,13 +7,13 @@ import OpenSourceItem from './OpenSourceItem'
 const ACCESS_TOKEN = reverse('ff7cece3c58d2a457908136b35475cbdf708d3d6')
 
 const OpenSource = React.createClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return {
       items: ''
     }
   },
 
-  componentDidMount: function() {
+  componentDidMount: function () {
     Repositories.fetch(ACCESS_TOKEN)
       .then(Repositories.sort('stargazers_count'))
       .then(take(12))
@@ -22,17 +22,17 @@ const OpenSource = React.createClass({
       .then(items => this.setState({ items }))
   },
 
-  getRepositoryLanguages: function(repositories) {
+  getRepositoryLanguages: function (repositories) {
     return Promise.all(map(Repositories.getLanguage, repositories))
   },
 
-  dataToOpenSourceItems: function(repositories) {
+  dataToOpenSourceItems: function (repositories) {
     return repositories.map(props => {
       return <OpenSourceItem key={props.name} {...props} />
     })
   },
 
-  render: function() {
+  render: function () {
     return (
       <div id="open-source" className="section hidden-print">
         <h2 className="display-4 m-b-2 text-xs-center">Open Source</h2>

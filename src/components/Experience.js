@@ -4,27 +4,30 @@ import fetch from 'isomorphic-fetch'
 import ExperienceItem from './ExperienceItem'
 
 const Experience = React.createClass({
-  getInitialState: function() {
-    const data = this.props.data
-    const items = data ? this.dataToExperienceItems(data) : ''
-
-    return { items }
+  propTypes: {
+    data: React.PropTypes.object
   },
 
-  componentDidMount: function() {
+  getInitialState () {
+    return {
+      items: this.props.data ? this.dataToExperienceItems(this.props.data) : ''
+    }
+  },
+
+  componentDidMount () {
     fetch('data/experience.json')
       .then(response => response.json())
       .then(this.dataToExperienceItems)
       .then(items => this.setState({ items }))
   },
 
-  dataToExperienceItems: function(data) {
+  dataToExperienceItems (data) {
     return data.results.map(props => {
       return <ExperienceItem key={props.name} {...props} />
     })
   },
 
-  render: function() {
+  render () {
     return (
       <div id="experience" className="section">
         <h2 className="display-4 m-b-2 text-xs-center">Experience</h2>

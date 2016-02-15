@@ -1,22 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 import dateFormat from 'dateformat'
 
-class ExperienceItem extends Component {
-  dateString(date) {
+const ExperienceItem = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string.isRequired,
+    image: React.PropTypes.string.isRequired,
+    role: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
+    startDate: React.PropTypes.string.isRequired,
+    endDate: React.PropTypes.string,
+    description: React.PropTypes.string.isRequired
+  },
+
+  dateString (date) {
     return dateFormat(date, 'mmmm yyyy')
-  }
+  },
 
-  endDateString(date) {
+  endDateString (date) {
     return date ? this.dateString(date) : 'Present'
-  }
+  },
 
-  paragraphs(text) {
+  paragraphs (text) {
     return `<p>
       ${text.split('\n\n').join('</p><p>')}
     </p>`
-  }
+  },
 
-  render() {
+  render () {
     return (
       <div className="row p-b-1">
         <div className="col-xs-12 col-sm-3 text-xs-center p-b-1">
@@ -37,6 +47,6 @@ class ExperienceItem extends Component {
       </div>
     )
   }
-}
+})
 
 export default ExperienceItem

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class PrintHeader extends Component {
-  render() {
+const PrintHeader = React.createClass({
+  render () {
     return (
       <div className="visible-print-block container-fluid text-xs-right">
         <address>
@@ -16,6 +16,6 @@ class PrintHeader extends Component {
       </div>
     )
   }
-}
+})
 
 export default PrintHeader

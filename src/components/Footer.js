@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Footer extends Component {
-  render() {
+const Footer = React.createClass({
+  render () {
     return (
       <footer className="section hidden-print">
         <div className="row">
@@ -13,6 +13,6 @@ class Footer extends Component {
       </footer>
     )
   }
-}
+})
 
 export default Footer

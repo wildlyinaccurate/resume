@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Header from '../components/Header'
 import PrintHeader from '../components/PrintHeader'
@@ -9,8 +9,12 @@ import Skills from '../components/Skills'
 import Publications from '../components/Publications'
 import OpenSource from '../components/OpenSource'
 
-export default class App extends Component {
-  render() {
+const App = React.createClass({
+  propTypes: {
+    data: React.PropTypes.object
+  },
+
+  render () {
     const data = this.props.data || {}
 
     return (
@@ -31,4 +35,6 @@ export default class App extends Component {
       </div>
     )
   }
-}
+})
+
+export default App

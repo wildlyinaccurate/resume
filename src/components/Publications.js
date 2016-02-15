@@ -2,14 +2,17 @@ import React from 'react'
 import fetch from 'isomorphic-fetch'
 
 const Publications = React.createClass({
-  getInitialState: function() {
-    const data = this.props.data
-    const publications = data ? this.dataToPublicationItems(data) : ''
-
-    return { publications }
+  propTypes: {
+    data: React.PropTypes.object
   },
 
-  componentDidMount: function() {
+  getInitialState () {
+    return {
+      publications: this.props.data ? this.dataToPublicationItems(this.props.data) : ''
+    }
+  },
+
+  componentDidMount () {
     fetch('data/publications.json')
       .then(response => response.json())
       .then(this.dataToPublicationItems)
@@ -18,7 +21,7 @@ const Publications = React.createClass({
       })
   },
 
-  dataToPublicationItems: function(data) {
+  dataToPublicationItems (data) {
     return data.results.map(props => {
       return (
         <div key={props.title} className="col-sm-6">
@@ -30,7 +33,7 @@ const Publications = React.createClass({
     })
   },
 
-  publicationLinks: function(links) {
+  publicationLinks (links) {
     return links.map(link => {
       return (
         <a key={link.title} className="label label-success" href={link.url}>{link.title}</a>
@@ -38,7 +41,7 @@ const Publications = React.createClass({
     })
   },
 
-  render: function() {
+  render () {
     return (
       <div id="publications" className="section">
         <h2 className="display-4 m-b-2 text-xs-center">Publications</h2>

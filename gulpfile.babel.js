@@ -55,7 +55,7 @@ gulp.task('minify', ['js'], () => {
 })
 
 gulp.task('static', done => {
-  fs.readFile('index.tmpl.html', 'utf-8', (err, template) => {
+  fs.readFile('index.tmpl.html', 'utf-8', (_, template) => {
     const data = {
       experience: readFileJSON('data/experience.json'),
       skills: readFileJSON('data/skills.json'),

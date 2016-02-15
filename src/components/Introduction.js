@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Introduction extends Component {
-  render() {
+const Introduction = React.createClass({
+  render () {
     return (
       <div id="introduction" className="introduction section text-xs-center">
         <h4 className="introduction__heading display-2">Hello!</h4>
@@ -15,6 +15,6 @@ class Introduction extends Component {
       </div>
     )
   }
-}
+})
 
 export default Introduction

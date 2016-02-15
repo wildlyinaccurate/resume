@@ -5,14 +5,17 @@ import fetch from 'isomorphic-fetch'
 import SkillItem from './SkillItem'
 
 const Skills = React.createClass({
-  getInitialState: function() {
-    const data = this.props.data
-    const skills = data ? this.dataToSkillItems(data) : ''
-
-    return { skills }
+  propTypes: {
+    data: React.PropTypes.object
   },
 
-  componentDidMount: function() {
+  getInitialState () {
+    return {
+      skills: this.props.data ? this.dataToSkillItems(this.props.data) : ''
+    }
+  },
+
+  componentDidMount () {
     fetch('data/skills.json')
       .then(response => response.json())
       .then(this.dataToSkillItems)
@@ -21,7 +24,7 @@ const Skills = React.createClass({
       })
   },
 
-  dataToSkillItems: function(data) {
+  dataToSkillItems (data) {
     return compose(
       values,
       this.mappedDataToSkillItems,
@@ -31,8 +34,8 @@ const Skills = React.createClass({
   },
 
   mappedDataToSkillItems: mapObjIndexed((skills, category) => {
-    const items = map(props => {
-      return <SkillItem key={props.name} {...props} />
+    const items = map(data => {
+      return <SkillItem key={data.name} {...data} />
     }, skills)
 
     return (
@@ -43,7 +46,7 @@ const Skills = React.createClass({
     )
   }),
 
-  render: function() {
+  render () {
     return (
       <div id="skills" className="section text-xs-center">
         <h2 className="display-4 m-b-2">Skills</h2>

@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import slug from '../utils/slug'
 import Icon from './Icon'
 
-class Header extends Component {
-  navItems() {
+const Header = React.createClass({
+  navItems () {
     return ['Skills', 'Experience', 'Publications', 'Open Source'].map(this.navItem)
-  }
+  },
 
-  navItem(item) {
+  navItem (item) {
     const anchor = `#${slug(item)}`
 
     return (
@@ -16,9 +16,9 @@ class Header extends Component {
         <a href={anchor} className="nav-link">{item}</a>
       </li>
     )
-  }
+  },
 
-  render() {
+  render () {
     return (
       <nav className="navbar navbar-fixed-top bg-faded">
         <div className="container">
@@ -52,6 +52,6 @@ class Header extends Component {
       </nav>
     )
   }
-}
+})
 
 export default Header

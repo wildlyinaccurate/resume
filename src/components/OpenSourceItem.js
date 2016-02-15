@@ -1,9 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Icon from './Icon'
 
-class OpenSourceItem extends Component {
-  render() {
+const OpenSourceItem = React.createClass({
+  propTypes: {
+    stargazers_count: React.PropTypes.number.isRequired,
+    html_url: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
+    language: React.PropTypes.string.isRequired,
+    description: React.PropTypes.string.isRequired
+  },
+
+  render () {
     return (
       <div className="col-xs-12 col-lg-6 m-b-2">
         <h4>
@@ -21,6 +29,6 @@ class OpenSourceItem extends Component {
       </div>
     )
   }
-}
+})
 
 export default OpenSourceItem
