@@ -16,7 +16,7 @@
 git clone https://github.com/wildlyinaccurate/resume.git
 cd resume
 npm install
-gulp build
+npm run build
 ```
 
 ## License
