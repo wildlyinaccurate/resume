@@ -1,5 +1,7 @@
-import { map, reverse, take } from 'ramda'
 import React from 'react'
+import map from 'ramda/src/map'
+import reverse from 'ramda/src/reverse'
+import take from 'ramda/src/take'
 
 import * as Repositories from '../github/repositories'
 import OpenSourceItem from './OpenSourceItem'

@@ -1,6 +1,12 @@
 import React from 'react'
-import { compose, groupBy, map, mapObjIndexed, prop, values } from 'ramda'
 import fetch from 'isomorphic-fetch'
+
+import compose from 'ramda/src/compose'
+import groupBy from 'ramda/src/groupBy'
+import map from 'ramda/src/map'
+import mapObjIndexed from 'ramda/src/mapObjIndexed'
+import prop from 'ramda/src/prop'
+import values from 'ramda/src/values'
 
 import SkillItem from './SkillItem'
 
