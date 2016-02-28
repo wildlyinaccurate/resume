@@ -73,7 +73,11 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('release', ['build'], () => {
+gulp.task('apply-production-env', () => {
+  process.env.NODE_ENV = 'production'
+})
+
+gulp.task('release', ['apply-production-env', 'build'], () => {
   return gulp.src('dist/**/*')
     .pipe(ghPages())
 })
