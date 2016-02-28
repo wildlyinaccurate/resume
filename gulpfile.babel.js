@@ -7,6 +7,7 @@ import browserify from 'browserify'
 import uglify from 'gulp-uglify'
 import eslint from 'gulp-eslint'
 import sass from 'gulp-sass'
+import uncss from 'gulp-uncss'
 import source from 'vinyl-source-stream'
 import watch from 'gulp-watch'
 import batch from 'gulp-batch'
@@ -22,11 +23,27 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['lint', 'sass', 'js', 'minify', 'static', 'copy'])
+gulp.task('build', ['lint', 'sass', 'uncss', 'js', 'minify', 'static', 'copy'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
     .pipe(sass({ includePaths: 'node_modules', outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('dist'))
+})
+
+gulp.task('uncss', ['sass'], () => {
+  return gulp.src('dist/main.css')
+    .pipe(uncss({
+      html: ['dist/index.html'],
+      ignore: [
+        '.star-count .icon',
+        '.pull-xs-right',
+        '.col-xs-12',
+        '.col-lg-6',
+        '.m-b-2',
+        'small'
+      ]
+    }))
     .pipe(gulp.dest('dist'))
 })
 
