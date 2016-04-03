@@ -6,7 +6,7 @@
       "role": "Senior Developer",
       "startDate": "2014-08-01",
       "image": "images/bbc-news.png",
-      "description": "I currently work for the core BBC News team. My focus recently has been on web page performance and on building the tooling around our new web application framework. I'm always working to improve the development workflow and the News product by contributing to groups like the Testing Working Group and the DevOps Working Group.\n\nPrevious to that, I was a part of the World Service team where I helped to build the BBC's 31 international responsive news websites."
+      "description": "I currently work for the core BBC News team. My focus recently has been on web page performance, and on building the deployment tooling and automated test suites around our new web application framework. I run the Automated Testing and DevOps working groups, which I use to drive improvements to the day-to-day development workflow.\n\nI have also worked for BBC World Service, where I architected a cloud-based feed aggregation service and helped to build the BBC's 31 international responsive news websites. These websites all share the same codebase as BBC News, and are driven primarily by metaprogramming small generic presentation components."
     },
     {
       "name": "Rightster",
@@ -15,7 +15,7 @@
       "image": "images/rightster.png",
       "startDate": "2013-12-01",
       "endDate": "2014-08-01",
-      "description": "At Rightster I helped to build the client-facing interface for the company's video distribution platform. We used Zend Framework 2 as a back-end & presentation layer, and made extensive use of AngularJS to build rich user interfaces.\n\nAs well as leading the JavaScript development, I helped to define a solid architecture and build process for the project's front-end. This was vitally important as the application contained over 20,000 lines of JavaScript. We used RequireJS and the AngularJS module system to decouple the code into small, easily-testable components."
+      "description": "At Rightster I helped to architect and build the client-facing interface for the company's video distribution platform. We used Zend Framework 2 as a back-end & presentation layer, and made extensive use of AngularJS to build rich user interfaces.\n\nAs well as leading the JavaScript development, I helped to define a solid architecture and build process for the project's front-end. This was vitally important as the application contained over 20,000 lines of JavaScript. We used RequireJS and the AngularJS module system to decouple the code into small, easily-testable components."
     },
     {
       "name": "Time Inc. UK",
@@ -24,7 +24,7 @@
       "image": "images/time-inc-uk.png",
       "startDate": "2012-05-01",
       "endDate": "2013-12-01",
-      "description": "At Time Inc. I helped to build the mobile website platform, which used a content data feed from desktop-oriented websites to create mobile optimised pages. During this project I became interested in automated testing as a way to improve the quality of our products. I developed a smoke test tool which uses PhantomJS to check for common errors, and takes a screenshot of each page for manual visual checks. This helped us to catch bugs earlier on, and enabled us to deploy the platform with more confidence.\n\nI also introduced JavaScript unit testing to several teams by helping them to write test suites for their projects. I demonstrated these test suites and encouraged more automated JavaScript testing at our monthly developer gathering. The slides from my talk are <a href=\"http://slid.es/wildlyinaccurate/automated-javascript-testing\">available here</a>."
+      "description": "At Time Inc. I worked on building out a new API-driven mobile website platform. During this project I became interested in automated testing as a way to improve the quality of our products. I wrote a smoke test tool which uses PhantomJS to check for common page-level errors, and takes a screenshot of each page to aid manual visual checks. This helped catch bugs quickly, and enabled us to deploy the platform several times a day with confidence.\n\nI also introduced JavaScript unit testing to the engineering department and encouraged more automated testing during the monthly developer gathering. The slides from my talk are <a href=\"http://slid.es/wildlyinaccurate/automated-javascript-testing\">available here</a>."
     },
     {
       "name": "Chroma",
@@ -33,7 +33,7 @@
       "image": "images/chroma.png",
       "startDate": "2011-04-01",
       "endDate": "2012-05-01",
-      "description": "At Chroma I was involved in designing and building an interface for bookmakers to monitor and set pricing in real time. The real-time aspect of this sytem was achieved using long polling, which allowed us to support legacy web browsers.\n\nI also used the Campaign Monitor API to build a module for the ExpressionEngine CMS which allowed editors to create and manage their email campaigns from a familiar interface."
+      "description": "At Chroma I was involved in designing and building an interface for bookmakers to monitor and set pricing in real time. The real-time aspect of this system was achieved using long polling, which allowed us to support legacy web browsers.\n\nI also used the Campaign Monitor API to build a module for the ExpressionEngine CMS which allowed editors to create and manage their email campaigns from a familiar interface."
     },
     {
       "name": "Zeevo",
