@@ -14,6 +14,7 @@
 
     { "name": "AWS", "icon": "aws", "category": "DevOps" },
     { "name": "Docker", "icon": "docker", "category": "DevOps" },
+    { "name": "Jenkins", "icon": "jenkins", "category": "DevOps" },
     { "name": "Nginx", "icon": "nginx", "category": "DevOps" },
     { "name": "Apache", "icon": "apache", "category": "DevOps" },
     { "name": "PostgreSQL", "icon": "postgresql", "category": "DevOps" },

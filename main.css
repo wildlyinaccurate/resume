@@ -191,7 +191,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   font-family: inherit;
   font-weight: 400;
   line-height: 1.1;
@@ -243,8 +243,8 @@ small {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
 }
 
 @media (min-width: 544px) {
@@ -274,15 +274,15 @@ small {
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
+  margin-left: -.9375rem;
+  margin-right: -.9375rem;
 }
 
 .col-xs-6,
@@ -297,8 +297,8 @@ small {
 .col-lg-6 {
   position: relative;
   min-height: 1px;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
 }
 
 .col-xs-6 {
@@ -379,12 +379,12 @@ small {
 .nav-pills .nav-link {
   display: block;
   padding: 0.5em 1em;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
 }
 
 .navbar {
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
 }
 
 .navbar::after {
@@ -395,7 +395,7 @@ small {
 
 @media (min-width: 544px) {
   .navbar {
-    border-radius: 0.25rem;
+    border-radius: .25rem;
   }
 }
 
@@ -426,7 +426,7 @@ small {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
 }
 
 a.label:focus,
@@ -548,8 +548,8 @@ a:hover .icon {
 }
 
 .header-link__text {
-  bottom: -0.4375rem;
-  font-size: 0.875rem;
+  bottom: -.4375rem;
+  font-size: .875rem;
   left: -50%;
   opacity: 0;
   position: absolute;
@@ -602,7 +602,7 @@ a:hover .icon {
 
 .star-count .icon {
   height: 1.7rem;
-  padding-left: 0.5rem;
+  padding-left: .5rem;
   width: 1.7rem;
 }
 
