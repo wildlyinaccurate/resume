@@ -6,7 +6,7 @@ const Introduction = React.createClass({
       <div id="introduction" className="introduction section text-xs-center">
         <h4 className="introduction__heading display-2">Hello!</h4>
         <p className="lead">
-          I'm a developer based in London, UK. Right now I am working as a JavaScript, Ruby and PHP developer; but in my spare time I like to write Haskell and Elm. I'm really passionate about building a better web, and I try to do my part by evangelising good development practices and modern web technologies.
+          I'm a developer based in London, UK. Right now I'm working as a JavaScript, Ruby, and PHP developer with a focus on DevOps and automated testing. In my spare time I maintain several open source projects, and I like to write Haskell and Elm.
         </p>
 
         <p className="lead">
