@@ -3,7 +3,7 @@
     {
       "name": "BBC News",
       "url": "http://www.bbc.co.uk/news",
-      "role": "Senior Developer",
+      "role": "Principal Developer",
       "startDate": "2014-08-01",
       "image": "images/bbc-news.png",
       "description": "I currently work for the core BBC News team. My focus recently has been on web page performance, and on building the deployment tooling and automated test suites around the new BBC News web application framework. I run the Automated Testing and DevOps working groups, which I use to drive improvements to the day-to-day development workflow.\n\nI have also worked for BBC World Service, where I architected a cloud-based feed aggregation service and helped to build the BBC's 31 international responsive news websites. These websites all share the same codebase as BBC News, and are driven primarily by metaprogramming small generic presentation components."
@@ -19,7 +19,7 @@
     },
     {
       "name": "Time Inc. UK",
-      "url": "http://www.ipcmedia.com/",
+      "url": "http://www.timeincuk.com/",
       "role": "Senior Developer",
       "image": "images/time-inc-uk.png",
       "startDate": "2012-05-01",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Chroma",
-      "url": "http://www.chromaagency.com/",
+      "url": "http://www.chromasports.com/",
       "role": "Developer",
       "image": "images/chroma.png",
       "startDate": "2011-04-01",
