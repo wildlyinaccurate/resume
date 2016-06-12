@@ -19,6 +19,14 @@
     "url": "https://github.com/wildlyinaccurate/resume/issues"
   },
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
+  "dependencies": {
+    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.2",
+    "dateformat": "^1.0.12",
+    "isomorphic-fetch": "^2.2.1",
+    "ramda": "^0.21.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -26,9 +34,10 @@
     "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "eslint": "^2.12.0",
     "eslint-config-standard": "^5.1.0",
     "eslint-plugin-promise": "^1.0.8",
-    "eslint-plugin-react": "^4.0.0-rc",
+    "eslint-plugin-react": "^5.1.1",
     "eslint-plugin-standard": "^1.3.2",
     "gulp": "^3.9.0",
     "gulp-batch": "^1.0.5",
@@ -39,13 +48,5 @@
     "gulp-uncss": "^1.0.4",
     "gulp-watch": "^4.3.5",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.2",
-    "dateformat": "^1.0.12",
-    "isomorphic-fetch": "^2.2.1",
-    "ramda": "^0.20.1",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0"
   }
 }

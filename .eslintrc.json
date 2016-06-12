@@ -1,29 +1,10 @@
 {
-  "rules": {
-    "no-unused-vars": [
-      2,
-      {
-        "varsIgnorePattern": "^React$"
-      }
+    "extends": [
+        "standard",
+        "plugin:react/recommended"
     ],
-    "arrow-parens": [
-      2,
-      "as-needed"
-    ],
-    "jsx-quotes": 0,
-    "react/no-danger": 0
-  },
-  "env": {
-    "es6": true,
-    "node": true,
-    "browser": true
-  },
-  "extends": ["standard", "plugin:react/recommended"],
-  "ecmaFeatures": {
-    "experimentalObjectRestSpread": true,
-    "modules": true
-  },
-  "plugins": [
-    "react"
-  ]
+    "plugins": [
+        "standard",
+        "react"
+    ]
 }

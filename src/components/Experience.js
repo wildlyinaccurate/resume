@@ -29,8 +29,8 @@ const Experience = React.createClass({
 
   render () {
     return (
-      <div id="experience" className="section">
-        <h2 className="display-4 m-b-2 text-xs-center">Experience</h2>
+      <div id='experience' className='section'>
+        <h2 className='display-4 m-b-2 text-xs-center'>Experience</h2>
         {this.state.items}
       </div>
     )
