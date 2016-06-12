@@ -5,6 +5,7 @@ import gulp from 'gulp'
 import gutil from 'gulp-util'
 import browserify from 'browserify'
 import uglify from 'gulp-uglify'
+import svgmin from 'gulp-svgmin'
 import eslint from 'gulp-eslint'
 import sass from 'gulp-sass'
 import uncss from 'gulp-uncss'
@@ -23,7 +24,7 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['lint', 'sass', 'uncss', 'js', 'minify', 'static', 'copy'])
+gulp.task('build', ['lint', 'sass', 'uncss', 'js', 'minify', 'static', 'copy', 'svgmin'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -83,6 +84,18 @@ gulp.task('static', done => {
 
     fs.writeFile('dist/index.html', template.replace('{{app}}', app), 'utf-8', done)
   })
+})
+
+gulp.task('svgmin', ['copy'], () => {
+  return gulp.src('dist/images/icons.svg')
+    .pipe(svgmin({
+      plugins: [
+        { cleanupIDs: false },
+        { removeHiddenElems: false },
+        { removeUselessDefs: false }
+      ]
+    }))
+    .pipe(gulp.dest('dist/images'))
 })
 
 gulp.task('copy', () => {
