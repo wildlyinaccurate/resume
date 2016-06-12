@@ -21,7 +21,7 @@ const App = React.createClass({
       <div>
         <PrintHeader />
 
-        <div className="container m-t-md">
+        <div className='container m-t-md'>
           <Header />
 
           <Introduction />

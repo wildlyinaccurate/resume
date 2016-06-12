@@ -36,14 +36,14 @@ const OpenSource = React.createClass({
 
   render: function () {
     return (
-      <div id="open-source" className="section hidden-print">
-        <h2 className="display-4 m-b-2 text-xs-center">Open Source</h2>
+      <div id='open-source' className='section hidden-print'>
+        <h2 className='display-4 m-b-2 text-xs-center'>Open Source</h2>
 
-        <p className="text-xs-center">
-          Below is a collection of my most popular open source work. You can visit <a href="https://github.com/wildlyinaccurate?tab=repositories">my GitHub profile</a> for a more complete picture of the open source work that I do.
+        <p className='text-xs-center'>
+          Below is a collection of my most popular open source work. You can visit <a href='https://github.com/wildlyinaccurate?tab=repositories'>my GitHub profile</a> for a more complete picture of the open source work that I do.
         </p>
 
-        <div className="row">
+        <div className='row'>
           {this.state.items}
         </div>
       </div>

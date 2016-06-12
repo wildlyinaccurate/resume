@@ -3,7 +3,7 @@ import React from 'react'
 const PrintHeader = React.createClass({
   render () {
     return (
-      <div className="visible-print-block container-fluid text-xs-right">
+      <div className='visible-print-block container-fluid text-xs-right'>
         <address>
           <strong>Joseph Wynn</strong>
           <br />
