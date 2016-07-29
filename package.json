@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
   "dependencies": {
-    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.2",
+    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.3",
     "dateformat": "^1.0.12",
     "isomorphic-fetch": "^2.2.1",
     "ramda": "^0.21.0",

@@ -36,7 +36,7 @@ const Publications = React.createClass({
   publicationLinks (links) {
     return links.map(link => {
       return (
-        <a key={link.title} className='label label-success' href={link.url}>{link.title}</a>
+        <a key={link.title} className='tag tag-success m-r-1/2' href={link.url}>{link.title}</a>
       )
     })
   },
