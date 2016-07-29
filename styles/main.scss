@@ -4,14 +4,16 @@ $headings-font-weight: 400;
 $link-color: #73278c;
 $enable-flex: true;
 
-// Fix for fluid images in Firefox (https://github.com/twbs/bootstrap/issues/17694)
-.img-fluid {
-    width: 100%;
-}
-
 // Core variables and mixins
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
+
+$spacers: map-merge($spacers, (
+  '1\\/2': (
+    x: ($spacer-x * 0.5),
+    y: ($spacer-y * 0.5)
+  )
+));
 
 // // Reset and dependencies
 @import 'bootstrap/scss/normalize';
@@ -26,13 +28,14 @@ $enable-flex: true;
 // // Components
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/navbar';
-@import 'bootstrap/scss/labels';
+@import 'bootstrap/scss/tags';
 
 // Utility classes
-@import 'bootstrap/scss/utilities';
-@import 'bootstrap/scss/utilities-background';
-@import 'bootstrap/scss/utilities-responsive';
-@import 'bootstrap/scss/utilities-spacing';
+@import 'bootstrap/scss/utilities/background';
+@import 'bootstrap/scss/utilities/pulls';
+@import 'bootstrap/scss/utilities/text';
+@import 'bootstrap/scss/utilities/spacing';
+@import 'bootstrap/scss/utilities/visibility';
 
 // ---------------
 
@@ -46,4 +49,9 @@ $enable-flex: true;
 
 a {
     font-weight: 400;
+}
+
+// Fix for fluid images in Firefox (https://github.com/twbs/bootstrap/issues/17694)
+.img-fluid {
+    width: 100%;
 }
