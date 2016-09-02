@@ -6,7 +6,7 @@
       "role": "Principal Developer",
       "startDate": "2014-08-01",
       "image": "images/bbc-news.png",
-      "description": "As the technical team lead for the BBC News front page rebuild, I am working closely with stakeholders and developers to deliver this critical project. The new front page is built using isomorphic React components which have been designed to be shared between various BBC products including News, Sport, Weather, and Live. The front-end is being built to be maintainable and performant by using the <a href=\"https://medium.com/@shaunbent/css-at-bbc-sport-part-1-bab546184e66\">Grandstand CSS framework</a>.\n\nI have also worked for BBC World Service, where I architected a cloud-based feed aggregation service and helped to build and deliver the BBC's 31 international responsive news websites."
+      "description": "As the development lead for the BBC News front page rebuild, I am working closely with stakeholders and developers to deliver this critical project. The new front page is built using isomorphic React components which have been designed to be shared between various BBC products including News, Sport, Weather, and Live. The front-end is being built to be maintainable and performant by using the <a href=\"https://medium.com/@shaunbent/css-at-bbc-sport-part-1-bab546184e66\">Grandstand CSS framework</a>.\n\nI have also worked for BBC World Service, where I architected a cloud-based feed aggregation service and helped to build and deliver the BBC's 31 international responsive news websites."
     },
     {
       "name": "Rightster",
