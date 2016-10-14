@@ -1,9 +1,9 @@
-import React from 'react'
+import { h, Component } from 'preact'
 import fetch from 'isomorphic-fetch'
 
 import ExperienceItem from './ExperienceItem'
 
-export default class Experience extends React.Component {
+export default class Experience extends Component {
   constructor (props) {
     super(props)
 
@@ -33,8 +33,4 @@ export default class Experience extends React.Component {
       </div>
     )
   }
-}
-
-Experience.propTypes = {
-  data: React.PropTypes.object
 }
