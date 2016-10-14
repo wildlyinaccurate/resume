@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
-import React from 'react'
+import { h, Component } from 'preact'
 import dateFormat from 'dateformat'
 
-export default class ExperienceItem extends React.Component {
+export default class ExperienceItem extends Component {
   dateString (date) {
     return dateFormat(date, 'mmmm yyyy')
   }
@@ -38,14 +38,4 @@ export default class ExperienceItem extends React.Component {
       </div>
     )
   }
-}
-
-ExperienceItem.propTypes = {
-  url: React.PropTypes.string.isRequired,
-  image: React.PropTypes.string.isRequired,
-  role: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  startDate: React.PropTypes.string.isRequired,
-  endDate: React.PropTypes.string,
-  description: React.PropTypes.string.isRequired
 }

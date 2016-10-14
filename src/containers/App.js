@@ -1,4 +1,4 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
 import Header from '../components/Header'
 import PrintHeader from '../components/PrintHeader'
@@ -9,7 +9,7 @@ import Skills from '../components/Skills'
 import Publications from '../components/Publications'
 import OpenSource from '../components/OpenSource'
 
-export default class App extends React.Component {
+export default class App extends Component {
   render () {
     const data = this.props.data || {}
 
@@ -31,8 +31,4 @@ export default class App extends React.Component {
       </div>
     )
   }
-}
-
-App.propTypes = {
-  data: React.PropTypes.object
 }

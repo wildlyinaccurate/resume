@@ -1,9 +1,9 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
 import slug from '../utils/slug'
 import Icon from './Icon'
 
-export default class Header extends React.Component {
+export default class Header extends Component {
   navItems () {
     return ['Skills', 'Experience', 'Publications', 'Open Source'].map(this.navItem)
   }
