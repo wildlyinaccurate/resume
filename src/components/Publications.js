@@ -1,7 +1,7 @@
 import React from 'react'
 import fetch from 'isomorphic-fetch'
 
-class Publications extends React.Component {
+export default class Publications extends React.Component {
   constructor (props) {
     super(props)
 
@@ -55,5 +55,3 @@ class Publications extends React.Component {
 Publications.propTypes = {
   data: React.PropTypes.object
 }
-
-export default Publications

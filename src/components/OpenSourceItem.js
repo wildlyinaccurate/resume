@@ -2,7 +2,7 @@ import React from 'react'
 
 import Icon from './Icon'
 
-class OpenSourceItem extends React.Component {
+export default class OpenSourceItem extends React.Component {
   render () {
     return (
       <div className='col-xs-12 col-lg-6 m-b-2'>
@@ -30,5 +30,3 @@ OpenSourceItem.propTypes = {
   language: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired
 }
-
-export default OpenSourceItem

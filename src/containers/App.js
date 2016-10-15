@@ -9,7 +9,7 @@ import Skills from '../components/Skills'
 import Publications from '../components/Publications'
 import OpenSource from '../components/OpenSource'
 
-class App extends React.Component {
+export default class App extends React.Component {
   render () {
     const data = this.props.data || {}
 
@@ -36,5 +36,3 @@ class App extends React.Component {
 App.propTypes = {
   data: React.PropTypes.object
 }
-
-export default App

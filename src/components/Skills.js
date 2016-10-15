@@ -23,7 +23,7 @@ const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
   )
 })
 
-class Skills extends React.Component {
+export default class Skills extends React.Component {
   constructor (props) {
     super(props)
 
@@ -66,5 +66,3 @@ class Skills extends React.Component {
 Skills.propTypes = {
   data: React.PropTypes.object
 }
-
-export default Skills
