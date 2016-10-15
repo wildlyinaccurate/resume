@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Introduction = React.createClass({
+export default class Introduction extends React.Component {
   render () {
     return (
       <div id='introduction' className='introduction section text-xs-center'>
@@ -15,6 +15,4 @@ const Introduction = React.createClass({
       </div>
     )
   }
-})
-
-export default Introduction
+}

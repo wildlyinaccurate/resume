@@ -9,11 +9,7 @@ import Skills from '../components/Skills'
 import Publications from '../components/Publications'
 import OpenSource from '../components/OpenSource'
 
-const App = React.createClass({
-  propTypes: {
-    data: React.PropTypes.object
-  },
-
+class App extends React.Component {
   render () {
     const data = this.props.data || {}
 
@@ -35,6 +31,10 @@ const App = React.createClass({
       </div>
     )
   }
-})
+}
+
+App.propTypes = {
+  data: React.PropTypes.object
+}
 
 export default App

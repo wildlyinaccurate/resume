@@ -3,29 +3,27 @@ import fetch from 'isomorphic-fetch'
 
 import ExperienceItem from './ExperienceItem'
 
-const Experience = React.createClass({
-  propTypes: {
-    data: React.PropTypes.object
-  },
+export default class Experience extends React.Component {
+  constructor (props) {
+    super(props)
 
-  getInitialState () {
-    return {
-      items: this.props.data ? this.dataToExperienceItems(this.props.data) : ''
+    this.state = {
+      items: props.data ? this.dataToExperienceItems(props.data) : ''
     }
-  },
+  }
 
   componentDidMount () {
     fetch('data/experience.json')
       .then(response => response.json())
       .then(this.dataToExperienceItems)
       .then(items => this.setState({ items }))
-  },
+  }
 
   dataToExperienceItems (data) {
     return data.results.map(props => {
       return <ExperienceItem key={props.name} {...props} />
     })
-  },
+  }
 
   render () {
     return (
@@ -35,6 +33,8 @@ const Experience = React.createClass({
       </div>
     )
   }
-})
+}
 
-export default Experience
+Experience.propTypes = {
+  data: React.PropTypes.object
+}

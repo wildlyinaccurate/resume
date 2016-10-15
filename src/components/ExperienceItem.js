@@ -2,30 +2,20 @@
 import React from 'react'
 import dateFormat from 'dateformat'
 
-const ExperienceItem = React.createClass({
-  propTypes: {
-    url: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string.isRequired,
-    role: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
-    startDate: React.PropTypes.string.isRequired,
-    endDate: React.PropTypes.string,
-    description: React.PropTypes.string.isRequired
-  },
-
+export default class ExperienceItem extends React.Component {
   dateString (date) {
     return dateFormat(date, 'mmmm yyyy')
-  },
+  }
 
   endDateString (date) {
     return date ? this.dateString(date) : 'Present'
-  },
+  }
 
   paragraphs (text) {
     return `<p>
       ${text.split('\n\n').join('</p><p>')}
     </p>`
-  },
+  }
 
   render () {
     return (
@@ -48,6 +38,14 @@ const ExperienceItem = React.createClass({
       </div>
     )
   }
-})
+}
 
-export default ExperienceItem
+ExperienceItem.propTypes = {
+  url: React.PropTypes.string.isRequired,
+  image: React.PropTypes.string.isRequired,
+  role: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string.isRequired,
+  startDate: React.PropTypes.string.isRequired,
+  endDate: React.PropTypes.string,
+  description: React.PropTypes.string.isRequired
+}

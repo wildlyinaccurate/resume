@@ -2,12 +2,7 @@ import React from 'react'
 
 import Icon from './Icon'
 
-const SkillItem = React.createClass({
-  propTypes: {
-    icon: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired
-  },
-
+class SkillItem extends React.Component {
   render () {
     return (
       <h5>
@@ -15,6 +10,11 @@ const SkillItem = React.createClass({
       </h5>
     )
   }
-})
+}
+
+SkillItem.propTypes = {
+  icon: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string.isRequired
+}
 
 export default SkillItem

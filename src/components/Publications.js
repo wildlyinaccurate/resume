@@ -1,16 +1,14 @@
 import React from 'react'
 import fetch from 'isomorphic-fetch'
 
-const Publications = React.createClass({
-  propTypes: {
-    data: React.PropTypes.object
-  },
+class Publications extends React.Component {
+  constructor (props) {
+    super(props)
 
-  getInitialState () {
-    return {
-      publications: this.props.data ? this.dataToPublicationItems(this.props.data) : ''
+    this.state = {
+      publications: props.data ? this.dataToPublicationItems(props.data) : ''
     }
-  },
+  }
 
   componentDidMount () {
     fetch('data/publications.json')
@@ -19,7 +17,7 @@ const Publications = React.createClass({
       .then(publications => {
         this.setState({ publications })
       })
-  },
+  }
 
   dataToPublicationItems (data) {
     return data.results.map(props => {
@@ -31,7 +29,7 @@ const Publications = React.createClass({
         </div>
       )
     })
-  },
+  }
 
   publicationLinks (links) {
     return links.map(link => {
@@ -39,7 +37,7 @@ const Publications = React.createClass({
         <a key={link.title} className='tag tag-success m-r-1/2' href={link.url}>{link.title}</a>
       )
     })
-  },
+  }
 
   render () {
     return (
@@ -52,6 +50,10 @@ const Publications = React.createClass({
       </div>
     )
   }
-})
+}
+
+Publications.propTypes = {
+  data: React.PropTypes.object
+}
 
 export default Publications

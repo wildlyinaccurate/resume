@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PrintHeader = React.createClass({
+export default class PrintHeader extends React.Component {
   render () {
     return (
       <div className='visible-print-block container-fluid text-xs-right'>
@@ -16,6 +16,4 @@ const PrintHeader = React.createClass({
       </div>
     )
   }
-})
-
-export default PrintHeader
+}
