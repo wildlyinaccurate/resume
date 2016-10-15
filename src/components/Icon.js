@@ -1,18 +1,13 @@
 import React from 'react'
 
-const Icon = React.createClass({
-  propTypes: {
-    name: React.PropTypes.string.isRequired,
-    style: React.PropTypes.string
-  },
-
+class Icon extends React.Component {
   iconClass (style) {
     return 'icon' + (style ? ` icon--${style}` : '')
-  },
+  }
 
   iconHref (icon) {
     return `images/icons.svg#icon-${icon}`
-  },
+  }
 
   render () {
     return (
@@ -21,6 +16,11 @@ const Icon = React.createClass({
       </svg>
     )
   }
-})
+}
+
+Icon.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  style: React.PropTypes.string
+}
 
 export default Icon

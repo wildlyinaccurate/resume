@@ -3,10 +3,10 @@ import React from 'react'
 import slug from '../utils/slug'
 import Icon from './Icon'
 
-const Header = React.createClass({
+export default class Header extends React.Component {
   navItems () {
     return ['Skills', 'Experience', 'Publications', 'Open Source'].map(this.navItem)
-  },
+  }
 
   navItem (item) {
     const anchor = `#${slug(item)}`
@@ -52,6 +52,4 @@ const Header = React.createClass({
       </nav>
     )
   }
-})
-
-export default Header
+}

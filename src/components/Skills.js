@@ -10,16 +10,27 @@ import values from 'ramda/src/values'
 
 import SkillItem from './SkillItem'
 
-const Skills = React.createClass({
-  propTypes: {
-    data: React.PropTypes.object
-  },
+const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
+  const items = map(data => {
+    return <SkillItem key={data.name} {...data} />
+  }, skills)
 
-  getInitialState () {
-    return {
-      skills: this.props.data ? this.dataToSkillItems(this.props.data) : ''
+  return (
+    <div key={category} className='col-xs-6 col-md-4 m-b-3'>
+      <h3>{category}</h3>
+      {items}
+    </div>
+  )
+})
+
+class Skills extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      skills: props.data ? this.dataToSkillItems(props.data) : ''
     }
-  },
+  }
 
   componentDidMount () {
     fetch('data/skills.json')
@@ -28,29 +39,16 @@ const Skills = React.createClass({
       .then(skills => {
         this.setState({ skills })
       })
-  },
+  }
 
   dataToSkillItems (data) {
     return compose(
       values,
-      this.mappedDataToSkillItems,
+      mappedDataToSkillItems,
       groupBy(prop('category')),
       prop('results')
     )(data)
-  },
-
-  mappedDataToSkillItems: mapObjIndexed((skills, category) => {
-    const items = map(data => {
-      return <SkillItem key={data.name} {...data} />
-    }, skills)
-
-    return (
-      <div key={category} className='col-xs-6 col-md-4 m-b-3'>
-        <h3>{category}</h3>
-        {items}
-      </div>
-    )
-  }),
+  }
 
   render () {
     return (
@@ -63,6 +61,10 @@ const Skills = React.createClass({
       </div>
     )
   }
-})
+}
+
+Skills.propTypes = {
+  data: React.PropTypes.object
+}
 
 export default Skills
