@@ -6,8 +6,9 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "npm run build",
-    "build": "gulp build",
-    "release": "gulp release"
+    "build": "npm run webpack && gulp build",
+    "webpack": "webpack -p",
+    "release": "npm run webpack && gulp release"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,6 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
     "eslint": "^3.2.0",
     "eslint-config-standard": "^6.2.0",
     "eslint-plugin-promise": "^3.0.0",
@@ -45,9 +45,8 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^3.0.1",
     "gulp-sass": "^2.1.1",
-    "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.4",
     "gulp-watch": "^4.3.5",
-    "vinyl-source-stream": "^1.1.0"
+    "webpack": "^1.13.2"
   }
 }

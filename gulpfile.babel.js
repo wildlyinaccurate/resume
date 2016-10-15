@@ -2,14 +2,10 @@ import fs from 'fs'
 
 import { __, compose, curry } from 'ramda'
 import gulp from 'gulp'
-import gutil from 'gulp-util'
-import browserify from 'browserify'
-import uglify from 'gulp-uglify'
 import imagemin, * as im from 'gulp-imagemin'
 import eslint from 'gulp-eslint'
 import sass from 'gulp-sass'
 import uncss from 'gulp-uncss'
-import source from 'vinyl-source-stream'
 import watch from 'gulp-watch'
 import batch from 'gulp-batch'
 import ghPages from 'gulp-gh-pages'
@@ -24,7 +20,7 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['lint', 'sass', 'uncss', 'js', 'minify', 'static', 'copy', 'imagemin'])
+gulp.task('build', ['lint', 'sass', 'uncss', 'static', 'copy', 'imagemin'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -53,23 +49,6 @@ gulp.task('lint', function () {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
-})
-
-gulp.task('js', () => {
-  const b = browserify('src/index.js', {
-    transform: ['babelify']
-  })
-
-  return b.bundle()
-    .on('error', error => gutil.log('Browserify Error:', error.toString()))
-    .pipe(source('index.js'))
-    .pipe(gulp.dest('dist'))
-})
-
-gulp.task('minify', ['js'], () => {
-  return gulp.src('dist/index.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('static', done => {
@@ -105,11 +84,7 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('apply-production-env', () => {
-  process.env.NODE_ENV = 'production'
-})
-
-gulp.task('release', ['apply-production-env', 'build'], () => {
+gulp.task('release', ['build'], () => {
   return gulp.src('dist/**/*')
     .pipe(ghPages())
 })
