@@ -1,17 +1,17 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-import Header from '../components/Header'
-import PrintHeader from '../components/PrintHeader'
-import Footer from '../components/Footer'
-import Introduction from '../components/Introduction'
-import Experience from '../components/Experience'
-import Skills from '../components/Skills'
-import Publications from '../components/Publications'
-import OpenSource from '../components/OpenSource'
+const Header = require('../components/Header')
+const PrintHeader = require('../components/PrintHeader')
+const Footer = require('../components/Footer')
+const Introduction = require('../components/Introduction')
+const Experience = require('../components/Experience')
+const Skills = require('../components/Skills')
+const Publications = require('../components/Publications')
+const OpenSource = require('../components/OpenSource')
 
-export default class App extends Component {
+module.exports = class App extends Component {
   render () {
-    const data = this.props.data || {}
+    const data = this.props['data'] || {}
 
     return (
       <div>

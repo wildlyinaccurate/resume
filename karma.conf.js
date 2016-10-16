@@ -1,6 +1,5 @@
 const connect = require('connect')
 const serveStatic = require('serve-static')
-const webpackConfig = require('./webpack.config')
 
 connect()
   .use(serveStatic('.'))
@@ -26,7 +25,15 @@ module.exports = function (config) {
     },
 
     webpack: {
-      module: webpackConfig.module
+      module: {
+        loaders: [
+          {
+            test: /\.js$/,
+            loader: 'babel-loader?presets=es2015',
+            exclude: /node_modules/
+          }
+        ]
+      }
     },
 
     reporters: ['mocha'],

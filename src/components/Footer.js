@@ -1,6 +1,6 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-export default class Footer extends Component {
+module.exports = class Footer extends Component {
   render () {
     return (
       <footer className='section hidden-print'>

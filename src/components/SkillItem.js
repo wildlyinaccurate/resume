@@ -1,12 +1,12 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-import Icon from './Icon'
+const Icon = require('./Icon')
 
-export default class SkillItem extends Component {
+module.exports = class SkillItem extends Component {
   render () {
     return (
       <h5>
-        <Icon name={this.props.icon} /> {this.props.name}
+        <Icon name={this.props['icon']} /> {this.props['name']}
       </h5>
     )
   }

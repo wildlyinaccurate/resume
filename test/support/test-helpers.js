@@ -1,4 +1,4 @@
-export function createMountPoint () {
+module.exports.createMountPoint = function () {
   const div = document.createElement('div')
   div.id = `test-mount-point-${Date.now()}`
   document.body.appendChild(div)
@@ -6,6 +6,6 @@ export function createMountPoint () {
   return div
 }
 
-export function removeMountPoint (mountPoint) {
+module.exports.removeMountPoint = function (mountPoint) {
   return document.body.removeChild(mountPoint)
 }
