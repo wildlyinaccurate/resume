@@ -1,6 +1,6 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
-export default class Icon extends React.Component {
+export default class Icon extends Component {
   iconClass (style) {
     return 'icon' + (style ? ` icon--${style}` : '')
   }
@@ -16,9 +16,4 @@ export default class Icon extends React.Component {
       </svg>
     )
   }
-}
-
-Icon.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  style: React.PropTypes.string
 }

@@ -1,6 +1,6 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
-export default class Introduction extends React.Component {
+export default class Introduction extends Component {
   render () {
     return (
       <div id='introduction' className='introduction section text-xs-center'>

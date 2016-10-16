@@ -1,6 +1,6 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
-export default class PrintHeader extends React.Component {
+export default class PrintHeader extends Component {
   render () {
     return (
       <div className='visible-print-block container-fluid text-xs-right'>

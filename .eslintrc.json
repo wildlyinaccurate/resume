@@ -1,10 +1,7 @@
 {
-    "extends": [
-        "standard",
-        "plugin:react/recommended"
-    ],
-    "plugins": [
-        "standard",
-        "react"
-    ]
+    "extends": ["standard"],
+    "plugins": ["standard"],
+	"rules": {
+		"no-unused-vars": [0, { "varsIgnorePattern": "^h$" }]
+	}
 }

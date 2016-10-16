@@ -1,7 +1,7 @@
-import React from 'react'
+import { h, Component } from 'preact'
 import fetch from 'isomorphic-fetch'
 
-export default class Publications extends React.Component {
+export default class Publications extends Component {
   constructor (props) {
     super(props)
 
@@ -50,8 +50,4 @@ export default class Publications extends React.Component {
       </div>
     )
   }
-}
-
-Publications.propTypes = {
-  data: React.PropTypes.object
 }

@@ -10,8 +10,8 @@ import watch from 'gulp-watch'
 import batch from 'gulp-batch'
 import ghPages from 'gulp-gh-pages'
 
-import React from 'react'
-import ReactDOMServer from 'react-dom/server'
+import render from 'preact-render-to-string'
+import { h } from 'preact'
 import App from './src/containers/App'
 
 const readFileJSON = compose(
@@ -59,7 +59,7 @@ gulp.task('static', done => {
       publications: readFileJSON('data/publications.json')
     }
 
-    const app = ReactDOMServer.renderToString(<App data={data} />)
+    const app = render(<App data={data} />)
 
     fs.writeFile('dist/index.html', template.replace('{{app}}', app), 'utf-8', done)
   })
