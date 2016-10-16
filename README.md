@@ -1,7 +1,7 @@
 <h1 align="center">Résumé</h1>
 
 <p align="center">
-    An HTML résumé built using ES2015 and universal React.
+    An HTML résumé built using ES2015 and universal Preact.
 </p>
 
 <p align="center">
