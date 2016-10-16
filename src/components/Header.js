@@ -1,9 +1,9 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-import slug from '../utils/slug'
-import Icon from './Icon'
+const slug = require('../utils/slug')
+const Icon = require('./Icon')
 
-export default class Header extends Component {
+module.exports = class Header extends Component {
   navItems () {
     return ['Skills', 'Experience', 'Publications', 'Open Source'].map(this.navItem)
   }

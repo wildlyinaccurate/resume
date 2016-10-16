@@ -1,17 +1,17 @@
-import fs from 'fs'
+const fs = require('fs')
 
-import { __, compose, curry } from 'ramda'
-import gulp from 'gulp'
-import imagemin, * as im from 'gulp-imagemin'
-import sass from 'gulp-sass'
-import uncss from 'gulp-uncss'
-import watch from 'gulp-watch'
-import batch from 'gulp-batch'
-import ghPages from 'gulp-gh-pages'
+const { __, compose, curry } = require('ramda')
+const gulp = require('gulp')
+const imagemin = require('gulp-imagemin')
+const sass = require('gulp-sass')
+const uncss = require('gulp-uncss')
+const watch = require('gulp-watch')
+const batch = require('gulp-batch')
+const ghPages = require('gulp-gh-pages')
 
-import render from 'preact-render-to-string'
-import { h } from 'preact'
-import App from './src/containers/App'
+const render = require('preact-render-to-string')
+const { h } = require('preact')
+const App = require('./src/containers/App')
 
 const readFileJSON = compose(
   JSON.parse,
@@ -73,7 +73,7 @@ gulp.task('static', done => {
 })
 
 gulp.task('imagemin', ['copy'], () => {
-  const svgo = im.svgo({
+  const svgo = imagemin.svgo({
     plugins: [
       { cleanupIDs: false },
       { removeHiddenElems: false },
@@ -82,7 +82,7 @@ gulp.task('imagemin', ['copy'], () => {
   })
 
   return gulp.src('dist/images/*')
-    .pipe(imagemin([svgo, im.optipng()]))
+    .pipe(imagemin([svgo, imagemin.optipng()]))
     .pipe(gulp.dest('dist/images'))
 })
 

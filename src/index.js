@@ -1,6 +1,6 @@
-import { h, render } from 'preact'
+const { h, render } = require('preact')
 
-import App from './containers/App'
+const App = require('./containers/App')
 
 const container = document.getElementById('app-container')
 const staticMarkup = container.childNodes[0]

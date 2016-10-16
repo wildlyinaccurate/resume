@@ -1,14 +1,14 @@
-import { h, Component } from 'preact'
-import fetch from 'isomorphic-fetch'
+const { h, Component } = require('preact')
+const fetch = require('isomorphic-fetch')
 
-import compose from 'ramda/src/compose'
-import groupBy from 'ramda/src/groupBy'
-import map from 'ramda/src/map'
-import mapObjIndexed from 'ramda/src/mapObjIndexed'
-import prop from 'ramda/src/prop'
-import values from 'ramda/src/values'
+const compose = require('ramda/src/compose')
+const groupBy = require('ramda/src/groupBy')
+const map = require('ramda/src/map')
+const mapObjIndexed = require('ramda/src/mapObjIndexed')
+const prop = require('ramda/src/prop')
+const values = require('ramda/src/values')
 
-import SkillItem from './SkillItem'
+const SkillItem = require('./SkillItem')
 
 const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
   const items = map(data => {
@@ -23,7 +23,7 @@ const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
   )
 })
 
-export default class Skills extends Component {
+module.exports = class Skills extends Component {
   constructor (props) {
     super(props)
 
@@ -35,7 +35,7 @@ export default class Skills extends Component {
   componentDidMount () {
     fetch('data/skills.json')
       .then(response => response.json())
-      .then(this.dataToSkillItems)
+      .then(data => this.dataToSkillItems(data))
       .then(skills => {
         this.setState({ skills })
       })

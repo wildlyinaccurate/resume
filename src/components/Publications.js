@@ -1,7 +1,7 @@
-import { h, Component } from 'preact'
-import fetch from 'isomorphic-fetch'
+const { h, Component } = require('preact')
+const fetch = require('isomorphic-fetch')
 
-export default class Publications extends Component {
+module.exports = class Publications extends Component {
   constructor (props) {
     super(props)
 
@@ -20,7 +20,7 @@ export default class Publications extends Component {
   }
 
   dataToPublicationItems (data) {
-    return data.results.map(props => {
+    return data['results'].map(props => {
       return (
         <div key={props.title} className='col-sm-6'>
           <h3>{props.title} ({props.year})</h3>

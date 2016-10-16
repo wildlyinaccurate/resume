@@ -1,9 +1,9 @@
-import { h, Component } from 'preact'
-import fetch from 'isomorphic-fetch'
+const { h, Component } = require('preact')
+const fetch = require('isomorphic-fetch')
 
-import ExperienceItem from './ExperienceItem'
+const ExperienceItem = require('./ExperienceItem')
 
-export default class Experience extends Component {
+module.exports = class Experience extends Component {
   constructor (props) {
     super(props)
 
@@ -15,12 +15,12 @@ export default class Experience extends Component {
   componentDidMount () {
     fetch('data/experience.json')
       .then(response => response.json())
-      .then(this.dataToExperienceItems)
+      .then(data => this.dataToExperienceItems(data))
       .then(items => this.setState({ items }))
   }
 
   dataToExperienceItems (data) {
-    return data.results.map(props => {
+    return data['results'].map(props => {
       return <ExperienceItem key={props.name} {...props} />
     })
   }
