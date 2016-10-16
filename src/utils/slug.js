@@ -1,7 +1,7 @@
-import compose from 'ramda/src/compose'
-import join from 'ramda/src/join'
-import split from 'ramda/src/split'
-import toLower from 'ramda/src/toLower'
+const compose = require('ramda/src/compose')
+const join = require('ramda/src/join')
+const split = require('ramda/src/split')
+const toLower = require('ramda/src/toLower')
 
 const slug = compose(
   join('-'),
@@ -9,4 +9,4 @@ const slug = compose(
   toLower
 )
 
-export default slug
+module.exports = slug

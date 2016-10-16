@@ -1,22 +1,22 @@
-import _fetch from 'isomorphic-fetch'
+const _fetch = require('isomorphic-fetch')
 
-import compose from 'ramda/src/compose'
-import contains from 'ramda/src/contains'
-import curry from 'ramda/src/curry'
-import find from 'ramda/src/find'
-import flip from 'ramda/src/flip'
-import keys from 'ramda/src/keys'
-import not from 'ramda/src/not'
-import prop from 'ramda/src/prop'
-import reverse from 'ramda/src/reverse'
-import sortBy from 'ramda/src/sortBy'
+const compose = require('ramda/src/compose')
+const contains = require('ramda/src/contains')
+const curry = require('ramda/src/curry')
+const find = require('ramda/src/find')
+const flip = require('ramda/src/flip')
+const keys = require('ramda/src/keys')
+const not = require('ramda/src/not')
+const prop = require('ramda/src/prop')
+const reverse = require('ramda/src/reverse')
+const sortBy = require('ramda/src/sortBy')
 
-export function fetch (accessToken) {
+module.exports.fetch = function (accessToken) {
   return _fetch(`https://api.github.com/user/repos?per_page=100&access_token=${accessToken}`)
     .then(response => response.json())
 }
 
-export const sort = curry((sortProp, repositories) => {
+module.exports.sort = curry((sortProp, repositories) => {
   return compose(
     reverse,
     sortBy(prop(sortProp))
@@ -26,18 +26,18 @@ export const sort = curry((sortProp, repositories) => {
 const isRealLanguage = compose(not, flip(contains)(['HTML', 'CSS']))
 
 const fetchRepositoryLanguage = repository => {
-  return _fetch(repository.languages_url)
+  return _fetch(repository['languages_url'])
     .then(response => response.json())
     .then(keys)
     .then(find(isRealLanguage))
 }
 
-export function getLanguage (repository) {
-  if (isRealLanguage(repository.language)) {
+module.exports.getLanguage = function (repository) {
+  if (isRealLanguage(repository['language'])) {
     return Promise.resolve(repository)
   } else {
     return fetchRepositoryLanguage(repository).then(language => {
-      repository.language = language
+      repository['language'] = language
 
       return repository
     })

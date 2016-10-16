@@ -1,6 +1,6 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-export default class Introduction extends Component {
+module.exports = class Introduction extends Component {
   render () {
     return (
       <div id='introduction' className='introduction section text-xs-center'>

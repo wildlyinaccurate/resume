@@ -1,6 +1,6 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-export default class Icon extends Component {
+module.exports = class Icon extends Component {
   iconClass (style) {
     return 'icon' + (style ? ` icon--${style}` : '')
   }
@@ -11,8 +11,12 @@ export default class Icon extends Component {
 
   render () {
     return (
-      <svg className={this.iconClass(this.props.style)}>
-        <use xlinkHref={this.iconHref(this.props.name)}></use>
+      <svg className={this.iconClass(this.props['style'])}>
+        {
+          h('use', {
+            'xlinkHref': this.iconHref(this.props['name'])
+          })
+        }
       </svg>
     )
   }
