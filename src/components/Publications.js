@@ -13,7 +13,7 @@ export default class Publications extends React.Component {
   componentDidMount () {
     fetch('data/publications.json')
       .then(response => response.json())
-      .then(this.dataToPublicationItems)
+      .then(items => this.dataToPublicationItems(items))
       .then(publications => {
         this.setState({ publications })
       })
