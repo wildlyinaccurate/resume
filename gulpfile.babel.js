@@ -20,7 +20,7 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['lint', 'sass', 'uncss', 'static', 'copy', 'imagemin'])
+gulp.task('build', ['lint', 'static', 'sass', 'uncss', 'inline-css', 'copy', 'imagemin'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -28,7 +28,7 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('uncss', ['sass'], () => {
+gulp.task('uncss', ['sass', 'static'], () => {
   return gulp.src('dist/main.css')
     .pipe(uncss({
       html: ['dist/index.html'],
@@ -42,6 +42,21 @@ gulp.task('uncss', ['sass'], () => {
       ]
     }))
     .pipe(gulp.dest('dist'))
+})
+
+gulp.task('inline-css', ['uncss'], done => {
+  fs.readFile('dist/index.html', 'utf-8', (_, html) => {
+    fs.readFile('dist/main.css', 'utf-8', (_, styles) => {
+      const inlined = html.replace(
+        `<link rel="stylesheet" href="main.css">`,
+        `<style>${styles}</style>`
+      )
+
+      fs.writeFile('dist/index.html', inlined, 'utf-8', () => {
+        fs.unlink('dist/main.css', done)
+      })
+    })
+  })
 })
 
 gulp.task('lint', function () {
