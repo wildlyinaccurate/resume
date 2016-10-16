@@ -1,4 +1,4 @@
-import React from 'react'
+import { h, Component } from 'preact'
 import fetch from 'isomorphic-fetch'
 
 import compose from 'ramda/src/compose'
@@ -23,7 +23,7 @@ const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
   )
 })
 
-export default class Skills extends React.Component {
+export default class Skills extends Component {
   constructor (props) {
     super(props)
 
@@ -61,8 +61,4 @@ export default class Skills extends React.Component {
       </div>
     )
   }
-}
-
-Skills.propTypes = {
-  data: React.PropTypes.object
 }

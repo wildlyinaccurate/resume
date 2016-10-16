@@ -1,4 +1,4 @@
-import React from 'react'
+import { h, Component } from 'preact'
 import map from 'ramda/src/map'
 import reverse from 'ramda/src/reverse'
 import take from 'ramda/src/take'
@@ -8,7 +8,7 @@ import OpenSourceItem from './OpenSourceItem'
 
 const ACCESS_TOKEN = reverse('ff7cece3c58d2a457908136b35475cbdf708d3d6')
 
-export default class OpenSource extends React.Component {
+export default class OpenSource extends Component {
   constructor (props) {
     super(props)
 

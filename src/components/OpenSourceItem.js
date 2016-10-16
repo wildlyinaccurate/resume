@@ -1,8 +1,8 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
 import Icon from './Icon'
 
-export default class OpenSourceItem extends React.Component {
+export default class OpenSourceItem extends Component {
   render () {
     return (
       <div className='col-xs-12 col-lg-6 m-b-2'>
@@ -21,12 +21,4 @@ export default class OpenSourceItem extends React.Component {
       </div>
     )
   }
-}
-
-OpenSourceItem.propTypes = {
-  stargazers_count: React.PropTypes.number.isRequired,
-  html_url: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired,
-  language: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired
 }

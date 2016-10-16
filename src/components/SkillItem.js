@@ -1,8 +1,8 @@
-import React from 'react'
+import { h, Component } from 'preact'
 
 import Icon from './Icon'
 
-export default class SkillItem extends React.Component {
+export default class SkillItem extends Component {
   render () {
     return (
       <h5>
@@ -10,9 +10,4 @@ export default class SkillItem extends React.Component {
       </h5>
     )
   }
-}
-
-SkillItem.propTypes = {
-  icon: React.PropTypes.string.isRequired,
-  name: React.PropTypes.string.isRequired
 }

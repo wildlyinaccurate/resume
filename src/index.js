@@ -1,10 +1,10 @@
-import ReactDOM from 'react-dom'
-import React from 'react'
+import { h, render } from 'preact'
 
 import App from './containers/App'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app-container')
-)
+const container = document.getElementById('app-container')
+const staticMarkup = container.childNodes[0]
 
+render(<App />, container)
+
+container.removeChild(staticMarkup)
