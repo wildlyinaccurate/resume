@@ -3,7 +3,6 @@ import fs from 'fs'
 import { __, compose, curry } from 'ramda'
 import gulp from 'gulp'
 import imagemin, * as im from 'gulp-imagemin'
-import eslint from 'gulp-eslint'
 import sass from 'gulp-sass'
 import uncss from 'gulp-uncss'
 import watch from 'gulp-watch'
@@ -20,7 +19,7 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['lint', 'static', 'sass', 'uncss', 'inline-css', 'copy', 'imagemin'])
+gulp.task('build', ['static', 'sass', 'uncss', 'inline-css', 'copy', 'imagemin'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -57,13 +56,6 @@ gulp.task('inline-css', ['uncss'], done => {
       })
     })
   })
-})
-
-gulp.task('lint', function () {
-  return gulp.src(['src/**/*.js', 'gulpfile.babel.js'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
 })
 
 gulp.task('static', done => {
