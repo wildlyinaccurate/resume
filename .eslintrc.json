@@ -1,6 +1,9 @@
 {
     "extends": ["standard"],
     "plugins": ["standard"],
+    "env": {
+        "jasmine": "true"
+    },
 	"rules": {
 		"no-unused-vars": [0, { "varsIgnorePattern": "^h$" }]
 	}
