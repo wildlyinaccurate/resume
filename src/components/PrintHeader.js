@@ -1,6 +1,6 @@
-import { h, Component } from 'preact'
+const { h, Component } = require('preact')
 
-export default class PrintHeader extends Component {
+module.exports = class PrintHeader extends Component {
   render () {
     return (
       <div className='visible-print-block container-fluid text-xs-right'>

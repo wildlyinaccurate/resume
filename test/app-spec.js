@@ -1,7 +1,7 @@
-import { h, render } from 'preact'
-import { createMountPoint, removeMountPoint } from './support/test-helpers'
+const { h, render } = require('preact')
+const { createMountPoint, removeMountPoint } = require('./support/test-helpers')
 
-import App from '../src/containers/App'
+const App = require('../src/containers/App')
 
 describe('App', () => {
   let mountPoint

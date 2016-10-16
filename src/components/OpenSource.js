@@ -1,14 +1,14 @@
-import { h, Component } from 'preact'
-import map from 'ramda/src/map'
-import reverse from 'ramda/src/reverse'
-import take from 'ramda/src/take'
+const { h, Component } = require('preact')
+const map = require('ramda/src/map')
+const reverse = require('ramda/src/reverse')
+const take = require('ramda/src/take')
 
-import * as Repositories from '../github/repositories'
-import OpenSourceItem from './OpenSourceItem'
+const Repositories = require('../github/repositories')
+const OpenSourceItem = require('./OpenSourceItem')
 
 const ACCESS_TOKEN = reverse('ff7cece3c58d2a457908136b35475cbdf708d3d6')
 
-export default class OpenSource extends Component {
+module.exports = class OpenSource extends Component {
   constructor (props) {
     super(props)
 

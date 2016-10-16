@@ -19,6 +19,8 @@ npm install
 npm run build
 ```
 
+> **Note:** Java is required to run the Google Closure Compiler. Alternatively, `webpack.config.js` can be modified to use the pure JS version of GCC: add `jsCompiler: true` to the `ClosureCompilerPlugin` options.
+
 ## License
 
 The MIT License (MIT)
