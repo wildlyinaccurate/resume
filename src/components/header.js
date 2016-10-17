@@ -1,7 +1,7 @@
 const { h, Component } = require('preact')
 
 const slug = require('../utils/slug')
-const Icon = require('./Icon')
+const Icon = require('./icon')
 
 module.exports = class Header extends Component {
   navItems () {

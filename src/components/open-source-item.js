@@ -1,6 +1,6 @@
 const { h, Component } = require('preact')
 
-const Icon = require('./Icon')
+const Icon = require('./icon')
 
 module.exports = class OpenSourceItem extends Component {
   render () {

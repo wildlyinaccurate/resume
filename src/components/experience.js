@@ -1,7 +1,7 @@
 const { h, Component } = require('preact')
 const fetch = require('isomorphic-fetch')
 
-const ExperienceItem = require('./ExperienceItem')
+const ExperienceItem = require('./experience-item')
 
 module.exports = class Experience extends Component {
   constructor (props) {
