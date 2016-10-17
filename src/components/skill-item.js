@@ -1,13 +1,11 @@
-const { h, Component } = require('preact')
+const { h } = require('preact')
 
 const Icon = require('./icon')
 
-module.exports = class SkillItem extends Component {
-  render () {
-    return (
-      <h5>
-        <Icon name={this.props['icon']} /> {this.props['name']}
-      </h5>
-    )
-  }
+module.exports = function SkillItem (props) {
+  return (
+    <h5>
+      <Icon name={props['icon']} /> {props['name']}
+    </h5>
+  )
 }
