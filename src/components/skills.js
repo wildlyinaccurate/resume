@@ -8,7 +8,7 @@ const mapObjIndexed = require('ramda/src/mapObjIndexed')
 const prop = require('ramda/src/prop')
 const values = require('ramda/src/values')
 
-const SkillItem = require('./SkillItem')
+const SkillItem = require('./skill-item')
 
 const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
   const items = map(data => {

@@ -1,13 +1,13 @@
 const { h, Component } = require('preact')
 
-const Header = require('../components/Header')
-const PrintHeader = require('../components/PrintHeader')
-const Footer = require('../components/Footer')
-const Introduction = require('../components/Introduction')
-const Experience = require('../components/Experience')
-const Skills = require('../components/Skills')
-const Publications = require('../components/Publications')
-const OpenSource = require('../components/OpenSource')
+const Header = require('../components/header')
+const PrintHeader = require('../components/print-header')
+const Footer = require('../components/footer')
+const Introduction = require('../components/introduction')
+const Experience = require('../components/experience')
+const Skills = require('../components/skills')
+const Publications = require('../components/publications')
+const OpenSource = require('../components/open-source')
 
 module.exports = class App extends Component {
   render () {

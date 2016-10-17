@@ -11,7 +11,7 @@ const ghPages = require('gulp-gh-pages')
 
 const render = require('preact-render-to-string')
 const { h } = require('preact')
-const App = require('./src/containers/App')
+const App = require('./src/containers/app')
 
 const readFileJSON = compose(
   JSON.parse,

@@ -1,7 +1,7 @@
 const { h, render } = require('preact')
 const { createMountPoint, removeMountPoint } = require('./support/test-helpers')
 
-const App = require('../src/containers/App')
+const App = require('../src/containers/app')
 
 describe('App', () => {
   let mountPoint
