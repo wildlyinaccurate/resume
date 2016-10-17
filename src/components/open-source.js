@@ -4,7 +4,7 @@ const reverse = require('ramda/src/reverse')
 const take = require('ramda/src/take')
 
 const Repositories = require('../github/repositories')
-const OpenSourceItem = require('./OpenSourceItem')
+const OpenSourceItem = require('./open-source-item')
 
 const ACCESS_TOKEN = reverse('ff7cece3c58d2a457908136b35475cbdf708d3d6')
 
