@@ -17,7 +17,7 @@ const months = {
 
 module.exports = class ExperienceItem extends Component {
   dateString (date) {
-    const [year, month, day] = date.split('-')
+    const [year, month] = date.split('-')
 
     return `${months[month]} ${year}`
   }
@@ -35,7 +35,7 @@ module.exports = class ExperienceItem extends Component {
       <div className='row p-b-1'>
         <div className='col-xs-12 col-sm-3 text-xs-center p-b-1'>
           <a href={this.props['url']}>
-            <img className='img-fluid center-block' src={this.props['image']}/>
+            <img className='img-fluid center-block' src={this.props['image']} />
           </a>
         </div>
 
