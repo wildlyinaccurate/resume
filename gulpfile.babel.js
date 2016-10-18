@@ -32,11 +32,13 @@ gulp.task('uncss', ['sass', 'static'], () => {
     .pipe(uncss({
       html: ['dist/index.html'],
       ignore: [
-        '.star-count .icon',
-        '.pull-xs-right',
-        '.col-xs-12',
         '.col-lg-6',
+        '.col-xs-12',
         '.m-b-2',
+        '.m-l-1\\/2',
+        '.pull-xs-right',
+        '.star-count .icon',
+        '.tag-primary',
         'small'
       ]
     }))

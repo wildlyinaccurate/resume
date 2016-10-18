@@ -11,7 +11,8 @@ module.exports = function OpenSourceItem (props) {
           <Icon name='star' />
         </small>
 
-        <a href={props['html_url']}>{props['name']} ({props['language']})</a>
+        <a href={props['html_url']}>{props['name']}</a>
+        <span className="tag tag-primary m-l-1/2">{props['language']}</span>
       </h4>
 
       <p>
