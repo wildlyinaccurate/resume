@@ -24,11 +24,11 @@ describe('App', () => {
     expect($('#introduction').innerHTML).toContain('Hello!')
   })
 
-  it('should render the skills section', () => {
-    expect($('#skills').innerHTML).toContain('Skills')
-    expect($('#skills').innerHTML).toContain('Languages')
-    expect($('#skills').innerHTML).toContain('JavaScript')
-    expect($('#skills').innerHTML).toContain('Git')
+  it('should render the toolkit section', () => {
+    expect($('#toolkit').innerHTML).toContain('Toolkit')
+    expect($('#toolkit').innerHTML).toContain('Languages')
+    expect($('#toolkit').innerHTML).toContain('JavaScript')
+    expect($('#toolkit').innerHTML).toContain('Git')
   })
 
   it('should render the experience section', () => {

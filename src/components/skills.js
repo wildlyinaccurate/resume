@@ -52,8 +52,8 @@ module.exports = class Skills extends Component {
 
   render () {
     return (
-      <div id='skills' className='section text-xs-center'>
-        <h2 className='display-4 m-b-2'>Skills</h2>
+      <div id='toolkit' className='section text-xs-center'>
+        <h2 className='display-4 m-b-2'>Toolkit</h2>
 
         <div className='row center-cols'>
           {this.state.skills}

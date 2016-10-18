@@ -4,7 +4,7 @@ const slug = require('../utils/slug')
 const Icon = require('./icon')
 
 function navItems () {
-  return ['Skills', 'Experience', 'Publications', 'Open Source'].map(navItem)
+  return ['Toolkit', 'Experience', 'Publications', 'Open Source'].map(navItem)
 }
 
 function navItem (item) {

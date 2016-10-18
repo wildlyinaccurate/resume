@@ -12,7 +12,7 @@ module.exports = function OpenSourceItem (props) {
         </small>
 
         <a href={props['html_url']}>{props['name']}</a>
-        <span className="tag tag-primary m-l-1/2">{props['language']}</span>
+        <span className='tag tag-primary m-l-1/2'>{props['language']}</span>
       </h4>
 
       <p>
