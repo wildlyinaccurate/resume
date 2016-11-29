@@ -34,9 +34,9 @@ gulp.task('uncss', ['sass', 'static'], () => {
       ignore: [
         '.col-lg-6',
         '.col-xs-12',
-        '.m-b-2',
-        '.m-l-1\\/2',
-        '.pull-xs-right',
+        '.mb-2',
+        '.ml-1\\/2',
+        '.float-xs-right',
         '.star-count .icon',
         '.tag-primary',
         'small'

@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
   "dependencies": {
-    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.4",
+    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.5",
     "dateformat": "^1.0.12",
     "isomorphic-fetch": "^2.2.1",
-    "preact": "^6.3.0",
+    "preact": "^7.0.0",
     "ramda": "^0.22.0"
   },
   "devDependencies": {

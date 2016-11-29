@@ -23,7 +23,7 @@ module.exports = function Header () {
       <div className='container'>
         <div className='row'>
           <div id='navbar' className='col-xs-12 col-sm-7 col-md-8 col-lg-9'>
-            <h2 className='pull-sm-left m-r-2 text-xs-center'>Joseph Wynn</h2>
+            <h2 className='float-sm-left mr-2 text-xs-center'>Joseph Wynn</h2>
 
             <ul className='nav nav-pills hidden-md-down'>
               {navItems()}

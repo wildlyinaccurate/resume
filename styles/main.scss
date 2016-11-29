@@ -34,7 +34,7 @@ $spacers: map-merge($spacers, (
 
 // Utility classes
 @import 'bootstrap/scss/utilities/background';
-@import 'bootstrap/scss/utilities/pulls';
+@import 'bootstrap/scss/utilities/float';
 @import 'bootstrap/scss/utilities/text';
 @import 'bootstrap/scss/utilities/spacing';
 @import 'bootstrap/scss/utilities/visibility';
