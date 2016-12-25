@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "2.3.6",
+  "version": "2.4.0",
   "description": "",
   "main": "dist/index.js",
   "jsnext:main": "src/index.js",
