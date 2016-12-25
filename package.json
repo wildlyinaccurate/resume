@@ -24,7 +24,6 @@
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
   "dependencies": {
     "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.5",
-    "dateformat": "^1.0.12",
     "isomorphic-fetch": "^2.2.1",
     "preact": "^7.0.0",
     "ramda": "^0.22.0"
@@ -47,7 +46,7 @@
     "gulp-batch": "^1.0.5",
     "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^3.0.1",
-    "gulp-sass": "^2.1.1",
+    "gulp-sass": "^3.0.0",
     "gulp-uncss": "^1.0.4",
     "gulp-watch": "^4.3.5",
     "jasmine-core": "^2.5.2",
