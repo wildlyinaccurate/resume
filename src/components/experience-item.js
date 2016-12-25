@@ -31,8 +31,8 @@ function paragraphs (text) {
 
 module.exports = function ExperienceItem (props) {
   return (
-    <div className='row p-b-1'>
-      <div className='col-xs-12 col-sm-3 text-xs-center p-b-1'>
+    <div className='row pb-1'>
+      <div className='col-xs-12 col-sm-3 text-xs-center pb-1'>
         <a href={props['url']}>
           <img className='img-fluid center-block' src={props['image']} />
         </a>

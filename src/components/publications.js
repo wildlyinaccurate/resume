@@ -34,7 +34,7 @@ module.exports = class Publications extends Component {
   publicationLinks (links) {
     return links.map(link => {
       return (
-        <a key={link.title} className='tag tag-success m-r-1/2' href={link.url}>{link.title}</a>
+        <a key={link.title} className='tag tag-success mr-1/2' href={link.url}>{link.title}</a>
       )
     })
   }
@@ -42,7 +42,7 @@ module.exports = class Publications extends Component {
   render () {
     return (
       <div id='publications' className='section'>
-        <h2 className='display-4 m-b-2 text-xs-center'>Publications</h2>
+        <h2 className='display-4 mb-2 text-xs-center'>Publications</h2>
 
         <div className='row'>
           {this.state.publications}

@@ -17,7 +17,7 @@ module.exports = class App extends Component {
       <div>
         <PrintHeader />
 
-        <div className='container m-t-md'>
+        <div className='container mt-2'>
           <Header />
 
           <Introduction />
