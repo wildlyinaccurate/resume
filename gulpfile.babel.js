@@ -33,12 +33,12 @@ gulp.task('uncss', ['sass', 'static'], () => {
       html: ['dist/index.html'],
       ignore: [
         '.col-lg-6',
-        '.col-xs-12',
+        '.col-12',
         '.mb-2',
-        '.ml-1\\/2',
-        '.float-xs-right',
+        '.mx-2',
+        '.float-right',
         '.star-count .icon',
-        '.tag-primary',
+        '.badge-primary',
         'small'
       ]
     }))
