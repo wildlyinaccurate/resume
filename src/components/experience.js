@@ -21,14 +21,14 @@ module.exports = class Experience extends Component {
 
   dataToExperienceItems (data) {
     return data['results'].map(props => {
-      return <ExperienceItem key={props.name} {...props} />
+      return <ExperienceItem {...props} />
     })
   }
 
   render () {
     return (
       <div id='experience' className='section'>
-        <h2 className='display-4 mb-2 text-xs-center'>Experience</h2>
+        <h2 className='display-4 mb-2 text-center'>Experience</h2>
         {this.state.items}
       </div>
     )

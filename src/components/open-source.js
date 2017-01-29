@@ -32,16 +32,16 @@ module.exports = class OpenSource extends Component {
 
   dataToOpenSourceItems (repositories) {
     return repositories.map(props => {
-      return <OpenSourceItem key={props.name} {...props} />
+      return <OpenSourceItem {...props} />
     })
   }
 
   render () {
     return (
       <div id='open-source' className='section hidden-print'>
-        <h2 className='display-4 mb-2 text-xs-center'>Open Source</h2>
+        <h2 className='display-4 mb-2 text-center'>Open Source</h2>
 
-        <p className='text-xs-center'>
+        <p className='text-center'>
           Below is a collection of my most popular open source work. You can visit <a href='https://github.com/wildlyinaccurate?tab=repositories'>my GitHub profile</a> for a more complete picture of the open source work that I do.
         </p>
 

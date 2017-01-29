@@ -12,11 +12,11 @@ const SkillItem = require('./skill-item')
 
 const mappedDataToSkillItems = mapObjIndexed((skills, category) => {
   const items = map(data => {
-    return <SkillItem key={data.name} {...data} />
+    return <SkillItem {...data} />
   }, skills)
 
   return (
-    <div key={category} className='col-xs-6 col-md-4 mb-3'>
+    <div className='col-6 col-md-4 mb-3'>
       <h3>{category}</h3>
       {items}
     </div>
@@ -52,7 +52,7 @@ module.exports = class Skills extends Component {
 
   render () {
     return (
-      <div id='toolkit' className='section text-xs-center'>
+      <div id='toolkit' className='section text-center'>
         <h2 className='display-4 mb-2'>Toolkit</h2>
 
         <div className='row center-cols'>

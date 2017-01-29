@@ -11,26 +11,26 @@ function navItem (item) {
   const anchor = `#${slug(item)}`
 
   return (
-    <li key={item} className='nav-item'>
-      <a href={anchor} className='nav-link'>{item}</a>
+    <li className='nav-item'>
+      <a className="nav-link" href={anchor}>{item}</a>
     </li>
   )
 }
 
 module.exports = function Header () {
   return (
-    <nav className='navbar navbar-fixed-top bg-faded'>
+    <nav className='navbar fixed-top bg-faded'>
       <div className='container'>
         <div className='row'>
-          <div id='navbar' className='col-xs-12 col-sm-7 col-md-8 col-lg-9'>
-            <h2 className='float-sm-left mr-2 text-xs-center'>Joseph Wynn</h2>
+          <div id='navbar' className='col-12 col-sm-7 col-md-8 col-lg-9'>
+            <h2 className='float-sm-left mr-2 text-center'>Joseph Wynn</h2>
 
-            <ul className='nav nav-pills hidden-md-down'>
+            <ul className='nav hidden-md-down'>
               {navItems()}
             </ul>
           </div>
 
-          <div className='header-links hidden-xs-down col-sm-5 col-md-4 col-lg-3 text-xs-right'>
+          <div className='header-links hidden-down col-sm-5 col-md-4 col-lg-3 text-right'>
             <a className='header-link' href='https://wildlyinaccurate.com/'>
               <Icon name='wildlyinaccurate' style='super' />
               <span className='header-link__text'>wildlyinaccurate.com</span>

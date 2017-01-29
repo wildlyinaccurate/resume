@@ -2,7 +2,7 @@ const { h } = require('preact')
 
 module.exports = function Introduction () {
   return (
-    <div id='introduction' className='introduction section text-xs-center'>
+    <div id='introduction' className='introduction section text-center'>
       <h4 className='introduction__heading display-2'>Hello!</h4>
       <p className='lead'>
         I'm a web developer for BBC News. I want to build web sites for <a href='https://www.youtube.com/watch?v=E6hGubMkNfM'>the next billion</a>, so unsurprisingly I have a passion for performance and accessibility. Most days you can find me writing JavaScript, Ruby, and Shell. When I'm not building for the web, I'm trying to improve workflows by creating tooling and optimising build pipelines.
