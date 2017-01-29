@@ -12,7 +12,7 @@ function navItem (item) {
 
   return (
     <li className='nav-item'>
-      <a className="nav-link" href={anchor}>{item}</a>
+      <a className='nav-link' href={anchor}>{item}</a>
     </li>
   )
 }
