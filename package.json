@@ -9,7 +9,7 @@
     "eslint": "eslint src/**/*.js test/**/*.js *.js",
     "karma": "karma start",
     "build": "npm run webpack && gulp build",
-    "webpack": "webpack --optimize-occurence-order",
+    "webpack": "webpack",
     "release": "npm run webpack && gulp release"
   },
   "repository": {
@@ -57,7 +57,7 @@
     "karma-webpack": "^2.0.0",
     "preact-render-to-string": "^3.2.1",
     "serve-static": "^1.11.1",
-    "webpack": "^1.13.2",
+    "webpack": "^2.0.0",
     "webpack-closure-compiler": "^2.1.1"
   }
 }
