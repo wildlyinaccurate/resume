@@ -18,9 +18,9 @@ module.exports = class OpenSource extends Component {
   }
 
   componentDidMount () {
-    Repositories.fetch(ACCESS_TOKEN)
+    Repositories.get(ACCESS_TOKEN)
       .then(Repositories.sort('stargazers_count'))
-      .then(take(12))
+      .then(take(8))
       .then(this.getRepositoryLanguages)
       .then(this.dataToOpenSourceItems)
       .then(items => this.setState({ items }))
