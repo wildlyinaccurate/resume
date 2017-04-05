@@ -23,7 +23,7 @@ module.exports.sort = curry((sortProp, repositories) => {
   )(repositories)
 })
 
-const isRealLanguage = compose(not, flip(contains)(['HTML', 'CSS']))
+const isRealLanguage = compose(not, flip(contains)(['HTML', 'CSS', 'Gherkin']))
 
 const fetchRepositoryLanguage = repository => {
   return fetch(repository['languages_url'])
