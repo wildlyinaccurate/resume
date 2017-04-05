@@ -1,3 +1,4 @@
+const path = require('path')
 const webpack = require('webpack')
 const ClosureCompilerPlugin = require('webpack-closure-compiler')
 
@@ -5,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'index.js',
-    path: './dist'
+    path: path.resolve('./dist')
   },
 
   module: {
