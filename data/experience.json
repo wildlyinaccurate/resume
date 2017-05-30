@@ -6,7 +6,7 @@
       "role": "Principal Developer",
       "startDate": "2014-08-01",
       "image": "images/bbc-news.png",
-      "description": "I am currently the development lead for the BBC News front page rebuild project. Built with Node.js, the front page is composed from React components which are shared through an internal open source system. These components are so far in use by BBC Sport, BBC Weather, and BBC Live.\n\nPrevious to the front page project, I lead a small team in redesigning the BBC News build pipeline using Jenkins and Docker. I have developed and still maintain several workflow and productivity tools used by developers in BBC News. I have also worked for BBC World Service where I assisted in the rollout of dozens of responsive web sites, and helped to architect & build the BBC's new cloud-based feed aggregation service."
+      "description": "I am currently the development lead for the BBC News front page rebuild project. Built with Node.js, the front page is composed from React components that are shared through an internal open source system. These components are so far in use by BBC Sport, BBC Weather, and BBC Live.\n\nPrevious to the front page project, I lead a small team in redesigning the BBC News build pipeline using Jenkins and Docker. I have developed and still maintain several workflow and productivity tools used by developers in BBC News. I have also worked for BBC World Service where I assisted in the rollout of dozens of responsive web sites, and helped to architect & build the BBC's new cloud-based feed aggregation service."
     },
     {
       "name": "Rightster",
@@ -24,7 +24,7 @@
       "image": "images/time-inc-uk.png",
       "startDate": "2012-05-01",
       "endDate": "2013-12-01",
-      "description": "At Time Inc. I worked on building out a new API-driven mobile web site platform. During this project I became interested in automated testing as a way to improve the quality of our products. I wrote a smoke test tool which uses PhantomJS to check for common page-level errors, and takes a screenshot of each page to aid manual visual checks. This helped catch bugs quickly, and enabled us to deploy the platform several times a day with confidence.\n\nI also introduced JavaScript unit testing to the engineering department and encouraged more automated testing during the monthly developer gathering. The slides from my talk are <a href=\"http://slid.es/wildlyinaccurate/automated-javascript-testing\">available here</a>."
+      "description": "At Time Inc. I worked on building out a new API-driven mobile web site platform. During this project I became interested in automated testing as a way to improve the quality of our products. I wrote a smoke test tool that uses PhantomJS to check for common page-level errors, and takes a screenshot of each page to aid manual visual checks. This helped catch bugs quickly, and enabled us to deploy the platform several times a day with confidence.\n\nI also introduced JavaScript unit testing to the engineering department and encouraged more automated testing during the monthly developer gathering. The slides from my talk are <a href=\"http://slid.es/wildlyinaccurate/automated-javascript-testing\">available here</a>."
     },
     {
       "name": "Chroma",
@@ -33,7 +33,7 @@
       "image": "images/chroma.png",
       "startDate": "2011-04-01",
       "endDate": "2012-05-01",
-      "description": "Working in a small close-knit team I atchitected and built a web interface used by bookmakers around the UK to monitor and set pricing in real time. To support legacy browsers, I chose to implement a long polling mechanism to achieve the \"real time\" functionality.\n\nI also worked closely with Chroma's clients to create bespoke modules for the ExpressionEngine CMS, including an interface for managing email campaigns using the Campaign Monitor API, and a membership management tool for Racing UK Club."
+      "description": "Working in a small close-knit team I architected and built a web interface used by bookmakers around the UK to monitor and set pricing in real time. To support legacy browsers, I chose to implement a long polling mechanism to achieve the \"real time\" functionality.\n\nI also worked closely with Chroma's clients to create bespoke modules for the ExpressionEngine CMS, including an interface for managing email campaigns using the Campaign Monitor API, and a membership management tool for Racing UK Club."
     },
     {
       "name": "Zeevo",
