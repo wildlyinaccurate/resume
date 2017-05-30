@@ -4,25 +4,22 @@
     { "name": "Ruby", "icon": "ruby", "category": "Languages" },
     { "name": "Elm", "icon": "elm", "category": "Languages" },
     { "name": "Haskell", "icon": "haskell", "category": "Languages" },
-    { "name": "PHP", "icon": "php", "category": "Languages" },
 
     { "name": "React", "icon": "react", "category": "Front-End" },
-    { "name": "AngularJS", "icon": "angular", "category": "Front-End" },
+    { "name": "Webpack", "icon": "webpack", "category": "Front-End" },
     { "name": "Sass", "icon": "sass", "category": "Front-End" },
     { "name": "CSS", "icon": "css", "category": "Front-End" },
     { "name": "HTML", "icon": "html", "category": "Front-End" },
 
     { "name": "AWS", "icon": "aws", "category": "DevOps" },
     { "name": "Docker", "icon": "docker", "category": "DevOps" },
-    { "name": "Jenkins", "icon": "jenkins", "category": "DevOps" },
     { "name": "Nginx", "icon": "nginx", "category": "DevOps" },
     { "name": "Apache", "icon": "apache", "category": "DevOps" },
     { "name": "PostgreSQL", "icon": "postgresql", "category": "DevOps" },
 
     { "name": "Git", "icon": "git", "category": "Workflow" },
-    { "name": "Travis CI", "icon": "travis", "category": "Workflow" },
-    { "name": "Gulp", "icon": "gulp", "category": "Workflow" },
-    { "name": "Grunt", "icon": "grunt", "category": "Workflow" }
+    { "name": "Jenkins", "icon": "jenkins", "category": "Workflow" },
+    { "name": "Travis CI", "icon": "travis", "category": "Workflow" }
   ]
 }
 
