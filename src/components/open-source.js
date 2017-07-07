@@ -38,14 +38,14 @@ module.exports = class OpenSource extends Component {
 
   render () {
     return (
-      <div id='open-source' className='section hidden-print'>
-        <h2 className='display-4 mb-2 text-center'>Open Source</h2>
+      <div id="open-source" className="section hidden-print">
+        <h2 className="display-4 mb-2 text-center">Open Source</h2>
 
-        <p className='text-center'>
-          Below is a collection of my most popular open source work. You can visit <a href='https://github.com/wildlyinaccurate?tab=repositories'>my GitHub profile</a> for a more complete picture of the open source work that I do.
+        <p className="text-center">
+          Below is a collection of my most popular open source work. You can visit <a href="https://github.com/wildlyinaccurate?tab=repositories">my GitHub profile</a> for a more complete picture of the open source work that I do.
         </p>
 
-        <div className='row'>
+        <div className="row">
           {this.state.items}
         </div>
       </div>

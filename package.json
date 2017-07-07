@@ -6,7 +6,7 @@
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "npm run eslint && npm run karma && npm run build",
-    "eslint": "eslint src/**/*.js test/**/*.js *.js",
+    "eslint": "eslint --fix src/**/*.js test/**/*.js *.js",
     "karma": "karma start",
     "build": "npm run webpack && gulp build",
     "webpack": "webpack",
@@ -36,9 +36,9 @@
     "babel-preset-es2015": "^6.16.0",
     "babelify": "^7.2.0",
     "connect": "^3.5.0",
-    "eslint": "^3.2.0",
+    "eslint": "^4.1.1",
     "eslint-config-standard": "^10.2.1",
-    "eslint-config-standard-jsx": "^4.0.1",
+    "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
@@ -59,7 +59,7 @@
     "karma-webpack": "^2.0.0",
     "preact-render-to-string": "^3.2.1",
     "serve-static": "^1.11.1",
-    "webpack": "^2.0.0",
+    "webpack": "^3.1.0",
     "webpack-closure-compiler": "^2.1.1"
   }
 }

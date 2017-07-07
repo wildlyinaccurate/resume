@@ -27,8 +27,8 @@ module.exports = class Experience extends Component {
 
   render () {
     return (
-      <div id='experience' className='section'>
-        <h2 className='display-4 mb-2 text-center'>Experience</h2>
+      <div id="experience" className="section">
+        <h2 className="display-4 mb-2 text-center">Experience</h2>
         {this.state.items}
       </div>
     )

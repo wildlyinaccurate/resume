@@ -1,11 +1,13 @@
 {
-    "extends": ["standard", "standard-jsx"],
-    "env": {
-        "browser": true,
-        "jasmine": true,
-        "node": true
-    },
-	"rules": {
-		"no-unused-vars": [2, { "varsIgnorePattern": "^h$" }]
-	}
+  "extends": ["standard", "standard-react"],
+  "rules": {
+    "jsx-quotes": ["error", "prefer-double"],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  }
 }
