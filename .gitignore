@@ -2,3 +2,4 @@ dist/
 node_modules/
 .publish/
 npm-debug.log
+package-lock.json

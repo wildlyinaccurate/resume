@@ -2,14 +2,10 @@ const { h } = require('preact')
 
 module.exports = function Introduction () {
   return (
-    <div id="introduction" className="introduction section text-center">
-      <h4 className="introduction__heading display-2">Hello!</h4>
+    <div id="introduction" className="introduction section text-center px-0 py-4 px-md-5">
+      <h5 className="introduction__heading display-3">Hello!</h5>
       <p className="lead">
-        I'm a web developer for BBC News. I want to build web sites for <a href="https://www.youtube.com/watch?v=E6hGubMkNfM">the next billion</a>, so unsurprisingly I have a passion for performance and accessibility. Most days you can find me writing JavaScript, Ruby, and Shell. When I'm not building for the web, I'm trying to improve workflows by creating tooling and optimising build pipelines.
-      </p>
-
-      <p className="lead">
-        In my spare time I maintain several open source projects, and I like to write Haskell and Elm. Outside of programming I am a cook, runner, rock climber and guitarist. I'm also an <a href="https://wildlyinaccurate.com/accidental-keyboard-enthusiasm/">accidental keyboard enthusiast</a>. I sometimes blog at <a href="https://wildlyinaccurate.com/">Wildly Inaccurate</a>.
+        My name is Joseph Wynn. I'm a web developer with a focus on performance and accessibility. My experience is with high-traffic, high-availability distributed systems at companies like BBC News and Time. I maintain some <a href="https://github.com/wildlyinaccurate/">open source projects</a><span className="visible-print-inline"> (github.com/wildlyinaccurate)</span> and occasionally <a href="https://wildlyinaccurate.com/">blog about my experiences</a><span className="visible-print-inline"> (wildlyinaccurate.com)</span>.
       </p>
     </div>
   )

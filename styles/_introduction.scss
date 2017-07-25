@@ -1,20 +1,3 @@
-.introduction {
-    padding: $spacer-y * 4;
-}
-
 .introduction__heading {
     color: $link-color;
-}
-
-@include media-breakpoint-down(sm) {
-    .introduction {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media print {
-    .introduction {
-        padding-top: $spacer-y;
-    }
 }

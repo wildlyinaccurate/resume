@@ -10,7 +10,6 @@ $badge-primary-bg: $link-color;
 
 // // Reset and dependencies
 @import 'bootstrap/scss/normalize';
-@import 'bootstrap/scss/print';
 
 // Core CSS
 @import 'bootstrap/scss/reboot';
@@ -28,10 +27,8 @@ $badge-primary-bg: $link-color;
 
 // ---------------
 
+@import 'headings';
 @import 'utilities';
-@import 'icons';
-@import 'header';
 @import 'section';
 @import 'introduction';
-@import 'open-source';
-@import 'footer';
+@import 'print';
