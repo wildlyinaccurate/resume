@@ -1,6 +1,5 @@
 const { h, Component } = require('preact')
 
-const Header = require('../components/header')
 const PrintHeader = require('../components/print-header')
 const Footer = require('../components/footer')
 const Introduction = require('../components/introduction')
@@ -17,9 +16,7 @@ module.exports = class App extends Component {
       <div>
         <PrintHeader />
 
-        <div className="container mt-2">
-          <Header />
-
+        <div className="container">
           <Introduction />
           <Skills data={data.skills} />
           <Experience data={data.experience} />

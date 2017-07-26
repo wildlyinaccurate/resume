@@ -1,14 +1,12 @@
 const { h } = require('preact')
 
-const Icon = require('./icon')
-
 module.exports = function OpenSourceItem (props) {
   return (
     <div className="col-12 col-lg-6 mb-2">
       <h4>
         <small title={`${props['stargazers_count']} stars`} className="star-count float-right">
           {props['stargazers_count']}
-          <Icon name="star" />
+          ★
         </small>
 
         <a href={props['html_url']}>{props['name']}</a>

@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const ClosureCompilerPlugin = require('webpack-closure-compiler')
+const BabiliPlugin = require('babili-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -26,13 +26,6 @@ module.exports = {
       }
     }),
 
-    new ClosureCompilerPlugin({
-      compiler: {
-        language_in: 'ECMASCRIPT6',
-        language_out: 'ECMASCRIPT5',
-        compilation_level: 'ADVANCED'
-      },
-      concurrency: 3
-    })
+    new BabiliPlugin()
   ]
 }

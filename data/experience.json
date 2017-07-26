@@ -3,10 +3,10 @@
     {
       "name": "BBC News",
       "url": "http://www.bbc.co.uk/news",
-      "role": "Principal Developer",
+      "role": "Principal Software Engineer",
       "startDate": "2014-08-01",
       "image": "images/bbc-news.png",
-      "description": "I am currently the development lead for the BBC News front page rebuild project. Built with Node.js, the front page is composed from React components that are shared through an internal open source system. These components are so far in use by BBC Sport, BBC Weather, and BBC Live.\n\nPrevious to the front page project, I lead a small team in redesigning the BBC News build pipeline using Jenkins and Docker. I have developed and still maintain several workflow and productivity tools used by developers in BBC News. I have also worked for BBC World Service where I assisted in the rollout of dozens of responsive web sites, and helped to architect & build the BBC's new cloud-based feed aggregation service."
+      "description": "I lead the engineering team rebuilding the front page of BBC News with a rigorous focus on performance. The new front page is <a href=\"https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/\">significantly faster</a>, and drives better user engagement: bounce rate is down 2% and weekly return visits are up 9%. The front page is built with Node.js, composed of React components that are shared through an internal open source system. The components are exposed as HTTP endpoints and assembled by a <a href=\"https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/\">page composition service</a>.\n\nI oversaw technical delivery of projects including defining the technical architecture and building continuous integration pipelines. I developed core features, mentored developers, defined code structure, and worked closely with other teams to deliver related features.\n\nThe tech stack included Node.js, Ruby, Go, AWS (EC2, ELB, S3, DynamoDB), Docker."
     },
     {
       "name": "Rightster",
@@ -15,7 +15,7 @@
       "image": "images/rightster.png",
       "startDate": "2013-12-01",
       "endDate": "2014-08-01",
-      "description": "At Rightster I helped to architect and build the front-end for the company's video distribution platform. We used Zend Framework 2 as a domain logic & presentation layer, and made extensive use of AngularJS to build rich user interfaces.\n\nThe project consisted of over 20,000 lines of JavaScript, which we managed by adhering to a solid architecture around small, well-tested components."
+      "description": "When I joined Righster I took control of their video distribution front-end system by introducing a modular architecture based on AngularJS and RequireJS. This enabled the team to effectively manage tens of thousands of lines of JavaScript without compromising on build speed or quality. I worked closely with the platform team to ensure their APIs enabled us to build an efficient presentation middle layer.\n\nI introduced a Git workflow that streamlined our deployment process and reduced defects by cutting releases from a single branch and enforcing code reviews before merges."
     },
     {
       "name": "Time Inc. UK",

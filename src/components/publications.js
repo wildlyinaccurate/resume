@@ -42,7 +42,7 @@ module.exports = class Publications extends Component {
   render () {
     return (
       <div id="publications" className="section">
-        <h2 className="display-4 mb-2 text-center">Publications</h2>
+        <h2 className="display-4 text-center">Publications</h2>
 
         <div className="row">
           {this.state.publications}
