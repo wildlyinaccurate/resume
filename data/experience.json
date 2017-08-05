@@ -15,7 +15,7 @@
       "image": "images/rightster.png",
       "startDate": "2013-12-01",
       "endDate": "2014-08-01",
-      "description": "When I joined Righster I took control of their video distribution front-end system by introducing a modular architecture based on AngularJS and RequireJS. This enabled the team to effectively manage tens of thousands of lines of JavaScript without compromising on build speed or quality. I worked closely with the platform team to ensure their APIs enabled us to build an efficient presentation middle layer.\n\nI introduced a Git workflow that streamlined our deployment process and reduced defects by cutting releases from a single branch and enforcing code reviews before merges."
+      "description": "When I joined Righster I took control of their video distribution front-end by introducing a modular architecture based on AngularJS and RequireJS. This enabled the team to effectively manage tens of thousands of lines of JavaScript without compromising on build speed or quality. I worked closely with the platform team to ensure their APIs enabled us to build an efficient presentation middle layer.\n\nI introduced a Git workflow that streamlined our deployment process and reduced defects by cutting releases from a single branch and enforcing code reviews before merges.\n\nThe tech stack included PHP on the Zend 2 framework, PostgreSQL, Lucene, ElasticSearch, and deployments to EC2 instances."
     },
     {
       "name": "Time Inc. UK",
