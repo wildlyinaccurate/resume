@@ -2,7 +2,6 @@ const fs = require('fs')
 
 const { __, compose, curry } = require('ramda')
 const gulp = require('gulp')
-const imagemin = require('gulp-imagemin')
 const sass = require('gulp-sass')
 const uncss = require('gulp-uncss')
 const watch = require('gulp-watch')
@@ -19,7 +18,7 @@ const readFileJSON = compose(
 )
 
 gulp.task('default', ['build'])
-gulp.task('build', ['static', 'sass', 'uncss', 'inline-css', 'copy', 'imagemin'])
+gulp.task('build', ['static', 'sass', 'uncss', 'inline-css', 'copy'])
 
 gulp.task('sass', () => {
   return gulp.src('styles/main.scss')
@@ -72,20 +71,6 @@ gulp.task('static', done => {
 
     fs.writeFile('dist/index.html', template.replace('{{app}}', app), 'utf-8', done)
   })
-})
-
-gulp.task('imagemin', ['copy'], () => {
-  const svgo = imagemin.svgo({
-    plugins: [
-      { cleanupIDs: false },
-      { removeHiddenElems: false },
-      { removeUselessDefs: false }
-    ]
-  })
-
-  return gulp.src('dist/images/*')
-    .pipe(imagemin([svgo, imagemin.optipng()]))
-    .pipe(gulp.dest('dist/images'))
 })
 
 gulp.task('copy', () => {
