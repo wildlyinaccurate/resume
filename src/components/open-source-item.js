@@ -5,8 +5,7 @@ module.exports = function OpenSourceItem (props) {
     <div className="col-12 col-lg-6 mb-2">
       <h4>
         <small title={`${props['stargazers_count']} stars`} className="star-count float-right">
-          {props['stargazers_count']}
-          ★
+          {props['stargazers_count']} ★
         </small>
 
         <a href={props['html_url']}>{props['name']}</a>
