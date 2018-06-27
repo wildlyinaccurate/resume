@@ -6,7 +6,7 @@
       "role": "Developer",
       "startDate": "2017-09-01",
       "image": "images/speedcurve.png",
-      "description": ""
+      "description": "At SpeedCurve I've been able to take my passion for web performance even further. I build features that help people understand their performance better, using statistical analysis and data visualisation to extract meaningful information from millions of data points.\n\nThe tech stack is PHP, JavaScript, MySQL, and AWS (EC2, S3, Redshift)."
     },
     {
       "name": "BBC News",
@@ -15,7 +15,7 @@
       "startDate": "2014-08-01",
       "endDate": "2017-09-01",
       "image": "images/bbc-news.png",
-      "description": "I lead the engineering team rebuilding the front page of BBC News with a rigorous focus on performance. The new front page is <a href=\"https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/\">significantly faster</a>, and drives better user engagement: bounce rate is down 2% and weekly return visits are up 9%. The front page is built with Node.js, composed of React components that are shared through an internal open source system. The components are exposed as HTTP endpoints and assembled by a <a href=\"https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/\">page composition service</a>.\n\nI oversaw technical delivery of projects including defining the technical architecture and building continuous integration pipelines. I developed core features, mentored developers, defined code structure, and worked closely with other teams to deliver related features.\n\nThe tech stack included Node.js, Ruby, Go, AWS (EC2, ELB, S3, DynamoDB), Docker."
+      "description": "I lead the engineering team rebuilding the front page of BBC News with a rigorous focus on performance. The new front page is <a href=\"https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/\">significantly faster</a>, and drives better user engagement: bounce rate is down 2% and weekly return visits are up 9%. The front page is built with Node.js, composed of React components that are shared through an internal open source system. The components are exposed as HTTP endpoints and assembled by a <a href=\"https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/\">page composition service</a>.\n\nWorking closely with product teams and business analysts, I oversaw technical delivery of projects. This included defining the technical architecture and building continuous integration pipelines. I developed core features, mentored developers, defined code structure, and worked closely with other teams to deliver integrated features.\n\nThe tech stack included Node.js, Ruby, Go, AWS (EC2, ELB, S3, DynamoDB), and Docker."
     },
     {
       "name": "Rightster",
