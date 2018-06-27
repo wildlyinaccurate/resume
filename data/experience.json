@@ -6,7 +6,7 @@
       "role": "Developer",
       "startDate": "2017-09-01",
       "image": "images/speedcurve.png",
-      "description": ""
+      "description": "At SpeedCurve I've been able to take my passion for web performance even further. I build features that help people understand their performance better, using statistical analysis and data visualisation to extract meaningful information from millions of data points.\n\nThe tech stack is PHP, JavaScript, MySQL, and AWS (EC2, S3, Redshift)."
     },
     {
       "name": "BBC News",
