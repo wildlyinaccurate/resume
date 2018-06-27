@@ -1,6 +1,14 @@
 {
   "results": [
     {
+      "title": "Becoming a team lead: a survival guide",
+      "year": 2018,
+      "summary": "Based on my experiences transitioning to a team lead role at the BBC, this is the survival guide I wish I had.",
+      "links": [
+        { "title": "Wildly Inaccurate", "url": "https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/" }
+      ]
+    },
+    {
       "title": "A Hacker's Guide to Git",
       "year": 2014,
       "summary": "This book explains some of Git’s core concepts including basic object storage, commits, branches and tags. It also contains in-depth explanations about the different kinds of merging in Git.",
