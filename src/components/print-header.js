@@ -2,7 +2,7 @@ const { h } = require('preact')
 
 module.exports = function PrintHeader () {
   return (
-    <small className="visible-print-block container-fluid text-right">
+    <small className="d-none d-print-block container-fluid text-right">
       <address>
         <strong>Joseph Wynn</strong>
         <br />

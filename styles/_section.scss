@@ -1,5 +1,5 @@
 .section {
-    padding: ($spacer-y * 2) 0;
+    padding: ($spacer * 2) 0;
 
     & ~ & {
         border-top: $hr-border-width solid $hr-border-color;
