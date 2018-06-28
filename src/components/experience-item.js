@@ -52,6 +52,8 @@ module.exports = function ExperienceItem (props) {
             }
           })
         }
+
+        <p><b>Tech Stack:</b> {props['techStack']}</p>
       </div>
     </div>
   )

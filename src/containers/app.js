@@ -18,7 +18,6 @@ module.exports = class App extends Component {
 
         <div className="container">
           <Introduction />
-          <Skills data={data.skills} />
           <Experience data={data.experience} />
           <Publications data={data.publications} />
           <OpenSource />

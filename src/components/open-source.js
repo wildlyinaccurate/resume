@@ -38,7 +38,7 @@ module.exports = class OpenSource extends Component {
 
   render () {
     return (
-      <div id="open-source" className="section hidden-print">
+      <div id="open-source" className="section d-print-none">
         <h2 className="display-4 text-center">Open Source</h2>
 
         <p className="text-center">

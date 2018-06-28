@@ -2,7 +2,7 @@ const { h } = require('preact')
 
 module.exports = function Footer () {
   return (
-    <footer className="section hidden-print mt-5">
+    <footer className="section d-print-none mt-5">
       <div className="row">
         <div className="col-12">
           Made with ❤ by Joseph Wynn.
