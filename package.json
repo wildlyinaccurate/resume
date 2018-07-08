@@ -1,64 +1,20 @@
 {
   "name": "resume",
-  "version": "2.5.0",
-  "description": "",
-  "main": "dist/index.js",
-  "jsnext:main": "src/index.js",
+  "version": "3.0.0",
+  "description": "The online resume of Joseph Wynn",
+  "main": "src/index.js",
   "scripts": {
-    "test": "npm run eslint && npm run karma && npm run build",
-    "eslint": "eslint --fix src/**/*.js test/**/*.js *.js",
-    "karma": "karma start",
-    "build": "npm run webpack && gulp build",
-    "webpack": "webpack",
-    "release": "npm run webpack && gulp release"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wildlyinaccurate/resume.git"
   },
-  "author": "Joseph Wynn",
-  "license": "MIT",
+  "author": "Joseph Wynn <joseph@wildlyinaccurate.com>",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/wildlyinaccurate/resume/issues"
   },
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
-  "dependencies": {
-    "bootstrap": "^4.1.1",
-    "isomorphic-fetch": "^2.2.1",
-    "preact": "^8.2.9",
-    "ramda": "^0.25.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
-    "babili-webpack-plugin": "^0.1.2",
-    "connect": "^3.6.6",
-    "eslint": "^5.0.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-config-standard-react": "^6.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "gulp": "^3.9.0",
-    "gulp-batch": "^1.0.5",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-sass": "^4.0.1",
-    "gulp-uncss": "^1.0.4",
-    "gulp-watch": "^5.0.0",
-    "jasmine-core": "^3.1.0",
-    "karma": "^2.0.4",
-    "karma-jasmine": "^1.1.2",
-    "karma-mocha-reporter": "^2.2.5",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "karma-webpack": "^3.0.0",
-    "preact-render-to-string": "^3.7.0",
-    "serve-static": "^1.13.2",
-    "webpack": "^4.12.1",
-    "webpack-cli": "^3.0.8"
-  }
+  "private": true
 }
