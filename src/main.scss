@@ -1,0 +1,52 @@
+$primary: #7700a8;
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/print";
+
+// Layout
+.container {
+	@include make-container();
+	@include make-container-max-widths();
+
+	display: flex;
+}
+
+// Spacing
+.pt-4 {
+	padding-top: map-get($spacers, 4);
+}
+
+.px-5 {
+	padding-left: map-get($spacers, 5);
+	padding-right: map-get($spacers, 5);
+}
+
+.mt-4 {
+	margin-top: map-get($spacers, 4);
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Sizing
+.w-80 {
+	width: 80%;
+}
+
+// Positioning
+.text-center {
+	text-align: center;
+}
+
+// Colours
+.text-primary {
+	color: $primary;
+}
+
