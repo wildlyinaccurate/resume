@@ -4,12 +4,15 @@
   "description": "The online resume of Joseph Wynn",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "npm run prettier && npm run webpack && npm run sass",
-    "webpack": "webpack --mode production",
+    "buble": "buble --input src --output dist --target chrome:71 --jsx h",
+    "build": "npm run prettier && npm run build-static && npm run build-client",
+    "build-client": "npm run webpack && npm run sass",
+    "build-static": "npm run buble && DEBUG=second:* node dist/build.js",
+    "prettier": "prettier --write --no-semi webpack.config.js src/{,**/}*.js",
     "sass": "sass --style compressed --load-path node_modules src/main.scss dist/main.css",
-    "prettier": "prettier --write --no-semi --single-quote webpack.config.js src/{,**/}*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --hot --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,18 +26,18 @@
   "homepage": "https://github.com/wildlyinaccurate/resume#readme",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.1.1",
-    "buble": "^0.19.3",
+    "bootstrap": "^4.3.1",
+    "buble": "^0.19.8",
     "buble-loader": "^0.5.1",
-    "preact": "^8.2.9",
+    "preact": "^10.0.1",
     "second": "^1.6.0"
   },
   "devDependencies": {
-    "node-sass": "^4.9.2",
-    "preact-render-to-string": "^3.7.0",
-    "prettier": "^1.13.7",
-    "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "node-sass": "^4.12.0",
+    "preact-render-to-string": "^5.1.0",
+    "prettier": "^1.18.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   }
 }
