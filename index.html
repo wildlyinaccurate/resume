@@ -77,6 +77,18 @@
         position: absolute;
         width: 1px;
     }
+
+    @media print {
+        body {
+            font-size: 1rem;
+        }
+
+        .page-break {
+            border: 0;
+            padding-bottom: 1rem;
+            page-break-before: always;
+        }
+    }
 </style>
 <body>
     <div class="container">
@@ -103,7 +115,7 @@
         <div class="section"><b>Data stores:</b> MariaDB, Amazon Redshift, SQLite</div>
         <div class="section"><b>Workflow:</b> Git, Docker, various CI & deployment tools</div>
 
-        <hr class="separator">
+        <hr class="separator page-break">
 
         <h2>Experience</h2>
 
@@ -122,7 +134,7 @@
         <h3>2009&ndash;2012: Various</h3>
         <p>Web work at various agencies in Christchurch and London. Let's talk over a cup of tea if you want to know more!</p>
 
-        <hr class="separator">
+        <hr class="separator page-break">
 
         <h2>Open Source</h2>
 
@@ -144,5 +156,6 @@
 
         <p><small>Hey, you made it to the end! If you want to know more about me, or you just want to chat, you can <a href="https://bsky.app/profile/joseph.likesdogs.nz">find me on Bluesky</a> or send an email to <b>joseph at wildlyinaccurate dot com</b>.</small></p>
     </div>
+    <script src="https://cdn-dev.speedcurve.com/js/lux.js?id=73376842" async crossorigin="anonymous"></script>
 </body>
 </html>
