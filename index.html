@@ -6,29 +6,43 @@
     <title>Joseph Wynn | Résumé</title>
 </head>
 <style>
+    :root {
+        --background: 285 20% 20%;
+        --foreground: 240 10% 95%;
+        --primary: 155 90% 50%
+    }
+
+    @font-face {
+        font-family: 'Geist Mono';
+        font-style: normal;
+        font-weight: 300 700;
+        font-display: swap;
+        src: url(geistmono.ttf) format('truetype');
+    }
+
     body {
-        background-color: #452f4a;
+        background-color: hsl(var(--background));
         box-sizing: border-box;
-        color: #fff4f1;
-        font-family: monospace;
-        font-size: 1.2rem;
+        color: hsl(var(--foreground));
+        font-family: 'Geist Mono', sans-serif;
+        font-size: 1.15rem;
         line-height: 1.5;
         padding-bottom: 1rem;
     }
 
     a {
-        color: #3da8cc;
+        color: hsl(var(--primary));
         font-weight: bold;
         text-decoration: none;
     }
 
     h3 {
         font-size: 1.3rem;
-        margin-bottom: -0.5rem;
+        margin-bottom: -1rem;
     }
 
     .separator {
-        border: 1px solid #bce784;
+        border: 1px solid hsl(var(--primary));
         margin: 3rem auto 2rem;
         width: 80%;
     }
@@ -41,16 +55,16 @@
 
     .container {
         margin: 0 auto;
-        max-width: min(90%, 960px);
+        max-width: min(90%, 840px);
+    }
+
+    .section {
+        margin: 0.5rem 0;
     }
 
     .lead {
         font-size: 3rem;
         font-weight: bold;
-    }
-
-    .text-center {
-        text-align: center;
     }
 
     .visually-hidden {
@@ -68,25 +82,36 @@
     <div class="container">
         <h1 class="visually-hidden">Joseph Wynn's Résumé</h1>
 
-        <div class="text-center">
+        <div>
             <p class="lead">Kia ora!</p>
 
-            <p>I'm Joseph Wynn, a <b>full stack developer</b> and <b>engineering team lead</b> with a focus on <b>performance</b> and <b>accessibility</b>. My experience ranges from building high-traffic distributed systems to crafting rich interactive UI components, to designing real-time data processing systems.</p>
+            <p>I'm Joseph Wynn, an <b>engineering team lead</b> and <b>software developer</b> based in Ōtautahi Christchurch. My experience ranges from building high-traffic distributed systems to growing and supporting engineering teams; from crafting rich interactive UI components to implementing real-time data processing pipelines.</p>
 
-            <p>On my journey to build better systems, I've become a <b>polyglot</b> and a <b>generalist</b>. I've written software in many languages at almost every layer of the web stack: database, back end, API, front end, UI, CDN, automation, developer tooling, testing, and server management.</p>
+            <p>On my journey to build better systems I've become a <b>polyglot</b> and a <b>generalist</b>. I've written software in many languages at almost every layer of the web stack: database, backend, API, frontend, CDN/edge, tooling, and testing.</p>
 
-            <p>Outside of my professional work, I maintain several <a href="https://github.com/wildlyinaccurate">open source projects</a> and occasionally <a href="https://wildlyinaccurate.com/">write about my experiences</a>.</p>
+            <p>Outside of my professional work I maintain several <a href="https://github.com/wildlyinaccurate">open source projects</a>, (infrequently) <a href="https://blog.structuredthoughts.dev/">write software development guides</a>, and (even less frequently) <a href="https://wildlyinaccurate.com/">write about other stuff</a>.</p>
+
+            <p><b>Want to know more?</b> Ask me to walk you through SpeedCurve's real user monitoring (RUM) architecture, or how I coordinated several teams building the BBC's next web platform.</p>
         </div>
 
         <hr class="separator">
 
-        <h2 class="text-center">Experience</h2>
+        <h2>Overview</h2>
+
+        <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, PHP</div>
+        <div class="section"><b>Platforms:</b> Compute@Edge, Heroku, Amazon EC2</div>
+        <div class="section"><b>Data stores:</b> MariaDB, Amazon Redshift, SQLite</div>
+        <div class="section"><b>Workflow:</b> Git, Docker, various CI & deployment tools</div>
+
+        <hr class="separator">
+
+        <h2>Experience</h2>
 
         <h3>2017&ndash;present: SpeedCurve</h3>
-        <p>Originally joining a small team, I had the chance to work on everything from the data layer, API, and backend to the web interface and developer tooling. I took ownership of SpeedCurve's real user monitoring (RUM) product, improving the capabilities of the real-time data pipeline, data warehousing, and reporting system. I have also enjoyed providing customer support and writing documentation. The most exciting part of this role has been transitioning to Head of Engineering and helping to expand the engineering team and lead the development of a React-based component library.</p>
+        <p>Originally joining a small team, I had the chance to work on everything from the data layer, API, and backend to the web interface and developer tooling. I took ownership of SpeedCurve's real user monitoring (RUM) product, improving the capabilities of the real-time data pipeline, data warehousing, and reporting system. I have also enjoyed providing customer support and writing documentation. During this role I transitioned to Head of Engineering where I expanded the engineering team and oversaw technical direction while still contributing as a developer.</p>
 
         <h3>2014&ndash;2017: BBC News</h3>
-        <p>Working across several teams, I helped to deliver the BBC's responsive web platform and new front-end component library. I worked on the CI pipeline that enabled teams to move from weekly deploys to several deploys per day, and built automated testing tooling to increase QA productivity. I later moved into a Principal Engineer position where I led the team responsible for building <a href="https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/">a better BBC News front page</a> and the BBC's <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">next web platform</a>. As my role shifted to include more management responsibility, I focussed on <a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">growing &amp; supporting the people around me</a>.</p>
+        <p>Working across several teams, I helped to deliver the BBC's responsive web platform and new front-end component library. I worked on the CI pipeline that enabled teams to move from weekly deploys to several deploys per day, and built automated testing tooling to increase QA productivity. I later moved into a Principal Engineer position where I led the team responsible for building <a href="https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/">a better BBC News front page</a> and the BBC's <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">next web platform</a>. As my role shifted to include more management responsibility, I focused on <a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">growing &amp; supporting the people around me</a>.</p>
 
         <h3>2013&ndash;2014: Rightster</h3>
         <p>Working closely with product developers and designers, I helped build Rightster's new video distribution platform. This role involved writing a lot of code and co-ordinating feature development with other teams. In between shipping features, I implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code. It was this Git workflow that led me to write <a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/"><i>A Hacker's Guide to Git</i></a>. It was very satisfying to build a product from the ground up, and to ensure our development practices allowed the team to grow quickly.</p>
@@ -99,7 +124,7 @@
 
         <hr class="separator">
 
-        <h2 class="text-center">Open Source</h2>
+        <h2>Open Source</h2>
 
         <p>Below are a few of my open source projects. You can find the rest of them <a href="https://github.com/wildlyinaccurate/">on GitHub</a>.</p>
 
@@ -117,7 +142,7 @@
 
         <hr class="separator">
 
-        <p class="text-center"><small>Hey, you made it to the end! If you want to know more about me, or you just want to chat, you can <a href="https://twitter.com/Joseph_Wynn">find me on Twitter</a> or send an email to <b>joseph at wildlyinaccurate dot com</b>.</small></p>
+        <p><small>Hey, you made it to the end! If you want to know more about me, or you just want to chat, you can <a href="https://bsky.app/profile/joseph.likesdogs.nz">find me on Bluesky</a> or send an email to <b>joseph at wildlyinaccurate dot com</b>.</small></p>
     </div>
 </body>
 </html>
