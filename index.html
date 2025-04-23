@@ -7,24 +7,32 @@
 </head>
 <style>
     :root {
-        --background: 285 20% 20%;
-        --foreground: 240 10% 95%;
-        --primary: 155 90% 50%;
+        --background: 50 30% 93%;
+        --foreground: 240 50% 20%;
+        --primary: 230 90% 50%;
     }
 
     @font-face {
-        font-family: 'Geist Mono';
+        font-family: 'IBM Plex Serif';
         font-style: normal;
-        font-weight: 300 700;
+        font-weight: 300;
         font-display: swap;
-        src: url(geistmono.ttf) format('truetype');
+        src: url(ibmplexserif.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'IBM Plex Serif';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(ibmplexserif-bold.ttf) format('truetype');
     }
 
     body {
         background-color: hsl(var(--background));
         box-sizing: border-box;
         color: hsl(var(--foreground));
-        font-family: 'Geist Mono', sans-serif;
+        font-family: 'IBM Plex Serif', serif;
         font-size: 1.15rem;
         line-height: 1.5;
         padding-bottom: 1rem;
@@ -32,13 +40,16 @@
 
     a {
         color: hsl(var(--primary));
-        font-weight: bold;
-        text-decoration: none;
     }
 
     h3 {
         font-size: 1.3rem;
-        margin-bottom: -1rem;
+        padding-top: 1rem;
+        margin: -1rem 0;
+    }
+
+    .pt {
+        padding-top: 2rem;
     }
 
     .separator {
@@ -78,70 +89,135 @@
         width: 1px;
     }
 
+    .pull-right {
+        float: right;
+        margin-left: 1rem;
+        text-align: right;
+    }
+
+    .print-only {
+        display: none;
+    }
+
     @media print {
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
         body {
             font-size: 1rem;
+        }
+
+        .section {
+            break-inside: avoid;
         }
 
         .page-break {
             border: 0;
             padding-bottom: 1rem;
-            page-break-before: always;
+            break-before: always;
+        }
+
+        .print-only {
+            display: block;
         }
     }
 </style>
 <body>
     <div class="container">
-        <h1 class="visually-hidden">Joseph Wynn's Résumé</h1>
+        <div class="print-only pull-right">
+            Joseph Wynn<br>
+            020 4133 6948<br>
+            <small>joseph at wildlyinaccurate dot com</small>
+        </div>
+
+        <h1 class="visually-hidden">Joseph Wynn&apos;s Résumé</h1>
 
         <div>
             <p class="lead">Kia ora!</p>
 
-            <p>I'm Joseph Wynn, an <b>engineering team lead</b> and <b>software developer</b> based in Ōtautahi Christchurch. My experience ranges from building high-traffic distributed systems to growing and supporting engineering teams; from crafting rich interactive UI components to implementing real-time data processing pipelines.</p>
+            <p>I&apos;m Joseph Wynn, an <b>engineering team lead</b> and <b>software developer</b> based in Ōtautahi Christchurch. My experience ranges from building high-traffic distributed systems to growing and supporting engineering teams; from crafting rich interactive UI components to implementing real-time data processing pipelines.</p>
 
-            <p>On my journey to build better systems I've become a <b>polyglot</b> and a <b>generalist</b>. I've written software in many languages at almost every layer of the web stack: database, backend, API, frontend, CDN/edge, tooling, and testing.</p>
+            <p>On my journey to build better systems I&apos;ve become a polyglot and a generalist. I&apos;ve written software in many languages at almost every layer of the web stack: database, backend, API, frontend, CDN/edge, tooling, and testing.</p>
 
             <p>Outside of my professional work I maintain several <a href="https://github.com/wildlyinaccurate">open source projects</a>, (infrequently) <a href="https://blog.structuredthoughts.dev/">write software development guides</a>, and (even less frequently) <a href="https://wildlyinaccurate.com/">write about other stuff</a>.</p>
 
-            <p><b>Want to know more?</b> Ask me to walk you through SpeedCurve's real user monitoring (RUM) architecture, or how I coordinated several teams building the BBC's next web platform.</p>
+            <p><b>Want to know more?</b> Ask me to walk you through how SpeedCurve&apos;s real user monitoring (RUM) architecture handles 2000 requests per second, or my role as Principal Engineer building the BBC&apos;s next web platform with 50 developers from multiple teams.</p>
         </div>
 
         <hr class="separator">
 
         <h2>Overview</h2>
 
-        <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, PHP</div>
-        <div class="section"><b>Platforms:</b> Compute@Edge, Heroku, Amazon EC2</div>
-        <div class="section"><b>Data stores:</b> MariaDB, Amazon Redshift, SQLite</div>
-        <div class="section"><b>Workflow:</b> Git, Docker, various CI & deployment tools</div>
+        <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, SQL, PHP</div>
+        <div class="section"><b>Platforms:</b> Fastly Compute, Heroku, Amazon Web Services (AWS)</div>
+        <div class="section"><b>Data stores:</b> MariaDB/MySQL, Amazon Redshift, SQLite</div>
+        <div class="section"><b>Workflow:</b> Git, Docker, Jenkins, CircleCI, GitHub</div>
+        <div class="section"><b>Team lead:</b> 5-10 direct reports, 50+ indirect reports</div>
 
         <hr class="separator page-break">
 
         <h2>Experience</h2>
 
-        <h3>2017&ndash;present: SpeedCurve</h3>
-        <p>Originally joining a small team, I had the chance to work on everything from the data layer, API, and backend to the web interface and developer tooling. I took ownership of SpeedCurve's real user monitoring (RUM) product, improving the capabilities of the real-time data pipeline, data warehousing, and reporting system. I have also enjoyed providing customer support and writing documentation. During this role I transitioned to Head of Engineering where I expanded the engineering team and oversaw technical direction while still contributing as a developer.</p>
+        <div class="section">
+            <h3>2020&ndash;present: SpeedCurve | Head of Engineering</h3>
+            <p>Stepping into the Head of Engineering role, my initial focus was on expanding the team and setting technical direction. It was rewarding to empower the team to work on what was important to them while still delivering the needs of the product and business.</p>
 
-        <h3>2014&ndash;2017: BBC News</h3>
-        <p>Working across several teams, I helped to deliver the BBC's responsive web platform and new front-end component library. I worked on the CI pipeline that enabled teams to move from weekly deploys to several deploys per day, and built automated testing tooling to increase QA productivity. I later moved into a Principal Engineer position where I led the team responsible for building <a href="https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/">a better BBC News front page</a> and the BBC's <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">next web platform</a>. As my role shifted to include more management responsibility, I focused on <a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">growing &amp; supporting the people around me</a>.</p>
+            <p>I oversaw the migration to a new cloud provider, enabling better scalability and faster deployments with no downtime. We adopted a service-based architecture during a period of high growth which enabled us to deliver new features without impacting existing services.</p>
 
-        <h3>2013&ndash;2014: Rightster</h3>
-        <p>Working closely with product developers and designers, I helped build Rightster's new video distribution platform. This role involved writing a lot of code and co-ordinating feature development with other teams. In between shipping features, I implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code. It was this Git workflow that led me to write <a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/"><i>A Hacker's Guide to Git</i></a>. It was very satisfying to build a product from the ground up, and to ensure our development practices allowed the team to grow quickly.</p>
+            <p>Due to our small team size, I remained an active contributor while in the Head of Engineering role. One of my bigger projects was building a bespoke database abstraction layer (DBAL) that allows end users to build custom charts, with the DBAL seamlessly fetching data from multiple sources. This project was a huge success and enabled us to easily add new data, dimensions, and even data sources.</p>
+        </div>
 
-        <h3>2012&ndash;2013: Time Inc. UK</h3>
-        <p>Built websites for magazine brands, just as print media started dying. Learned a myriad of useful things including programming at the CDN edge, proper change management, automated testing, and data-driven product development.</p>
+        <div class="section">
+            <h3>2017&ndash;2020: SpeedCurve | Lead Software Developer</h3>
+            <p>As a developer at SpeedCurve I worked on everything from the infrastructure, database, and backend to the API and frontend. I took ownership of SpeedCurve&apos;s real user monitoring (RUM) product, performing a major refactor of the <a href="https://github.com/SpeedCurve-Metrics/lux.js">data collection script</a> and validating the results by writing a test harness with nearly 100% coverage. I migrated the RUM data ingestion from primitive VCL routines to a fast & flexible Rust service running on Fastly Compute. I used code generation techniques including self-modifying code to build highly-optimised SQL for generating <a href="https://www.speedcurve.com/blog/site-speed-business-correlation/">correlation charts</a>. I also guided our engineering team through building a library of modular front-end components using <a href="https://wildlyinaccurate.com/redefining-the-bcc-news-core-experience/">techniques that I pioneered at the BBC</a>.</p>
 
-        <h3>2009&ndash;2012: Various</h3>
-        <p>Web work at various agencies in Christchurch and London. Let's talk over a cup of tea if you want to know more!</p>
+            <p>While I love coding, my priority as a team lead has always been unblocking my team and enabling them to work on the things they care about. Regular one-on-one meetings helped me identify and fix conflicts or burnout before they became issues for the wider team. I am proud to say that no one was afraid to ask for my time, and that we had a culture of lifting each other up.</p>
+        </div>
+
+        <div class="section">
+            <h3>2014&ndash;2017: BBC News | Principal Engineer</h3>
+            <p>Working across several teams, I helped to deliver the BBC&apos;s responsive web platform and new front-end component library. I worked on the CI pipeline that enabled teams to move from weekly deploys to several deploys per day, and built automated testing tooling to increase QA productivity. As Principal Engineer I led the team responsible for building <a href="https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/">a better BBC News front page</a> and the BBC&apos;s <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">next web platform</a>. As my role shifted to include more management responsibility, I focused on <a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">growing &amp; supporting the people around me</a>.</p>
+        </div>
+
+        <h2 class="print-only page-break pt">Experience (continued)</h2>
+
+        <div class="section">
+            <h3>2013&ndash;2014: Rightster | Senior Software Developer</h3>
+            <p>Working closely with product developers and designers, I helped build Rightster&apos;s new video distribution platform. This role involved writing a lot of code and co-ordinating feature development with other teams. In between shipping features, I implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code. It was this Git workflow that led me to write <a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker&apos;s Guide to Git</a>. It was very satisfying to build a product from the ground up, and to ensure our development practices allowed the team to grow quickly.</p>
+        </div>
+
+        <div class="section">
+            <h3>2012&ndash;2013: Time Inc. UK | Senior Software Developer</h3>
+            <p>Built websites for some of the UK&apos;s biggest magazine brands, using complex caching strategies to handle high traffic demands. Learned a myriad of useful things including programming at the CDN edge, proper change management, automated testing, and data-driven product development.</p>
+        </div>
+
+        <div class="section">
+            <h3>2007&ndash;2012: Various | Software Developer</h3>
+            <p>Software development at various agencies in Christchurch and London. I helped build a tourism booking portal, a buy &amp; sell platform, a real-time racing odds checker, and much more. Let&apos;s chat over a coffee if you&apos;d like to learn more about my past work.</p>
+        </div>
 
         <hr class="separator page-break">
+
+        <h2>Writing</h2>
+
+        <p>Some of my writings have been circulated through the wider software development community over the years. Here are a few of the most popular pieces:</p>
+
+        <ul>
+            <li><a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker&apos;s Guide to Git</a> (2014) &ndash; A look at Git from the inside-out, explaining how simple building blocks come together to enable a powerful version control system.
+            <li><a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">Becoming a Team Lead: A Survival Guide</a> (2018) &ndash; Learnings and advice from my personal journey of developer to team lead. Originall given as <a href="https://www.youtube.com/watch?v=fBqmb3bCfbY">a talk at O&apos;Reilly Fluent 2018</a>.
+            <li><a href="https://blog.structuredthoughts.dev/lets-build-a-virtual-dom-library">Let&apos;s Build a Virtual DOM Library</a> (2023) &ndash; Demystifying VDOM frameworks by building one from scratch.
+        </ul>
+
+        <hr class="separator">
 
         <h2>Open Source</h2>
 
         <p>Below are a few of my open source projects. You can find the rest of them <a href="https://github.com/wildlyinaccurate/">on GitHub</a>.</p>
 
         <h3><a href="https://github.com/wildlyinaccurate/tiny-relative-date">tiny-relative-date</a></h3>
-        <p>A tiny (800 byte) library that converts absolute dates to relative, human-readable strings. If you've used npm, then you've used this project!</p>
+        <p>A tiny (800 byte) library that converts absolute dates to relative, human-readable strings. If you&apos;ve used npm, then you've used this project!</p>
 
         <h3><a href="https://github.com/wildlyinaccurate/jekyll-responsive-image">jekyll-responsive-image</a></h3>
         <p>A popular responsive image plugin for the Jekyll static site generator.</p>
