@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Wynn | Résumé</title>
+    <title>Joseph Wynn | Engineering Team Lead &amp; Principal Software Engineer</title>
 </head>
 <style>
     :root {
-        --background: 50 30% 93%;
-        --foreground: 240 50% 20%;
-        --primary: 230 90% 50%;
+        --background: hsl(50 30% 93%);
+        --foreground: hsl(240 50% 20%);
+        --primary: hsl(230 90% 50%);
+        --muted: hsl(240 20% 40%);
+        --print-margin-x: 0.5cm;
+        --print-margin-y: 0.3cm;
     }
 
     @font-face {
@@ -29,41 +32,63 @@
     }
 
     body {
-        background-color: hsl(var(--background));
+        background-color: var(--background);
         box-sizing: border-box;
-        color: hsl(var(--foreground));
+        color: var(--foreground);
         font-family: 'IBM Plex Serif', serif;
-        font-size: 1.15rem;
-        line-height: 1.5;
+        font-size: 18px;
+        line-height: 1.4;
         padding-bottom: 1rem;
     }
 
     a {
-        color: hsl(var(--primary));
+        color: var(--primary);
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        margin-bottom: 0;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 0;
     }
 
     h3 {
+        font-size: 1.3rem;
         padding-top: 1rem;
         margin: -1rem 0;
     }
 
+    ul {
+        padding-left: 1.5rem;
+    }
+
     li {
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .muted {
+        color: var(--muted);
     }
 
     .pt {
-        padding-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .mt {
+        margin-top: 1.5rem;
     }
 
     .separator {
-        border: 1px solid hsl(var(--primary));
-        margin: 3rem auto 2rem;
+        border: 1px solid var(--primary);
+        margin: 2rem auto 1.6rem;
         width: 80%;
+    }
+
+    .join {
+        padding: 0 0.2rem;
     }
 
     a:active,
@@ -82,15 +107,6 @@
         break-inside: avoid;
     }
 
-    .lead {
-        font-size: 3rem;
-        font-weight: bold;
-    }
-
-    .condensed {
-        line-height: 1.15;
-    }
-
     .visually-hidden {
         border: 0;
         clip: rect(0, 0, 0, 0);
@@ -102,12 +118,6 @@
         width: 1px;
     }
 
-    .pull-right {
-        float: right;
-        margin-left: 1rem;
-        text-align: right;
-    }
-
     .print-only {
         display: none;
     }
@@ -115,11 +125,19 @@
     @media print {
         @page {
             size: A4 portrait;
-            margin: 0;
+            margin: var(--print-margin-y) var(--print-margin-x);
         }
 
         body {
-            font-size: 1rem;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
         }
 
         .print-only {
@@ -135,26 +153,24 @@
 </style>
 <body>
     <div class="container">
-        <div class="condensed print-only pull-right">
+        <h1>Joseph Wynn</h1>
+
+        <p>
+            <b>Engineering Team Lead</b> and <b>Principal Software Engineer</b><br>
+
             <small>
-                Joseph Wynn<br>
-                020 4133 6948<br>
+                020 4133 6948
+                <b class="join">|</b>
                 joseph@wildlyinaccurate.com
+                <b class="join">|</b>
+                <a href="https://github.com/wildlyinaccurate/">github.com/wildlyinaccurate</a>
             </small>
-        </div>
+        </p>
 
-        <h1 class="visually-hidden">Joseph Wynn's Résumé</h1>
+        <div class="mt">
+            <p>Full stack engineering leader with 15+ years of experience building &amp; scaling distributed systems and leading cross-functional teams. Skilled in real-time data processing pipelines, query abstraction layers, and high performance web platforms.</p>
 
-        <div>
-            <p class="lead condensed">Kia ora!</p>
-
-            <p>I'm Joseph Wynn, an <b>engineering team lead</b> and <b>software developer</b> based in Ōtautahi Christchurch. I have <b>over 18 years of experience</b> building high-traffic distributed systems and growing &amp; supporting engineering teams. I have worked on interactive UI components to implementing real-time data processing pipelines.</p>
-
-            <p>On my journey to build better systems I have become a polyglot and a generalist. I have written software in many languages at almost every layer of the web stack: database, backend, API, frontend, CDN/edge, tooling, and testing. I have learnt how to estimate, plan, and deliver complex software projects with teams of all sizes.</p>
-
-            <p>Outside of my professional work I maintain several <a href="https://github.com/wildlyinaccurate">open source projects</a>, (infrequently) <a href="https://blog.structuredthoughts.dev/">write software development guides</a>, and (even less frequently) <a href="https://wildlyinaccurate.com/">write about other stuff</a>. I'm also a runner, rock climber, dog lover, and father. Work-life balance is important to me, and I strive to ensure that everyone on my team can enjoy the same balance that I want for myself.</p>
-
-            <p><b>Want to know more?</b> Please don't hesitate to get in touch if you'd like to ask me any questions. Feel free to ask about how SpeedCurve's real user monitoring (RUM) architecture handles 2000 requests per second, or about my role as Principal Engineer building the BBC's next web platform with 50 developers from multiple teams. I'm also happy to show photos of my two dogs and tell you where to find the best pizza in town.</p>
+            <p>Experienced working at every layer of the web stack: database, backend, API, frontend, CDN/edge, and developer tooling. Proven track record of estimating, planning, and delivering complex software projects with teams of all sizes.</p>
         </div>
 
         <hr class="separator">
@@ -163,59 +179,86 @@
 
         <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, SQL, PHP</div>
         <div class="section"><b>Platforms:</b> Fastly Compute, Heroku, Amazon Web Services (AWS)</div>
-        <div class="section"><b>Data stores:</b> MariaDB/MySQL, Amazon Redshift, SQLite</div>
+        <div class="section"><b>Data stores:</b> MariaDB/MySQL, PostgreSQL, Amazon Redshift, SQLite</div>
         <div class="section"><b>Workflow:</b> Git, Docker, Jenkins, CircleCI, GitHub</div>
         <div class="section"><b>Team lead:</b> 5-10 direct reports, 50+ indirect reports</div>
 
-        <hr class="separator page-break">
+        <hr class="separator">
 
         <h2>Experience</h2>
 
         <div class="section">
-            <h3>2020&ndash;present: SpeedCurve | Head of Engineering</h3>
-            <p>Stepping into the Head of Engineering role, my initial focus was on expanding the team and setting technical direction. It was rewarding to empower the team to work on what was important to them while still delivering the needs of the product and business.</p>
+            <h3>SpeedCurve | Head of Engineering</h3>
+            <p><i>2020&mdash;present <small class="muted">(Christchurch, Remote)</small></i></p>
 
-            <p>I oversaw the migration to a new cloud provider, enabling better scalability and faster deployments with no downtime. We adopted a service-based architecture during a period of high growth which enabled us to deliver new features without impacting existing services.</p>
-
-            <p>Due to our small team size, I remained an active contributor while in the Head of Engineering role. One of my bigger projects was building a bespoke database abstraction layer (DBAL) that allows end users to build custom charts, with the DBAL seamlessly fetching data from multiple sources. This project was a huge success and enabled us to easily add new data, dimensions, and even data sources.</p>
-        </div>
-
-        <div class="section">
-            <h3>2017&ndash;2020: SpeedCurve | Lead Software Developer</h3>
-            <p>As a developer at SpeedCurve I worked on everything from the infrastructure, database, and backend to the API and frontend. I took ownership of SpeedCurve's real user monitoring (RUM) product, performing a major refactor of the <a href="https://github.com/SpeedCurve-Metrics/lux.js">data collection script</a> and validating the results by writing a test harness with nearly 100% coverage. I migrated the RUM data ingestion from primitive VCL routines to a fast & flexible Rust service running on Fastly Compute. I used code generation techniques including self-modifying code to build highly-optimised SQL for generating <a href="https://www.speedcurve.com/blog/site-speed-business-correlation/">correlation charts</a>. I also guided our engineering team through building a library of modular front-end components using <a href="https://wildlyinaccurate.com/redefining-the-bcc-news-core-experience/">techniques that I pioneered at the BBC</a>.</p>
-
-            <p>While I love coding, my priority as a team lead has always been unblocking my team and enabling them to work on the things they care about. Regular one-on-one meetings helped me identify and fix conflicts or burnout before they became issues for the wider team. I am proud to say that no one was afraid to ask for my time, and that we had a culture of lifting each other up.</p>
-        </div>
-
-        <div class="section">
-            <h3>2014&ndash;2017: BBC News | Principal Engineer</h3>
-            <p>As Principal Engineer at the BBC I had 6 direct reports and more than 30 indirect reports spread across multiple teams and departments. I was involved in several large company-wide projects including the move from on-premise to cloud infrastructure, and the development of a completely new component-as-a-service architecture (which you can <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">read about here</a>). My team was responsible for the BBC News responsive web platform, but we also picked up tooling projects including a revamped CI pipeline that enabled teams to move from weekly deploys to several deploys per day.</p>
-
-            <p>Outside of my Principal Engineer role I also took charge of the BBC's performance initiative, and pushed for organisational change that led to the BBC News front page loading 50% faster on mobile devices (<a href="https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/">more information here</a>). As my role shifted to include more management responsibility, I focused on growing &amp; supporting the people around me. My goal was always to have a self-sufficient team who worked efficiently together and could resolve conflicts on their own. I spoke and wrote about my <a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/"></a>transition into a team lead role here</a>.</p>
+            <ul>
+                <li>Expanded the engineering team and migrated from a monolithic app on dedicated hosting to a service-oriented architecture in AWS.</li>
+                <li>Scaled the real user monitoring (RUM) pipeline to handle 150M events per day and allow real-time querying of 10TB of data.</li>
+                <li>Designed and built a database abstraction layer (DBAL) that simplifies querying &amp; aggregating various data sources, enabling new dashboards &amp; visualisations to be deployed easily.</li>
+                <li>Conducted regular one-on-one meetings with team members to provide support and help with career progression.</li>
+                <li>Worked directly with clients and stakeholders to ensure technical direction aligned with business goals.</li>
+            </ul>
         </div>
 
         <h2 class="print-only page-break pt">Experience (continued)</h2>
 
         <div class="section">
-            <h3>2013&ndash;2014: Rightster | Senior Software Developer</h3>
-            <p>Working closely with product developers and designers, I helped build Rightster's new video distribution platform. This role involved writing a lot of code and co-ordinating feature development with other teams. In between shipping features, I implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code. It was this Git workflow that led me to write <a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a>. It was very satisfying to build a product from the ground up, and to ensure our development practices allowed the team to grow quickly.</p>
+            <h3>SpeedCurve | Principal Software Engineer</h3>
+            <p><i>2017&mdash;2020 <small class="muted">(Christchurch, Remote)</small></i></p>
+
+            <ul>
+                <li>Rewrote SpeedCurve's RUM data collection in TypeScript after building a test harness with nearly 100% coverage.</li>
+                <li>Migrated ETL processes to Rust, improving performance and maintainability.</li>
+                <li>Used code generation techniques including self-modifying code to build highly-optimised SQL for generating <a href="https://www.speedcurve.com/blog/site-speed-business-correlation/">correlation charts</a>.</li>
+                <li>Built a library of modular front-end components using <a href="https://wildlyinaccurate.com/redefining-the-bcc-news-core-experience/">techniques that I pioneered at the BBC</a>.</li>
+                <li>Improved overall infrastructure reliability and reduced on-call events by 96%.</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h3>2012&ndash;2013: Time Inc. UK | Senior Software Developer</h3>
-            <p>At Time I built websites for some of the UK's biggest magazine brands, using complex caching strategies to handle high traffic demands. Here I learnt a myriad of useful software development techniques including programming at the CDN edge, proper change management, automated testing, and data-driven product development.</p>
+            <h3>BBC News | Principal Software Engineer</h3>
+            <p><i>2014&mdash;2017 <small class="muted">(London)</small></i></p>
+
+            <ul>
+                <li>Migrated from on-premise to cloud infrastructure, developing a new <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">component-as-a-service architecture</a> serving 38M users per day.</li>
+                <li>Led the team responsible for building and deploying <a href="https://wildlyinaccurate.com/introducing-a-faster-bbc-news-front-page/">pages that were 50% faster.</a></li>
+                <li>Built a revamped CI pipeline that enabled teams to move from weekly deploys to several deploys per day.</li>
+                <li><a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">Transitioned to a team lead role</a>, focusing on building and supporting a self-sufficient team who worked efficiently together.</li>
+            </ul>
         </div>
 
         <div class="section">
-            <h3>2007&ndash;2012: Various | Software Developer</h3>
-            <p>Software development at various agencies in Christchurch and London. I helped build a tourism booking portal, a buy &amp; sell platform, a real-time racing odds checker, and much more. Let's chat over a coffee if you'd like to learn more about my past work.</p>
+            <h3>Rightster | Senior Software Developer</h3>
+            <p><i>2013&mdash;2014 <small class="muted">(London)</small></i></p>
+
+            <ul>
+                <li>Helped to build second generation video distribution platform, co-ordinating feature development with other teams.</li>
+                <li>Worked closely with product and architecture teams to ensure feature development was meeting specifications.</li>
+                <li>Implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Various | Software Developer</h3>
+            <p><i>2007&mdash;2013 <small class="muted">(Christchurch, London)</small></i></p>
+
+            <ul>
+                <li>Software development at various agencies. Built a tourism booking portal, a buy &amp; sell platform, a real-time racing odds checker, and much more.</li>
+                <li>Built websites for some of the UK's largest magazine brands, using complex caching strategies to handle high traffic demands.</li>
+            </ul>
         </div>
 
         <hr class="separator page-break">
 
+        <h2>Interests</h2>
+
+        <p>Outside of my professional work I maintain <a href="https://github.com/wildlyinaccurate">several open source projects</a>. I like to spend my free time surfing, rock climbing, running, and spending time with my dogs. Work-life balance is important to me, and I strive to ensure that everyone on my team can enjoy the same balance that I want for myself.</p>
+
+        <hr class="separator">
+
         <h2>Writing</h2>
 
-        <p>Some of my writings have been circulated through the wider software development community over the years. Here are a few of the most popular pieces:</p>
+        <p>I mostly write on <a href="https://blog.structuredthoughts.dev/">The Structured Thoughts</a> &amp; <a href="https://wildlyinaccurate.com/">Wildly Inaccurate</a> blogs, although some of my longer pieces have been turned into e-books. Here are a few my most popular pieces:</p>
 
         <ul>
             <li><b><a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a> (2014)</b> &ndash; A look at Git from the inside-out, explaining how simple building blocks come together to enable a powerful version control system.
@@ -240,10 +283,6 @@
 
         <h3><a href="https://github.com/wildlyinaccurate/plait">Plait</a></h3>
         <p>A fast, experimental JavaScript component framework built with functional paradigms and immutable data structures.</p>
-
-        <hr class="separator">
-
-        <p><small>Hey, you made it to the end! If you want to know more about me, or you just want to chat, you can find me on <a href="https://bsky.app/profile/joseph.likesdogs.nz"><b>Bluesky</b></a> or <a href="https://github.com/wildlyinaccurate/"><b>GitHub</b></a>. You could also email me: <b>joseph at wildlyinaccurate dot com</b>.</small></p>
     </div>
     <script src="https://cdn-dev.speedcurve.com/js/lux.js?id=73376842" async crossorigin="anonymous"></script>
 </body>
