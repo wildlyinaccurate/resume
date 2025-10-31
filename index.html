@@ -11,8 +11,8 @@
         --foreground: hsl(240 50% 20%);
         --primary: hsl(230 90% 50%);
         --muted: hsl(240 20% 40%);
-        --print-margin-x: 0.5cm;
-        --print-margin-y: 0.3cm;
+        --print-margin-x: 0.4cm;
+        --print-margin-y: 0.2cm;
     }
 
     @font-face {
@@ -156,7 +156,7 @@
         <h1>Joseph Wynn</h1>
 
         <p>
-            <b>Engineering Team Lead</b> and <b>Principal Software Engineer</b><br>
+            <b>Principal Software Engineer</b> and <b>Engineering Team Lead</b><br>
 
             <small>
                 020 4133 6948
@@ -171,14 +171,16 @@
             <p>Full stack engineering leader with 15+ years of experience building &amp; scaling distributed systems and leading cross-functional teams. Skilled in real-time data processing pipelines, query abstraction layers, and high performance web platforms.</p>
 
             <p>Experienced working at every layer of the web stack: database, backend, API, frontend, CDN/edge, and developer tooling. Proven track record of estimating, planning, and delivering complex software projects with teams of all sizes.</p>
+
+            <p>Dedicated to growing teams based on mutual trust, and lifting up everyone to achieve more together.</p>
         </div>
 
         <hr class="separator">
 
         <h2>Overview</h2>
 
-        <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, SQL, PHP</div>
-        <div class="section"><b>Platforms:</b> Fastly Compute, Heroku, Amazon Web Services (AWS)</div>
+        <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, SQL</div>
+        <div class="section"><b>Platforms:</b> Amazon Web Services (AWS), Fastly Compute, Heroku, Render</div>
         <div class="section"><b>Data stores:</b> MariaDB/MySQL, PostgreSQL, Amazon Redshift, SQLite</div>
         <div class="section"><b>Workflow:</b> Git, Docker, Jenkins, CircleCI, GitHub</div>
         <div class="section"><b>Team lead:</b> 5-10 direct reports, 50+ indirect reports</div>
@@ -192,11 +194,10 @@
             <p><i>2020&mdash;present <small class="muted">(Christchurch, Remote)</small></i></p>
 
             <ul>
-                <li>Expanded the engineering team and migrated from a monolithic app on dedicated hosting to a service-oriented architecture in AWS.</li>
-                <li>Scaled the real user monitoring (RUM) pipeline to handle 150M events per day and allow real-time querying of 10TB of data.</li>
-                <li>Designed and built a database abstraction layer (DBAL) that simplifies querying &amp; aggregating various data sources, enabling new dashboards &amp; visualisations to be deployed easily.</li>
-                <li>Conducted regular one-on-one meetings with team members to provide support and help with career progression.</li>
-                <li>Worked directly with clients and stakeholders to ensure technical direction aligned with business goals.</li>
+                <li>Worked directly with product and account teams to align technical direction with business goals, without compromising on technical debt work.</li>
+                <li>Oversaw interviewing, hiring, and onboarding of new team members. Used D&I best practices to ensure a wide range of applicants.</li>
+                <li>Continued working as an individual contributor. Focused on tasks that unblock the rest of the team, and framework-level code that helped streamline feature development.</li>
+                <li>Rebuilt ETL processes in Rust running on Fastly Edge Compute, improving performance and maintainability.</li>
             </ul>
         </div>
 
@@ -207,8 +208,8 @@
             <p><i>2017&mdash;2020 <small class="muted">(Christchurch, Remote)</small></i></p>
 
             <ul>
-                <li>Rewrote SpeedCurve's RUM data collection in TypeScript after building a test harness with nearly 100% coverage.</li>
-                <li>Migrated ETL processes to Rust, improving performance and maintainability.</li>
+                <li>Scaled the real user monitoring (RUM) pipeline to handle 150M events per day and allow real-time querying of 10TB of data.</li>
+                <li>Designed and built a database abstraction layer (DBAL) that simplifies querying &amp; aggregating various data sources, enabling new dashboards &amp; visualisations to be deployed easily.</li>
                 <li>Used code generation techniques including self-modifying code to build highly-optimised SQL for generating <a href="https://www.speedcurve.com/blog/site-speed-business-correlation/">correlation charts</a>.</li>
                 <li>Built a library of modular front-end components using <a href="https://wildlyinaccurate.com/redefining-the-bcc-news-core-experience/">techniques that I pioneered at the BBC</a>.</li>
                 <li>Improved overall infrastructure reliability and reduced on-call events by 96%.</li>
@@ -232,7 +233,7 @@
             <p><i>2013&mdash;2014 <small class="muted">(London)</small></i></p>
 
             <ul>
-                <li>Helped to build second generation video distribution platform, co-ordinating feature development with other teams.</li>
+                <li>Helped to build Rightster's second generation video distribution platform, co-ordinating feature development with other teams.</li>
                 <li>Worked closely with product and architecture teams to ensure feature development was meeting specifications.</li>
                 <li>Implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code.</li>
             </ul>
@@ -252,7 +253,7 @@
 
         <h2>Interests</h2>
 
-        <p>Outside of my professional work I maintain <a href="https://github.com/wildlyinaccurate">several open source projects</a>. I like to spend my free time surfing, rock climbing, running, and spending time with my dogs. Work-life balance is important to me, and I strive to ensure that everyone on my team can enjoy the same balance that I want for myself.</p>
+        <p>Outside of my professional work I maintain <a href="https://github.com/wildlyinaccurate">several open source projects</a>. I like to spend my free time surfing, rock climbing, running, and walking my dogs. Work-life balance is important to me, and I strive to ensure that everyone on my team can enjoy the same balance that I want for myself.</p>
 
         <hr class="separator">
 
@@ -261,9 +262,9 @@
         <p>I mostly write on <a href="https://blog.structuredthoughts.dev/">The Structured Thoughts</a> &amp; <a href="https://wildlyinaccurate.com/">Wildly Inaccurate</a> blogs, although some of my longer pieces have been turned into e-books. Here are a few my most popular pieces:</p>
 
         <ul>
-            <li><b><a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a> (2014)</b> &ndash; A look at Git from the inside-out, explaining how simple building blocks come together to enable a powerful version control system.
-            <li><b><a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">Becoming a Team Lead: A Survival Guide</a> (2018)</b> &ndash; Learnings and advice from my personal journey of developer to team lead. Originall given as <a href="https://www.youtube.com/watch?v=fBqmb3bCfbY">a talk at O'Reilly Fluent 2018</a>.
             <li><b><a href="https://blog.structuredthoughts.dev/lets-build-a-virtual-dom-library">Let's Build a Virtual DOM Library</a> (2023)</b> &ndash; Demystifying VDOM frameworks by building one from scratch.
+            <li><b><a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">Becoming a Team Lead: A Survival Guide</a> (2018)</b> &ndash; Learnings and advice from my personal journey of developer to team lead. Originall given as <a href="https://www.youtube.com/watch?v=fBqmb3bCfbY">a talk at O'Reilly Fluent 2018</a>.
+            <li><b><a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a> (2014)</b> &ndash; A look at Git from the inside-out, explaining how simple building blocks come together to enable a powerful version control system.
         </ul>
 
         <hr class="separator">
