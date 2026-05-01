@@ -7,10 +7,10 @@
 </head>
 <style>
     :root {
-        --background: hsl(50 30% 93%);
+        --background: hsl(42 25% 95%);
         --foreground: hsl(240 50% 20%);
-        --primary: hsl(230 90% 50%);
-        --muted: hsl(240 20% 40%);
+        --primary: hsl(218 60% 40%);
+        --muted: hsl(225 14% 42%);
         --print-margin-x: 0.4cm;
         --print-margin-y: 0.2cm;
     }
@@ -31,13 +31,22 @@
         src: url(ibmplexserif-bold.ttf) format('truetype');
     }
 
+    @font-face {
+        font-family: 'IBM Plex Serif';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(ibmplexserif-medium.woff2) format('woff2');
+    }
+
     body {
         background-color: var(--background);
         box-sizing: border-box;
         color: var(--foreground);
         font-family: 'IBM Plex Serif', serif;
+        font-weight: 300;
         font-size: 18px;
-        line-height: 1.4;
+        line-height: 1.55;
         padding-bottom: 1rem;
     }
 
@@ -45,14 +54,20 @@
         color: var(--primary);
     }
 
+    h1, h2, h3, b, strong {
+        font-weight: 500;
+    }
+
     h1 {
         font-size: 2.6rem;
         margin-bottom: 0;
+        letter-spacing: -0.015em;
     }
 
     h2 {
         font-size: 1.8rem;
         margin-bottom: 0;
+        letter-spacing: 0.02em;
     }
 
     h3 {
@@ -66,7 +81,11 @@
     }
 
     li {
-        padding-bottom: 0.3rem;
+        padding-bottom: 0.25rem;
+    }
+
+    li::marker {
+        color: var(--primary);
     }
 
     .muted {
@@ -78,17 +97,56 @@
     }
 
     .mt {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
 
     .separator {
         border: 1px solid var(--primary);
-        margin: 2rem auto 1.6rem;
+        margin: 1.5rem auto 1.2rem;
         width: 80%;
     }
 
-    .join {
-        padding: 0 0.2rem;
+    .hero {
+        text-align: center;
+        padding: 0.5rem 0 1.4rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid var(--primary);
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.3rem;
+    }
+
+    .hero .role-line {
+        font-style: italic;
+        color: var(--primary);
+        font-weight: 500;
+        margin: 0 0 0.9rem;
+        font-size: 1.05rem;
+    }
+
+    .hero .contact-bar {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .hero .contact-bar span:not(:first-child) {
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .hero .contact-bar span:not(:first-child)::before {
+        content: '·';
+        color: var(--primary);
+        position: absolute;
+        left: 0;
     }
 
     a:active,
@@ -107,6 +165,33 @@
         break-inside: avoid;
     }
 
+    .role {
+        margin: 0.5rem 0;
+        break-inside: avoid;
+    }
+
+    .role-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding-top: 0.75rem;
+    }
+
+    .role-head h3 {
+        font-size: 1.3rem;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .role-head .when {
+        font-style: italic;
+        color: var(--muted);
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
     .visually-hidden {
         border: 0;
         clip: rect(0, 0, 0, 0);
@@ -122,6 +207,34 @@
         display: none;
     }
 
+    .overview-dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        column-gap: 1rem;
+        row-gap: 0;
+        margin: 0.5rem 0 0;
+    }
+
+    .overview-dl dt {
+        font-weight: 500;
+        color: var(--primary);
+        text-align: right;
+        letter-spacing: 0.02em;
+        padding: 0.22rem 0;
+    }
+
+    .overview-dl dd {
+        margin: 0;
+        border-left: 1px solid var(--primary);
+        padding: 0.22rem 0 0.22rem 1rem;
+    }
+
+    @media (max-width: 600px) {
+        .overview-dl { grid-template-columns: 1fr; column-gap: 0; }
+        .overview-dl dt { text-align: left; padding-top: 0.4rem; }
+        .overview-dl dd { border-left: 0; padding-left: 0; }
+    }
+
     @media print {
         @page {
             size: A4 portrait;
@@ -130,13 +243,26 @@
 
         body {
             font-size: 16px;
+            line-height: 1.4;
         }
 
         h2 {
             font-size: 1.6rem;
         }
 
+        .hero h1 {
+            font-size: 2.6rem;
+        }
+
+        .hero .role-line {
+            font-size: 1rem;
+        }
+
         h3 {
+            font-size: 1.2rem;
+        }
+
+        .role-head h3 {
             font-size: 1.2rem;
         }
 
@@ -153,19 +279,15 @@
 </style>
 <body>
     <div class="container">
-        <h1>Joseph Wynn</h1>
-
-        <p>
-            <b>Engineering Team Lead</b> and <b>Principal Software Engineer</b><br>
-
-            <small>
-                020 4133 6948
-                <b class="join">|</b>
-                joseph@wildlyinaccurate.com
-                <b class="join">|</b>
-                <a href="https://github.com/wildlyinaccurate/">github.com/wildlyinaccurate</a>
-            </small>
-        </p>
+        <header class="hero">
+            <h1>Joseph Wynn</h1>
+            <p class="role-line">Engineering Team Lead and Principal Software Engineer</p>
+            <p class="contact-bar">
+                <span>020 4133 6948</span>
+                <span>joseph@wildlyinaccurate.com</span>
+                <span><a href="https://github.com/wildlyinaccurate/">github.com/wildlyinaccurate</a></span>
+            </p>
+        </header>
 
         <div class="mt">
             <p>Full stack engineering leader with 15+ years of experience building &amp; scaling distributed systems and leading cross-functional teams. Skilled in real-time data processing pipelines, query abstraction layers, and high performance web platforms.</p>
@@ -179,19 +301,45 @@
 
         <h2>Overview</h2>
 
-        <div class="section"><b>Languages:</b> Rust, TypeScript/JavaScript, Python, SQL</div>
-        <div class="section"><b>Platforms:</b> Amazon Web Services (AWS), Fastly Compute, Heroku, Render</div>
-        <div class="section"><b>Data stores:</b> MariaDB/MySQL, PostgreSQL, Amazon Redshift, SQLite</div>
-        <div class="section"><b>Workflow:</b> Git, Docker, Jenkins, CircleCI, GitHub</div>
-        <div class="section"><b>Team lead:</b> 5-10 direct reports, 30+ indirect reports</div>
+        <dl class="overview-dl">
+            <dt>Languages</dt>
+            <dd>Rust, TypeScript/JavaScript, Python, SQL</dd>
+
+            <dt>Platforms</dt>
+            <dd>Amazon Web Services (AWS), Fastly Compute, Heroku, Render</dd>
+
+            <dt>Data stores</dt>
+            <dd>MariaDB/MySQL, PostgreSQL, ClickHouse, Amazon Redshift</dd>
+
+            <dt>Workflow</dt>
+            <dd>Git, Docker, Jenkins, CircleCI, GitHub</dd>
+
+            <dt>Team lead</dt>
+            <dd>5&ndash;10 direct reports, 30+ indirect reports</dd>
+        </dl>
 
         <hr class="separator">
 
         <h2>Experience</h2>
 
-        <div class="section">
-            <h3>SpeedCurve | Head of Engineering</h3>
-            <p><i>2020&mdash;present <small class="muted">(Christchurch, Remote)</small></i></p>
+        <div class="role">
+            <div class="role-head">
+                <h3>Embrace | Principal Software Engineer</h3>
+                <span class="when">2026&mdash;present <span class="muted">· Christchurch, Remote</span></span>
+            </div>
+
+            <ul>
+                <li>Migrated the legacy RUM pipeline from Redshift to ClickHouse and enabled dual-running by adding SQL dialect support to the database abstraction layer.</li>
+                <li>Rewrote the JavaScript error tracking pipeline end-to-end, focusing on type safety and automated integration testing.</li>
+                <li>Assisted in bringing modern performance metrics into the Embrace web SDK.</li>
+            </ul>
+        </div>
+
+        <div class="role">
+            <div class="role-head">
+                <h3>SpeedCurve | Head of Engineering</h3>
+                <span class="when">2020&mdash;2026 <span class="muted">· Christchurch, Remote</span></span>
+            </div>
 
             <ul>
                 <li>Worked directly with product and account teams to align technical direction with business goals, without compromising on technical debt work.</li>
@@ -203,9 +351,11 @@
 
         <h2 class="print-only page-break pt">Experience (continued)</h2>
 
-        <div class="section">
-            <h3>SpeedCurve | Principal Software Engineer</h3>
-            <p><i>2017&mdash;2020 <small class="muted">(Christchurch, Remote)</small></i></p>
+        <div class="role">
+            <div class="role-head">
+                <h3>SpeedCurve | Principal Software Engineer</h3>
+                <span class="when">2017&mdash;2020 <span class="muted">· Christchurch, Remote</span></span>
+            </div>
 
             <ul>
                 <li>Scaled the real user monitoring (RUM) pipeline to handle 150M events per day and allow real-time querying of 10TB of data.</li>
@@ -216,9 +366,11 @@
             </ul>
         </div>
 
-        <div class="section">
-            <h3>BBC News | Principal Software Engineer</h3>
-            <p><i>2014&mdash;2017 <small class="muted">(London)</small></i></p>
+        <div class="role">
+            <div class="role-head">
+                <h3>BBC News | Principal Software Engineer</h3>
+                <span class="when">2014&mdash;2017 <span class="muted">· London</span></span>
+            </div>
 
             <ul>
                 <li>Migrated from on-premise to cloud infrastructure, developing a new <a href="https://wildlyinaccurate.com/how-we-assemble-web-pages-at-bbc-news/">component-as-a-service architecture</a> serving 38M users per day.</li>
@@ -228,24 +380,16 @@
             </ul>
         </div>
 
-        <div class="section">
-            <h3>Rightster | Senior Software Developer</h3>
-            <p><i>2013&mdash;2014 <small class="muted">(London)</small></i></p>
-
-            <ul>
-                <li>Helped to build Rightster's second generation video distribution platform, co-ordinating feature development with other teams.</li>
-                <li>Worked closely with product and architecture teams to ensure feature development was meeting specifications.</li>
-                <li>Implemented a Git workflow that helped to reduce the chaos of multiple teams working on the same source code.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Various | Software Developer</h3>
-            <p><i>2007&mdash;2013 <small class="muted">(Christchurch, London)</small></i></p>
+        <div class="role">
+            <div class="role-head">
+                <h3>Various | Senior Software Developer</h3>
+                <span class="when">2007&mdash;2014 <span class="muted">· Christchurch, London</span></span>
+            </div>
 
             <ul>
                 <li>Software development at various agencies. Built a tourism booking portal, a buy &amp; sell platform, a real-time racing odds checker, and much more.</li>
                 <li>Built websites for some of the UK's largest magazine brands, using complex caching strategies to handle high traffic demands.</li>
+                <li>Built a video distribution platform, working alongside publishers and adtech.</li>
             </ul>
         </div>
 
@@ -262,9 +406,9 @@
         <p>I mostly write on <a href="https://blog.structuredthoughts.dev/">The Structured Thoughts</a> &amp; <a href="https://wildlyinaccurate.com/">Wildly Inaccurate</a> blogs, although some of my longer pieces have been turned into e-books. Here are a few my most popular pieces:</p>
 
         <ul>
-            <li><b><a href="https://blog.structuredthoughts.dev/lets-build-a-virtual-dom-library">Let's Build a Virtual DOM Library</a> (2023)</b> &ndash; Demystifying VDOM frameworks by building one from scratch.
-            <li><b><a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">Becoming a Team Lead: A Survival Guide</a> (2018)</b> &ndash; Learnings and advice from my personal journey of developer to team lead. Originall given as <a href="https://www.youtube.com/watch?v=fBqmb3bCfbY">a talk at O'Reilly Fluent 2018</a>.
-            <li><b><a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a> (2014)</b> &ndash; A look at Git from the inside-out, explaining how simple building blocks come together to enable a powerful version control system.
+            <li><b><a href="https://blog.structuredthoughts.dev/lets-build-a-virtual-dom-library">Let's Build a Virtual DOM Library</a> (2023)</b> &ndash; Demystifying VDOM frameworks by building one from scratch.</li>
+            <li><b><a href="https://wildlyinaccurate.com/becoming-a-team-lead-a-survival-guide/">Becoming a Team Lead: A Survival Guide</a> (2018)</b> &ndash; Learnings and advice from my personal journey of developer to team lead. Originall given as <a href="https://www.youtube.com/watch?v=fBqmb3bCfbY">a talk at O'Reilly Fluent 2018</a>.</li>
+            <li><b><a href="https://wildlyinaccurate.com/a-hackers-guide-to-git/">A Hacker's Guide to Git</a> (2014)</b> &ndash; A look at Git from the inside-out, explaining how simple building blocks come together to enable a powerful version control system.</li>
         </ul>
 
         <hr class="separator">
